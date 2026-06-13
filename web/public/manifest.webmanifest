@@ -1,6 +1,6 @@
 {
-  "name": "Risk Assessment Tool",
-  "short_name": "Risk Tool",
+  "name": "Risk Assessment Web",
+  "short_name": "Risk Web",
   "description": "Offline-first air-pollution health-risk assessment PWA.",
   "theme_color": "#17324d",
   "background_color": "#f5f2eb",

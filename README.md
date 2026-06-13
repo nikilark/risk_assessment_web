@@ -1,6 +1,6 @@
-# Risk Assessment Tool
+# Risk Assessment Web
 
-Risk Assessment Tool calculates, visualizes, and reports air-pollution health risk.
+Risk Assessment Web calculates, visualizes, and reports air-pollution health risk.
 
 The repository currently contains:
 
@@ -45,7 +45,7 @@ make preview
 
 The PWA caches the interface and default catalog after the first launch. Calculations, project autosave, JSON import/export, TSV export, PNG/TSV/GeoJSON export, and report preview work offline. OpenStreetMap tiles, reverse geocoding, and the optional pollution-source overlay require network access.
 
-User instructions are in [`manual/risk_assessment_tool_manual.md`](manual/risk_assessment_tool_manual.md).
+User instructions are in [`manual/risk_assessment_web_manual.md`](manual/risk_assessment_web_manual.md).
 
 Archive distribution is intended to ship `web/dist` plus a launcher binary built from `launcher/`:
 
@@ -56,24 +56,4 @@ make launcher-build
 
 ## GitHub Pages
 
-The repository includes `.github/workflows/pages.yml`. It builds `web/dist` and deploys it to GitHub Pages from `main`.
-
-In GitHub repository settings, choose:
-
-```
-Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
-```
-
-Domain-root builds remain the default:
-
-```
-make build
-```
-
-The Pages workflow builds with:
-
-```
-VITE_BASE_PATH=/risk_assessment_web/
-```
-
-Use a different `VITE_BASE_PATH` if the repository name or custom path changes. For a custom domain mounted at `/`, do not set `VITE_BASE_PATH`.
+https://nikilark.github.io/risk_assessment_web/

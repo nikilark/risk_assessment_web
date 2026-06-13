@@ -8,6 +8,8 @@ const items: Array<{ key: PageKey; label: string; icon: LucideIcon }> = [
   { key: "report", label: "Звіт", icon: FileText }
 ];
 
+const appIconUrl = `${import.meta.env.BASE_URL}icons/app-icon.jpg`;
+
 export function Sidebar({
   page,
   setPage,
@@ -25,10 +27,10 @@ export function Sidebar({
     <aside className="sidebar">
       <div className="brand">
         <div className="brand-mark">
-          <img src="/icons/app-icon.jpg" alt="" aria-hidden="true" />
+          <img src={appIconUrl} alt="" aria-hidden="true" />
         </div>
         <div>
-          <strong>Risk Assessment</strong>
+          <strong>Risk Assessment Web</strong>
           <span>offline PWA</span>
         </div>
       </div>

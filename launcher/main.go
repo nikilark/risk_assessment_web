@@ -109,7 +109,7 @@ func main() {
 	}
 
 	go func() {
-		log.Printf("Serving Risk Assessment Tool from %s", dist)
+		log.Printf("Serving Risk Assessment Web from %s", dist)
 		log.Printf("URL: %s", url)
 		if !*noOpen {
 			openBrowser(url)
@@ -127,4 +127,3 @@ func main() {
 	defer cancel()
 	_ = server.Shutdown(ctx)
 }
-

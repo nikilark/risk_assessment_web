@@ -1,7 +1,7 @@
 import { FileDown, FileUp, Monitor, Moon, RotateCcw, Sun } from "lucide-react";
 import { clearAutosave } from "../storage/db";
 import { exportProject, readJsonFile } from "../domain/files";
-import { applyCatalogMode, normalizeProject } from "../domain/project";
+import { normalizeProject } from "../domain/project";
 import type { ProjectFile, ThemeMode } from "../domain/types";
 
 export function SettingsPage({
@@ -24,7 +24,6 @@ export function SettingsPage({
   };
 
   const setTheme = (theme: ThemeMode) => updateProject({ ...project, settings: { ...project.settings, theme } });
-  const setExpandedCatalog = (expandedCatalog: boolean) => updateProject(applyCatalogMode(project, expandedCatalog));
 
   return (
     <section className="page settings-page">
@@ -42,23 +41,6 @@ export function SettingsPage({
             <button className="secondary" onClick={() => exportProject(project)}><FileDown size={16} /> Зберегти JSON</button>
             <label className="file-button"><FileUp size={16} /> Відкрити JSON<input type="file" accept="application/json,.json" onChange={(event) => event.target.files?.[0] && importProject(event.target.files[0])} /></label>
             <button className="danger" onClick={resetAll}><RotateCcw size={16} /> Новий проєкт</button>
-          </div>
-        </div>
-
-        <div className="panel">
-          <h3>Каталог речовин</h3>
-          <p className="muted">Базовий каталог містить найтиповіші речовини. Розширений каталог відкриває повний дедуплікований список без ручного імпорту файлів.</p>
-          <label className="switch-row">
-            <span>
-              <strong>Розширений список</strong>
-              <small>{project.settings.expandedCatalog ? "Увімкнено" : "Вимкнено, використовується базовий список"}</small>
-            </span>
-            <input className="toggle-input" type="checkbox" checked={project.settings.expandedCatalog} onChange={(event) => setExpandedCatalog(event.target.checked)} />
-          </label>
-          <div className="catalog-summary">
-            <span>{project.settings.expandedCatalog ? "Розширений" : "Базовий"}</span>
-            <strong>{project.project.agents.length.toLocaleString("uk-UA")}</strong>
-            <span>речовин доступно</span>
           </div>
         </div>
 

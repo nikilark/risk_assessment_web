@@ -1,6 +1,6 @@
 import { Plus, Search } from "lucide-react";
 import { useMemo, useState } from "react";
-import { createId } from "../domain/project";
+import { applyCatalogMode, createId } from "../domain/project";
 import { formatNumber, normalizeNumber } from "../domain/risk";
 import type { AgentRecord, ProjectFile } from "../domain/types";
 import { OrganChips, OrganIconLegend, OrganToggleGroup } from "./OrganChips";
@@ -84,6 +84,8 @@ export function ProjectPage({ project, updateProject }: { project: ProjectFile; 
       project: { ...project.project, agents: project.project.agents.map((agent) => (agent.id === id ? { ...agent, selected } : agent)) }
     });
 
+  const setExpandedCatalog = (expandedCatalog: boolean) => updateProject(applyCatalogMode(project, expandedCatalog));
+
   const addAgent = () => {
     if (!draft.name?.trim()) return;
     const agent: AgentRecord = {
@@ -146,7 +148,13 @@ export function ProjectPage({ project, updateProject }: { project: ProjectFile; 
 
       <div className="toolbar">
         <div className="muted">{shownAgents.filter((agent) => agent.selected).length}/{shownAgents.length} обрано в поточному фільтрі</div>
-        <label className="search"><Search size={16} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Пошук речовини" /></label>
+        <div className="toolbar-actions">
+          <label className="search"><Search size={16} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Пошук речовини" /></label>
+          <label className="catalog-toggle">
+            <span>Розширений список</span>
+            <input className="toggle-input" type="checkbox" checked={project.settings.expandedCatalog} onChange={(event) => setExpandedCatalog(event.target.checked)} />
+          </label>
+        </div>
       </div>
 
       <div className="table-wrap agents-table">

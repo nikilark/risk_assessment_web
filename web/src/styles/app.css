@@ -394,6 +394,12 @@ input.toggle-input.small:checked::before {
   margin-bottom: 12px;
 }
 
+.toolbar-actions {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
 .muted {
   color: var(--muted);
   font-size: 14px;
@@ -407,6 +413,26 @@ input.toggle-input.small:checked::before {
   background: var(--panel);
   border-radius: 8px;
   padding: 7px 10px;
+}
+
+.catalog-toggle {
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  min-height: 42px;
+  padding: 7px 10px;
+}
+
+.catalog-toggle span {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .search input,
@@ -928,39 +954,6 @@ textarea {
   display: none;
 }
 
-.switch-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 12px;
-  background: var(--panel-strong);
-}
-
-.switch-row span {
-  display: grid;
-  gap: 3px;
-}
-
-.switch-row small {
-  color: var(--muted);
-}
-
-.catalog-summary {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  margin-top: 14px;
-  color: var(--muted);
-}
-
-.catalog-summary strong {
-  color: var(--text);
-  font-size: 24px;
-}
-
 .theme-toggle {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1221,9 +1214,19 @@ textarea {
     flex-direction: column;
   }
 
+  .toolbar-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
   .search,
-  .search input {
+  .search input,
+  .catalog-toggle {
     width: 100%;
+  }
+
+  .catalog-toggle {
+    justify-content: space-between;
   }
 
   .form-grid,

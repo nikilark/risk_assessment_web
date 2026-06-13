@@ -7,11 +7,16 @@ test("project page fits mobile width", async ({ page }) => {
 
   await expect(page.locator(".title-input")).toHaveValue("Нове дослідження");
   await expect(page.locator(".organ-legend")).toContainText("Легенда іконок органів");
+  await expect(page.getByLabel("Розширений список")).not.toBeChecked();
+  await page.getByLabel("Розширений список").check();
+  await expect(page.getByLabel("Розширений список")).toBeChecked();
   const viewport = await page.evaluate(() => ({
     scrollWidth: document.documentElement.scrollWidth,
     clientWidth: document.documentElement.clientWidth
   }));
   expect(viewport.scrollWidth).toBe(viewport.clientWidth);
+  await page.getByRole("button", { name: /Налаштування/ }).click();
+  await expect(page.locator(".settings-page")).not.toContainText("Каталог речовин");
 });
 
 test("main research flow renders map, chart, and typed report assets", async ({ page }) => {

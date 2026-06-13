@@ -1,0 +1,24 @@
+{
+  "name": "Risk Assessment Tool",
+  "short_name": "Risk Tool",
+  "description": "Offline-first air-pollution health-risk assessment PWA.",
+  "theme_color": "#17324d",
+  "background_color": "#f5f2eb",
+  "display": "standalone",
+  "start_url": ".",
+  "scope": ".",
+  "icons": [
+    {
+      "src": "icons/app-icon.jpg",
+      "sizes": "1536x1536",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

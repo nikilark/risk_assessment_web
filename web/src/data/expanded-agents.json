@@ -1,0 +1,4793 @@
+[
+  {
+    "id": "expanded-158",
+    "name": "Азасерин",
+    "cas": "115-02-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 11
+  },
+  {
+    "id": "expanded-159",
+    "name": "Азатіоприн",
+    "cas": "446-86-6",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.8
+  },
+  {
+    "id": "expanded-160",
+    "name": "Азобензол",
+    "cas": "103-33-3",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.11
+  },
+  {
+    "id": "expanded-1",
+    "name": "Азотна кислота",
+    "cas": "4697-37-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0.04,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.09,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-2",
+    "name": "Азоту діоксид",
+    "cas": "10102-44-0",
+    "dangerClass": 3,
+    "rfcLifelong": 0.04,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.47,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-3",
+    "name": "Азоту оксид",
+    "cas": "10102-43-9",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.72,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-161",
+    "name": "Акриламід",
+    "cas": "79-06-1",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 4.5
+  },
+  {
+    "id": "expanded-4",
+    "name": "Акрилова кислота",
+    "cas": "79-10-7",
+    "dangerClass": 3,
+    "rfcLifelong": 1,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 6,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-5",
+    "name": "Акрилонітрил",
+    "cas": "107-13-1",
+    "dangerClass": 2,
+    "rfcLifelong": 2,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.2,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0.24
+  },
+  {
+    "id": "expanded-6",
+    "name": "Акролеїн",
+    "cas": "107-02-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0.00002,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.0001,
+    "affectedOrgansAcute": [
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-163",
+    "name": "Актиноміцин D",
+    "cas": "50-76-0",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 8700
+  },
+  {
+    "id": "expanded-164",
+    "name": "Алар",
+    "cas": "1596-84-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 18
+  },
+  {
+    "id": "expanded-165",
+    "name": "Алдрин",
+    "cas": "309-00-2",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 17
+  },
+  {
+    "id": "expanded-7",
+    "name": "Аліфатичні насичені альдегіди C3-C8",
+    "cas": "",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 125,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору",
+      "печінка"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-166",
+    "name": "Алліл хлористий",
+    "cas": "107-05-1",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 21
+  },
+  {
+    "id": "expanded-8",
+    "name": "Алюміній та сполуки",
+    "cas": "7429-90-5",
+    "dangerClass": 0,
+    "rfcLifelong": 5,
+    "affectedOrgansLifelong": [
+      "органи дихання",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-9",
+    "name": "Аміак",
+    "cas": "7664-41-7",
+    "dangerClass": 4,
+    "rfcLifelong": 0.1,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.35,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-167",
+    "name": "Аміно-2-метилантрахінон 1-",
+    "cas": "82-28-0",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.15
+  },
+  {
+    "id": "expanded-168",
+    "name": "Аміно-6-метилдіпірідилдо(1 2-а:3’ 2’-d)імідазол 2-",
+    "cas": "2194-11-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 4.8
+  },
+  {
+    "id": "expanded-170",
+    "name": "Аміно-9-етилкарбазол 3- гідрохлорид",
+    "cas": "6109-97-3",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 78
+  },
+  {
+    "id": "expanded-169",
+    "name": "Аміно-9Н-піридо[2 3-b]індол",
+    "cas": "26148-68-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.4
+  },
+  {
+    "id": "expanded-171",
+    "name": "Аміноазотолуол о-",
+    "cas": "97-56-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 3.8
+  },
+  {
+    "id": "expanded-172",
+    "name": "Амінодіпірідо(1 2- а:3’ 2’-d)імідазол 2-",
+    "cas": "2194-10-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.4
+  },
+  {
+    "id": "expanded-173",
+    "name": "Амінодіфеніл 4-",
+    "cas": "92-67-1",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 21
+  },
+  {
+    "id": "expanded-174",
+    "name": "Амітрол",
+    "cas": "61-82-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.91
+  },
+  {
+    "id": "expanded-10",
+    "name": "Анілін",
+    "cas": "62-53-3",
+    "dangerClass": 2,
+    "rfcLifelong": 1,
+    "affectedOrgansLifelong": [
+      "кровоносна система",
+      "селезінка"
+    ],
+    "rfcAcute": 0.2,
+    "affectedOrgansAcute": [
+      "кровоносна система"
+    ],
+    "sfi": 0.0057
+  },
+  {
+    "id": "expanded-176",
+    "name": "Араміт",
+    "cas": "140-57-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 25
+  },
+  {
+    "id": "expanded-177",
+    "name": "Аурамін",
+    "cas": "492-80-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.88
+  },
+  {
+    "id": "expanded-11",
+    "name": "Ацетальдегід",
+    "cas": "75-07-0",
+    "dangerClass": 2,
+    "rfcLifelong": 9,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 115,
+    "affectedOrgansAcute": [
+      "органи зору",
+      "слизові"
+    ],
+    "sfi": 0.0077
+  },
+  {
+    "id": "expanded-179",
+    "name": "Ацетамід",
+    "cas": "60-35-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.07
+  },
+  {
+    "id": "expanded-180",
+    "name": "Ацетиламінофлуорен",
+    "cas": "53-96-3",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 3.8
+  },
+  {
+    "id": "expanded-12",
+    "name": "Ацетон",
+    "cas": "67-64-1",
+    "dangerClass": 4,
+    "rfcLifelong": 30,
+    "affectedOrgansLifelong": [
+      "нирки",
+      "печінка",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 62,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-13",
+    "name": "Ацетонітрил",
+    "cas": "75-05-8",
+    "dangerClass": 0,
+    "rfcLifelong": 0.06,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-14",
+    "name": "Ацетонціангідрин",
+    "cas": "75-86-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0.01,
+    "affectedOrgansLifelong": [
+      "органи дихання",
+      "печінка"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-181",
+    "name": "Ацетофенетидин п-",
+    "cas": "62-44-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0022
+  },
+  {
+    "id": "expanded-15",
+    "name": "Ацетофенон",
+    "cas": "98-86-2",
+    "dangerClass": 3,
+    "rfcLifelong": 0.00002,
+    "affectedOrgansLifelong": [
+      "органи дихання",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-16",
+    "name": "Барій та сполуки",
+    "cas": "7440-39-3",
+    "dangerClass": 0,
+    "rfcLifelong": 0.0005,
+    "affectedOrgansLifelong": [
+      "репродуктивна система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-186",
+    "name": "Бенз(а)пірен",
+    "cas": "50-32-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 3.1
+  },
+  {
+    "id": "expanded-182",
+    "name": "Бенз[а]антрацен",
+    "cas": "56-55-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.31
+  },
+  {
+    "id": "expanded-17",
+    "name": "Бензил хлористий",
+    "cas": "100-44-7",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.5,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-183",
+    "name": "Бензо[b]флуорантен",
+    "cas": "205-99-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.39
+  },
+  {
+    "id": "expanded-184",
+    "name": "Бензо[j]флуорантен",
+    "cas": "205-82-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.39
+  },
+  {
+    "id": "expanded-185",
+    "name": "Бензо[k]флуорантен",
+    "cas": "207-08-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 31
+  },
+  {
+    "id": "expanded-18",
+    "name": "Бензол",
+    "cas": "71-43-2",
+    "dangerClass": 1,
+    "rfcLifelong": 0.06,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "кровоносна система",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0.15,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "імунна система",
+      "репродуктивна система"
+    ],
+    "sfi": 27
+  },
+  {
+    "id": "expanded-19",
+    "name": "Бензотрихлорид",
+    "cas": "98-07-7",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.0007,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-188",
+    "name": "Берилій",
+    "cas": "7440-41-7",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 8.4
+  },
+  {
+    "id": "expanded-189",
+    "name": "Берилій оксид",
+    "cas": "1304-56-9",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 7
+  },
+  {
+    "id": "expanded-190",
+    "name": "Берилій сульфат (1:1)",
+    "cas": "13510-19-1",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 3000
+  },
+  {
+    "id": "expanded-20",
+    "name": "Берилій та сполуки",
+    "cas": "7440-41-7",
+    "dangerClass": 0,
+    "rfcLifelong": 0.00002,
+    "affectedOrgansLifelong": [
+      "імунна система",
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-192",
+    "name": "Біс(2-хлоретиловий)ефір",
+    "cas": "111-44-4",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.15
+  },
+  {
+    "id": "expanded-191",
+    "name": "Біс(2-хлорізопроріловий)ефір",
+    "cas": "39638-32-9",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 35
+  },
+  {
+    "id": "expanded-193",
+    "name": "Біс(п-хлорфеніл)-1 1-діхлоретилен 2 2-",
+    "cas": "72-55-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.34
+  },
+  {
+    "id": "expanded-194",
+    "name": "Біфінелол 2- натрієва сіль",
+    "cas": "132-27-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 3
+  },
+  {
+    "id": "expanded-21",
+    "name": "Бром",
+    "cas": "7726-95-6",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.2,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-196",
+    "name": "Бромдихлорметан",
+    "cas": "75-27-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.13
+  },
+  {
+    "id": "expanded-195",
+    "name": "Бромдіфеніли",
+    "cas": "",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 30
+  },
+  {
+    "id": "expanded-22",
+    "name": "Брометен",
+    "cas": "593-60-2",
+    "dangerClass": 2,
+    "rfcLifelong": 3,
+    "affectedOrgansLifelong": [
+      "печінка",
+      "шлунково-кишковий тракт"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.11
+  },
+  {
+    "id": "expanded-23",
+    "name": "Бромметан",
+    "cas": "74-83-9",
+    "dangerClass": 0,
+    "rfcLifelong": 5,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "органи дихання",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0.2,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-197",
+    "name": "Бромоформ",
+    "cas": "75-25-2",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0039
+  },
+  {
+    "id": "expanded-24",
+    "name": "Бутадієн 1 3-",
+    "cas": "106-99-0",
+    "dangerClass": 2,
+    "rfcLifelong": 8,
+    "affectedOrgansLifelong": [
+      "репродуктивна система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.8
+  },
+  {
+    "id": "expanded-25",
+    "name": "Бутанол 2-",
+    "cas": "78-92-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0.3,
+    "affectedOrgansLifelong": [
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-26",
+    "name": "Бутеноксид 1-",
+    "cas": "106-88-7",
+    "dangerClass": 0,
+    "rfcLifelong": 0.02,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-27",
+    "name": "Бутилацетат",
+    "cas": "123-86-4",
+    "dangerClass": 4,
+    "rfcLifelong": 0.7,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-200",
+    "name": "Бутіролактон бета-",
+    "cas": "3068-88-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1
+  },
+  {
+    "id": "expanded-28",
+    "name": "Бутоксіетанол 2-",
+    "cas": "111-76-2",
+    "dangerClass": 0,
+    "rfcLifelong": 13,
+    "affectedOrgansLifelong": [
+      "кровоносна система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-29",
+    "name": "Ванадій та сполуки",
+    "cas": "7440-62-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0.00007,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.0002,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-30",
+    "name": "Вінілацетат",
+    "cas": "108-05-4",
+    "dangerClass": 3,
+    "rfcLifelong": 0.2,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-31",
+    "name": "Вінілхлорид",
+    "cas": "75-01-4",
+    "dangerClass": 1,
+    "rfcLifelong": 5,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку"
+    ],
+    "rfcAcute": 1.3,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку"
+    ],
+    "sfi": 0.3
+  },
+  {
+    "id": "expanded-32",
+    "name": "Водень сульфід",
+    "cas": "7783-06-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0.001,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.1,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-33",
+    "name": "Водень фтористий",
+    "cas": "7664-39-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0.03,
+    "affectedOrgansLifelong": [
+      "кісткова система",
+      "органи дихання"
+    ],
+    "rfcAcute": 0.2,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-34",
+    "name": "Водень хлорид",
+    "cas": "7647-01-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0.02,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 2.1,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-35",
+    "name": "Водень ціанід",
+    "cas": "74-90-8",
+    "dangerClass": 2,
+    "rfcLifelong": 3,
+    "affectedOrgansLifelong": [
+      "ендокринна система",
+      "серцево-судинна система",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0.3,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-36",
+    "name": "Вуглецю оксид",
+    "cas": "630-08-0",
+    "dangerClass": 4,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [
+      "кровоносна система",
+      "серцево-судинна система",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 23,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "серцево-судинна система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-37",
+    "name": "Гексаметилендіізоціанат",
+    "cas": "822-06-0",
+    "dangerClass": 0,
+    "rfcLifelong": 0.00001,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-38",
+    "name": "Гексан",
+    "cas": "110-54-3",
+    "dangerClass": 4,
+    "rfcLifelong": 0.2,
+    "affectedOrgansLifelong": [
+      "органи дихання",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-202",
+    "name": "Гексахлоран",
+    "cas": "608-73-1",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.78
+  },
+  {
+    "id": "expanded-39",
+    "name": "Гексахлорбензол",
+    "cas": "118-74-1",
+    "dangerClass": 2,
+    "rfcLifelong": 3,
+    "affectedOrgansLifelong": [
+      "печінка"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.6
+  },
+  {
+    "id": "expanded-40",
+    "name": "Гексахлорбутадієн",
+    "cas": "87-68-3",
+    "dangerClass": 3,
+    "rfcLifelong": 0.09,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 77
+  },
+  {
+    "id": "expanded-205",
+    "name": "Гексахлордібензо-п-діоксин",
+    "cas": "34465-46-8",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 3300
+  },
+  {
+    "id": "expanded-206",
+    "name": "Гексахлордібензо-п-діоксин 1 2 3 4 7 8 -",
+    "cas": "39227-28-6",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16000
+  },
+  {
+    "id": "expanded-208",
+    "name": "Гексахлордібензо-п-діоксин 1 2 3 6 7 8-",
+    "cas": "57653-85-7",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16000
+  },
+  {
+    "id": "expanded-207",
+    "name": "Гексахлордібензо-п-діоксин 1 2 3 7 8 9-",
+    "cas": "19408-74-3",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 4550
+  },
+  {
+    "id": "expanded-209",
+    "name": "Гексахлордібензофуран 1 2 3 4 7 8-",
+    "cas": "70648-26-9",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16000
+  },
+  {
+    "id": "expanded-210",
+    "name": "Гексахлордібензофуран 1 2 3 6 7 8-",
+    "cas": "57117-44-9",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16000
+  },
+  {
+    "id": "expanded-211",
+    "name": "Гексахлордібензофуран 1 2 3 7 8 9-",
+    "cas": "72918-21-9",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16000
+  },
+  {
+    "id": "expanded-212",
+    "name": "Гексахлордібензофуран 2 3 4 6 7 8-",
+    "cas": "60851-34-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16000
+  },
+  {
+    "id": "expanded-41",
+    "name": "Гексахлоретан",
+    "cas": "67-72-1",
+    "dangerClass": 3,
+    "rfcLifelong": 0.08,
+    "affectedOrgansLifelong": [
+      "центральна нервова система"
+    ],
+    "rfcAcute": 58,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 14
+  },
+  {
+    "id": "expanded-214",
+    "name": "Гептахлор",
+    "cas": "76-44-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 4.5
+  },
+  {
+    "id": "expanded-215",
+    "name": "Гептахлордібензо-п-діоксин 1 2 3 4 6 7 8-",
+    "cas": "35822-46-9",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1600
+  },
+  {
+    "id": "expanded-216",
+    "name": "Гептахлордібензофуран 1 2 3 4 6 7 8-",
+    "cas": "67562-39-4",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1600
+  },
+  {
+    "id": "expanded-217",
+    "name": "Гептахлордібензофуран 1 2 3 4 7 8 9-",
+    "cas": "",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1300
+  },
+  {
+    "id": "expanded-218",
+    "name": "Гептахлорепоксид",
+    "cas": "1024-57-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 9.1
+  },
+  {
+    "id": "expanded-42",
+    "name": "Гідразин",
+    "cas": "302-01-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0.0002,
+    "affectedOrgansLifelong": [
+      "ендокринна система",
+      "печінка"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 17.1
+  },
+  {
+    "id": "expanded-220",
+    "name": "Гідразин сульфат",
+    "cas": "10034-93-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 17
+  },
+  {
+    "id": "expanded-221",
+    "name": "Гіромітрин",
+    "cas": "16568-02-8",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 10
+  },
+  {
+    "id": "expanded-222",
+    "name": "Дакарбазин",
+    "cas": "4342-03-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 49
+  },
+  {
+    "id": "expanded-223",
+    "name": "ДДТ",
+    "cas": "50-29-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.34
+  },
+  {
+    "id": "expanded-229",
+    "name": "Дибенз(а h)антрацен",
+    "cas": "53-70-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 3.1
+  },
+  {
+    "id": "expanded-230",
+    "name": "Дибенз[а h]акрідин",
+    "cas": "226-36-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.39
+  },
+  {
+    "id": "expanded-228",
+    "name": "Дибенз[а j]акрідин",
+    "cas": "224-42-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.39
+  },
+  {
+    "id": "expanded-231",
+    "name": "Дибенз[f j]антрацен",
+    "cas": "194-59-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.9
+  },
+  {
+    "id": "expanded-232",
+    "name": "Дибензо[а h)пірен",
+    "cas": "189-64-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 39
+  },
+  {
+    "id": "expanded-233",
+    "name": "Дибензо[a i]пірен",
+    "cas": "189-55-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 39
+  },
+  {
+    "id": "expanded-234",
+    "name": "Дибензо[a l]пірен",
+    "cas": "191-30-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 39
+  },
+  {
+    "id": "expanded-43",
+    "name": "Диброметан 1 2-",
+    "cas": "106-93-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0.0008,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "нирки",
+      "печінка",
+      "репродуктивна система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.77
+  },
+  {
+    "id": "expanded-235",
+    "name": "Дибромхлорметан",
+    "cas": "124-48-1",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 94
+  },
+  {
+    "id": "expanded-237",
+    "name": "Дигідроксінантрахінон 1 8-",
+    "cas": "117-10-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 76
+  },
+  {
+    "id": "expanded-238",
+    "name": "Дигідросафрол",
+    "cas": "94-58-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 44
+  },
+  {
+    "id": "expanded-239",
+    "name": "Дигліциділрезорциновий ефір",
+    "cas": "101-90-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.7
+  },
+  {
+    "id": "expanded-240",
+    "name": "Диметилбенз[а]антрацен 7 12-",
+    "cas": "57-97-6",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 250
+  },
+  {
+    "id": "expanded-241",
+    "name": "Диметилгідразин 1 1-",
+    "cas": "57-14-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 550
+  },
+  {
+    "id": "expanded-242",
+    "name": "Диметилкарбамоілхлорид",
+    "cas": "79-44-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 13
+  },
+  {
+    "id": "expanded-243",
+    "name": "Динітропірен 1 6-",
+    "cas": "42397-64-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 39
+  },
+  {
+    "id": "expanded-244",
+    "name": "Динітропірен 1 8-",
+    "cas": "42397-65-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 39
+  },
+  {
+    "id": "expanded-245",
+    "name": "Динітротолуол 2 4-",
+    "cas": "121-14-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.31
+  },
+  {
+    "id": "expanded-44",
+    "name": "Дисульфотон",
+    "cas": "298-04-4",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 6,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-247",
+    "name": "Дифенілгідразин 1 2-",
+    "cas": "122-66-7",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.77
+  },
+  {
+    "id": "expanded-248",
+    "name": "Дихлорбензол 1 4-",
+    "cas": "106-46-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.04
+  },
+  {
+    "id": "expanded-249",
+    "name": "Дихлорбут-2-ен 1 4-",
+    "cas": "764-41-0",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 9.3
+  },
+  {
+    "id": "expanded-250",
+    "name": "Дихлордіметиловий ефір 1 1’-",
+    "cas": "542-88-1",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 217
+  },
+  {
+    "id": "expanded-45",
+    "name": "Дихлордіфторметан",
+    "cas": "75-71-8",
+    "dangerClass": 4,
+    "rfcLifelong": 0.2,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "печінка"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-46",
+    "name": "Дихлоретан 1 1-",
+    "cas": "75-34-3",
+    "dangerClass": 0,
+    "rfcLifelong": 0.5,
+    "affectedOrgansLifelong": [
+      "нирки"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0057
+  },
+  {
+    "id": "expanded-47",
+    "name": "Дихлоретан 1 2-",
+    "cas": "107-06-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0.4,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 91
+  },
+  {
+    "id": "expanded-259",
+    "name": "Дихлоретилен 1 1-",
+    "cas": "75-35-4",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.18
+  },
+  {
+    "id": "expanded-48",
+    "name": "Дихлоретилен 1 2-",
+    "cas": "540-59-0",
+    "dangerClass": 0,
+    "rfcLifelong": 0.06,
+    "affectedOrgansLifelong": [
+      "біохімія крові",
+      "вроджені вади розвитку",
+      "печінки"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-251",
+    "name": "Дихлорізопропіловий ефір 2 2’-",
+    "cas": "108-60-1",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 35
+  },
+  {
+    "id": "expanded-49",
+    "name": "Дихлорметан",
+    "cas": "75-09-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0.4,
+    "affectedOrgansLifelong": [
+      "печінка",
+      "серцево-судинна система",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 2.1,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0.0016
+  },
+  {
+    "id": "expanded-50",
+    "name": "Дихлорофос",
+    "cas": "62-73-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 18,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0.29
+  },
+  {
+    "id": "expanded-51",
+    "name": "Дихлорпропан 1 2-",
+    "cas": "78-87-5",
+    "dangerClass": 3,
+    "rfcLifelong": 4,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 63
+  },
+  {
+    "id": "expanded-54",
+    "name": "Дихлорпропен 1 3-",
+    "cas": "542-75-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0.02,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-52",
+    "name": "Дихлорпропен транс-1 3-",
+    "cas": "10061-02-6",
+    "dangerClass": 0,
+    "rfcLifelong": 0.02,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.13
+  },
+  {
+    "id": "expanded-53",
+    "name": "Дихлорпропен цис-1 3-",
+    "cas": "10061-01-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0.02,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.13
+  },
+  {
+    "id": "expanded-55",
+    "name": "Дихлорфторметан",
+    "cas": "75-43-4",
+    "dangerClass": 4,
+    "rfcLifelong": 0.6,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-224",
+    "name": "Ді(2-етилгексил)фталат",
+    "cas": "117-81-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0084
+  },
+  {
+    "id": "expanded-226",
+    "name": "Діаміноанізол 2 4-",
+    "cas": "615-05-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 23
+  },
+  {
+    "id": "expanded-225",
+    "name": "Діаміноанізол 2 4- сульфат",
+    "cas": "39156-41-7",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 13
+  },
+  {
+    "id": "expanded-227",
+    "name": "Діамінодіфенілметан 4 4’-",
+    "cas": "101-77-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.6
+  },
+  {
+    "id": "expanded-56",
+    "name": "Діванадій пентооксид",
+    "cas": "1314-62-1",
+    "dangerClass": 1,
+    "rfcLifelong": 0.00007,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-260",
+    "name": "Діелдрін",
+    "cas": "60-57-1",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16
+  },
+  {
+    "id": "expanded-57",
+    "name": "Діетиламін",
+    "cas": "124-40-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0.00002,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-261",
+    "name": "Діетилстілбестрол",
+    "cas": "56-53-1",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 490
+  },
+  {
+    "id": "expanded-58",
+    "name": "Ділильних двигунів емісії",
+    "cas": "",
+    "dangerClass": 0,
+    "rfcLifelong": 5,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-246",
+    "name": "Діоксан 1 4-",
+    "cas": "123-91-1",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 27
+  },
+  {
+    "id": "expanded-59",
+    "name": "Епіхлоргідрин",
+    "cas": "106-89-8",
+    "dangerClass": 2,
+    "rfcLifelong": 1,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 3,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0.0042
+  },
+  {
+    "id": "expanded-263",
+    "name": "Естрадіол",
+    "cas": "50-28-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 39
+  },
+  {
+    "id": "expanded-60",
+    "name": "Етанол",
+    "cas": "64-17-5",
+    "dangerClass": 4,
+    "rfcLifelong": 100,
+    "affectedOrgansLifelong": [
+      "органи дихання",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 100,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-61",
+    "name": "Етилацетат",
+    "cas": "141-78-6",
+    "dangerClass": 4,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 140,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-62",
+    "name": "Етилен",
+    "cas": "74-85-1",
+    "dangerClass": 3,
+    "rfcLifelong": 0.1,
+    "affectedOrgansLifelong": [
+      "кровоносна система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-63",
+    "name": "Етиленбензол",
+    "cas": "100-41-4",
+    "dangerClass": 3,
+    "rfcLifelong": 1,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "ендокринна система",
+      "нирки",
+      "печінка"
+    ],
+    "rfcAcute": 1,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-64",
+    "name": "Етиленгликоль",
+    "cas": "107-21-1",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 1.3,
+    "affectedOrgansAcute": [
+      "нирки"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-264",
+    "name": "Етиленімін",
+    "cas": "151-56-4",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 65
+  },
+  {
+    "id": "expanded-65",
+    "name": "Етиленоксид",
+    "cas": "75-21-8",
+    "dangerClass": 3,
+    "rfcLifelong": 5,
+    "affectedOrgansLifelong": [
+      "кровоносна система",
+      "мутаген."
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-66",
+    "name": "Етилмеркаптан",
+    "cas": "75-08-1",
+    "dangerClass": 0,
+    "rfcLifelong": 1,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.1,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-67",
+    "name": "Етоксиетанол 2-",
+    "cas": "110-80-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0.2,
+    "affectedOrgansLifelong": [
+      "кровоносна система",
+      "репродуктивна система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-68",
+    "name": "Етоксиетилацетат 2-",
+    "cas": "111-15-9",
+    "dangerClass": 0,
+    "rfcLifelong": 0.3,
+    "affectedOrgansLifelong": [
+      "кровоносна система",
+      "репродуктивна система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-70",
+    "name": "Завислі частинки (РМ10)",
+    "cas": "",
+    "dangerClass": 0,
+    "rfcLifelong": 0.05,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.15,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-71",
+    "name": "Завислі частинки (РМ2.5)",
+    "cas": "",
+    "dangerClass": 0,
+    "rfcLifelong": 15,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 65,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-69",
+    "name": "Зважені частинки (TSP)",
+    "cas": "",
+    "dangerClass": 3,
+    "rfcLifelong": 0.1,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "органи дихання",
+      "серцево-судинна система",
+      "смертність"
+    ],
+    "rfcAcute": 0.3,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-72",
+    "name": "Изопропанол",
+    "cas": "67-63-0",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 3,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-73",
+    "name": "Ізопропілбензол",
+    "cas": "98-82-8",
+    "dangerClass": 4,
+    "rfcLifelong": 0.4,
+    "affectedOrgansLifelong": [
+      "ендокринна система",
+      "нирки"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-74",
+    "name": "Ізофорон",
+    "cas": "78-59-1",
+    "dangerClass": 0,
+    "rfcLifelong": 12,
+    "affectedOrgansLifelong": [
+      "маса тіла"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-267",
+    "name": "Індено[1 2 3-с d]пірен",
+    "cas": "193-39-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.31
+  },
+  {
+    "id": "expanded-268",
+    "name": "Кадмій",
+    "cas": "7440-43-9",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 6.3
+  },
+  {
+    "id": "expanded-75",
+    "name": "Кадмій та сполуки",
+    "cas": "7440-43-9",
+    "dangerClass": 0,
+    "rfcLifelong": 0.0002,
+    "affectedOrgansLifelong": [
+      "нирки",
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-269",
+    "name": "Калію бромат",
+    "cas": "7758-01-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.49
+  },
+  {
+    "id": "expanded-270",
+    "name": "Кам’яновугільні смоли",
+    "cas": "8007-45-2",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 2.17
+  },
+  {
+    "id": "expanded-271",
+    "name": "Каптан",
+    "cas": "133-06-2",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0023
+  },
+  {
+    "id": "expanded-272",
+    "name": "Каптофол",
+    "cas": "2425-06-1",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.15
+  },
+  {
+    "id": "expanded-273",
+    "name": "Кепон",
+    "cas": "143-50-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16
+  },
+  {
+    "id": "expanded-76",
+    "name": "Керосин",
+    "cas": "8008-20-6",
+    "dangerClass": 0,
+    "rfcLifelong": 0.01,
+    "affectedOrgansLifelong": [
+      "печінка"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-77",
+    "name": "Кобальт та сполуки",
+    "cas": "7440-48-4",
+    "dangerClass": 1,
+    "rfcLifelong": 0.00005,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-78",
+    "name": "Крезол",
+    "cas": "1319-77-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 2.2,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-79",
+    "name": "Ксилол",
+    "cas": "1330-20-7",
+    "dangerClass": 3,
+    "rfcLifelong": 0.3,
+    "affectedOrgansLifelong": [
+      "біохімія крові",
+      "кровоносна система",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 4.3,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору",
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-274",
+    "name": "Купферон",
+    "cas": "135-20-6",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.22
+  },
+  {
+    "id": "expanded-275",
+    "name": "Лізіокарпін",
+    "cas": "303-34-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 7.8
+  },
+  {
+    "id": "expanded-276",
+    "name": "Ліндан",
+    "cas": "58-89-9",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.1
+  },
+  {
+    "id": "expanded-277",
+    "name": "Ліндан альфа-",
+    "cas": "319-84-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 6.3
+  },
+  {
+    "id": "expanded-278",
+    "name": "Ліндан бета-",
+    "cas": "319-85-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.85
+  },
+  {
+    "id": "expanded-91",
+    "name": "м-Ксилол",
+    "cas": "108-38-3",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 22,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-80",
+    "name": "Малеиновий ангідрид",
+    "cas": "108-31-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.1,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-81",
+    "name": "Марганець та сполуки",
+    "cas": "7439-96-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0.00005,
+    "affectedOrgansLifelong": [
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-279",
+    "name": "Мелфалан",
+    "cas": "148-82-3",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 130
+  },
+  {
+    "id": "expanded-82",
+    "name": "Метанол",
+    "cas": "67-56-1",
+    "dangerClass": 3,
+    "rfcLifelong": 4,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку"
+    ],
+    "rfcAcute": 30,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-280",
+    "name": "Метил-1-нітроантрахінон 2-",
+    "cas": "129-15-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 4.3
+  },
+  {
+    "id": "expanded-281",
+    "name": "Метил-1-хлорпроп-1-ен 2",
+    "cas": "513-37-1",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 45
+  },
+  {
+    "id": "expanded-282",
+    "name": "Метил-2-метоксианілін 5-",
+    "cas": "120-71-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.15
+  },
+  {
+    "id": "expanded-87",
+    "name": "Метил-трет-бутиловий ефір",
+    "cas": "1634-04-4",
+    "dangerClass": 4,
+    "rfcLifelong": 3,
+    "affectedOrgansLifelong": [
+      "нирки",
+      "печінка"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.00015
+  },
+  {
+    "id": "expanded-283",
+    "name": "Метил-N’-нітрозо-N-нітрогуанідин N-",
+    "cas": "70-25-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 8.3
+  },
+  {
+    "id": "expanded-284",
+    "name": "Метиланілін 2-",
+    "cas": "95-53-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.18
+  },
+  {
+    "id": "expanded-285",
+    "name": "Метиланілін 2- гідрохлорид",
+    "cas": "636-21-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.13
+  },
+  {
+    "id": "expanded-83",
+    "name": "Метилгидразин",
+    "cas": "60-34-4",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.00094,
+    "affectedOrgansAcute": [
+      "кровоносна система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-287",
+    "name": "Метилендіанілін 4 4’ діхлорид",
+    "cas": "13552-44-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.2
+  },
+  {
+    "id": "expanded-84",
+    "name": "Метилізоціанат",
+    "cas": "624-83-9",
+    "dangerClass": 0,
+    "rfcLifelong": 1,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.0047,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-85",
+    "name": "Метилмеркаптан",
+    "cas": "74-93-1",
+    "dangerClass": 4,
+    "rfcLifelong": 1,
+    "affectedOrgansLifelong": [
+      "органи дихання",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-86",
+    "name": "Метилметакрилат",
+    "cas": "80-62-6",
+    "dangerClass": 3,
+    "rfcLifelong": 0.7,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-288",
+    "name": "Метилметансульфонат",
+    "cas": "66-27-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 99
+  },
+  {
+    "id": "expanded-289",
+    "name": "Метилтіоурацил",
+    "cas": "56-04-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.4
+  },
+  {
+    "id": "expanded-291",
+    "name": "Метилхолантрен 3-",
+    "cas": "56-49-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 22
+  },
+  {
+    "id": "expanded-292",
+    "name": "Метилхрізен 5-",
+    "cas": "3697-24-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 3.9
+  },
+  {
+    "id": "expanded-286",
+    "name": "Метілен біс(2-хлоранілін)4 4’-",
+    "cas": "101-14-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.13
+  },
+  {
+    "id": "expanded-293",
+    "name": "Метокси-5-нітроанілін 2-",
+    "cas": "99-59-2",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 49
+  },
+  {
+    "id": "expanded-294",
+    "name": "Метоксианілін 2-",
+    "cas": "90-04-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.14
+  },
+  {
+    "id": "expanded-295",
+    "name": "Метоксибензамін 2- гідрохлорид",
+    "cas": "134-29-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.11
+  },
+  {
+    "id": "expanded-88",
+    "name": "Миш’як",
+    "cas": "7440-38-2",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.0004,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "репродуктивна система"
+    ],
+    "sfi": 15
+  },
+  {
+    "id": "expanded-89",
+    "name": "Мідь сульфат",
+    "cas": "7758-98-7",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.1,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-90",
+    "name": "Мідь та сполуки",
+    "cas": "7440-50-8",
+    "dangerClass": 0,
+    "rfcLifelong": 0.00002,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.1,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-296",
+    "name": "Мірекс",
+    "cas": "2385-85-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 18
+  },
+  {
+    "id": "expanded-297",
+    "name": "Мітоміцин С",
+    "cas": "50-07-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 8200
+  },
+  {
+    "id": "expanded-298",
+    "name": "Монокроталін",
+    "cas": "315-22-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 10
+  },
+  {
+    "id": "expanded-92",
+    "name": "Натрію гидроксид",
+    "cas": "1310-73-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 5,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-300",
+    "name": "Нафтиламін 2-",
+    "cas": "91-59-8",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.8
+  },
+  {
+    "id": "expanded-301",
+    "name": "Нафто(1 2 3 4-def)хрізен",
+    "cas": "192-65-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 3.9
+  },
+  {
+    "id": "expanded-93",
+    "name": "Нікель",
+    "cas": "7440-02-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 3,
+    "affectedOrgansAcute": [
+      "імунна система",
+      "органи дихання"
+    ],
+    "sfi": 0.91
+  },
+  {
+    "id": "expanded-94",
+    "name": "Нікель карбонил",
+    "cas": "13463-39-3",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 6,
+    "affectedOrgansAcute": [
+      "імунна система",
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-303",
+    "name": "Нікель очищений пил",
+    "cas": "",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.84
+  },
+  {
+    "id": "expanded-304",
+    "name": "Нікель субсульфід",
+    "cas": "12035-72-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.68
+  },
+  {
+    "id": "expanded-305",
+    "name": "Нітрилотриоцтова кислота",
+    "cas": "139-13-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0053
+  },
+  {
+    "id": "expanded-306",
+    "name": "Нітрилотриоцтова кислота тринатрі- єва сіль моногідрат",
+    "cas": "18662-53-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.01
+  },
+  {
+    "id": "expanded-307",
+    "name": "Нітроаценафтен 5-",
+    "cas": "602-87-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.13
+  },
+  {
+    "id": "expanded-95",
+    "name": "Нітробензол",
+    "cas": "98-95-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.5,
+    "affectedOrgansAcute": [
+      "кровоносна система",
+      "печінка",
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-327",
+    "name": "Нітроген",
+    "cas": "1836-75-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 82
+  },
+  {
+    "id": "expanded-308",
+    "name": "Нітрогліцерин",
+    "cas": "55-63-0",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 14
+  },
+  {
+    "id": "expanded-311",
+    "name": "Нітрозо-N-етилсечовина N-",
+    "cas": "759-73-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 27
+  },
+  {
+    "id": "expanded-309",
+    "name": "Нітрозо-N-метилсечовина N-",
+    "cas": "684-93-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 120
+  },
+  {
+    "id": "expanded-310",
+    "name": "Нітрозо-N-метилуретан N-",
+    "cas": "615-53-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 110
+  },
+  {
+    "id": "expanded-312",
+    "name": "Нітрозодибутиламін N-",
+    "cas": "924-16-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 5.6
+  },
+  {
+    "id": "expanded-313",
+    "name": "Нітрозодиметиламін N-",
+    "cas": "62-75-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 49
+  },
+  {
+    "id": "expanded-314",
+    "name": "Нітрозодипропіламін N-",
+    "cas": "621-64-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 7
+  },
+  {
+    "id": "expanded-315",
+    "name": "Нітрозодифеніламін N-",
+    "cas": "96-30-6",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 9
+  },
+  {
+    "id": "expanded-316",
+    "name": "Нітрозодіетиламін N-",
+    "cas": "55-18-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 150
+  },
+  {
+    "id": "expanded-317",
+    "name": "Нітрозоімінодіетанол 2 2’-",
+    "cas": "1116-54-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 2.8
+  },
+  {
+    "id": "expanded-318",
+    "name": "Нітрозометилетиламін N-",
+    "cas": "10595-95-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 22
+  },
+  {
+    "id": "expanded-319",
+    "name": "Нітрозоморфолін N-",
+    "cas": "59-89-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 6.7
+  },
+  {
+    "id": "expanded-320",
+    "name": "Нітрозонорнікотин N-",
+    "cas": "16543-55-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.4
+  },
+  {
+    "id": "expanded-321",
+    "name": "Нітрозопіперідин N-",
+    "cas": "100-75-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 9.4
+  },
+  {
+    "id": "expanded-322",
+    "name": "Нітрозопіролідін N-",
+    "cas": "930-55-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 2.1
+  },
+  {
+    "id": "expanded-323",
+    "name": "Нітрозофеніл-4 анілін N-",
+    "cas": "156-10-5",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 22
+  },
+  {
+    "id": "expanded-324",
+    "name": "Нітропірен 1-",
+    "cas": "5522-43-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.39
+  },
+  {
+    "id": "expanded-325",
+    "name": "Нітропірен 4-",
+    "cas": "57835-92-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.39
+  },
+  {
+    "id": "expanded-326",
+    "name": "Нітропропан 2-",
+    "cas": "79-46-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 9.4
+  },
+  {
+    "id": "expanded-328",
+    "name": "Нітрохрізен 6-",
+    "cas": "7496-02-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 39
+  },
+  {
+    "id": "expanded-329",
+    "name": "Ніфураден",
+    "cas": "555-84-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.8
+  },
+  {
+    "id": "expanded-330",
+    "name": "Ніфуртиазол",
+    "cas": "3570-75-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 2.3
+  },
+  {
+    "id": "expanded-97",
+    "name": "о-Ксилол",
+    "cas": "95-47-6",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 22,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-96",
+    "name": "Озон",
+    "cas": "10028-15-6",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.18,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-331",
+    "name": "Оксидіанілін 4 4’-",
+    "cas": "101-80-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.14
+  },
+  {
+    "id": "expanded-332",
+    "name": "Октахлордібензо-п-діоксин",
+    "cas": "3268-87-9",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 130
+  },
+  {
+    "id": "expanded-333",
+    "name": "Октахлордібензофуран 1 2 3 4 5 6 7 8-",
+    "cas": "39001-02-0",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 130
+  },
+  {
+    "id": "expanded-98",
+    "name": "Оцтова кислота",
+    "cas": "64-19-7",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 3.7,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-103",
+    "name": "п-Ксилол",
+    "cas": "106-42-3",
+    "dangerClass": 0,
+    "rfcLifelong": 0.44,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "органи дихання",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 22,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-99",
+    "name": "Паратион",
+    "cas": "56-38-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 2,
+    "affectedOrgansAcute": [
+      "біохімія крові"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-334",
+    "name": "Пентахлордібензофуран 1 2 3 7 8-",
+    "cas": "109719-77-9",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 8000
+  },
+  {
+    "id": "expanded-335",
+    "name": "Пентахлордібензофуран 2 3 4 7 8-",
+    "cas": "57117-41-6",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 80000
+  },
+  {
+    "id": "expanded-336",
+    "name": "Пентахлорфенол",
+    "cas": "87-86-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 18
+  },
+  {
+    "id": "expanded-100",
+    "name": "Перилен",
+    "cas": "198-55-0",
+    "dangerClass": 0,
+    "rfcLifelong": 0.07,
+    "affectedOrgansLifelong": [
+      "нирки"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-101",
+    "name": "Пероксиацетилнитрат",
+    "cas": "2278-22-0",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.0088,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-337",
+    "name": "Пігмент червоний",
+    "cas": "5160-02-1",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0053
+  },
+  {
+    "id": "expanded-102",
+    "name": "Піридин",
+    "cas": "110-86-1",
+    "dangerClass": 2,
+    "rfcLifelong": 7,
+    "affectedOrgansLifelong": [
+      "біохімія крові",
+      "печінка"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-104",
+    "name": "Поліхлоровані біфеніли",
+    "cas": "1136-36-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0.0012,
+    "affectedOrgansLifelong": [
+      "ендокринна система",
+      "нирки",
+      "печінка"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.4
+  },
+  {
+    "id": "expanded-340",
+    "name": "Понсо 3R",
+    "cas": "3564-09-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16
+  },
+  {
+    "id": "expanded-341",
+    "name": "Понсо MX",
+    "cas": "3761-53-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0045
+  },
+  {
+    "id": "expanded-342",
+    "name": "Прокарбазин",
+    "cas": "671-16-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 14
+  },
+  {
+    "id": "expanded-343",
+    "name": "Прокарбазин гідрохлорид",
+    "cas": "366-70-1",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 12
+  },
+  {
+    "id": "expanded-344",
+    "name": "Пропансультон 1 3-",
+    "cas": "1120-71-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 2.4
+  },
+  {
+    "id": "expanded-105",
+    "name": "Пропілен",
+    "cas": "115-07-1",
+    "dangerClass": 3,
+    "rfcLifelong": 3,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-106",
+    "name": "Пропілен оксид",
+    "cas": "75-56-9",
+    "dangerClass": 1,
+    "rfcLifelong": 0.03,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 6,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 13
+  },
+  {
+    "id": "expanded-346",
+    "name": "Пропілтіоурацил",
+    "cas": "51-52-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1
+  },
+  {
+    "id": "expanded-347",
+    "name": "Пропіолактон бета-",
+    "cas": "57-57-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 14
+  },
+  {
+    "id": "expanded-348",
+    "name": "Прямий коричневий 95",
+    "cas": "16071-86-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 6.7
+  },
+  {
+    "id": "expanded-349",
+    "name": "Прямий синій 6",
+    "cas": "2602-46-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 7.4
+  },
+  {
+    "id": "expanded-350",
+    "name": "Прямий чорний 38",
+    "cas": "1937-37-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 7.4
+  },
+  {
+    "id": "expanded-351",
+    "name": "Резерпін",
+    "cas": "50-55-5",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 11
+  },
+  {
+    "id": "expanded-107",
+    "name": "Ртуть та сполуки",
+    "cas": "7439-97-6",
+    "dangerClass": 1,
+    "rfcLifelong": 3,
+    "affectedOrgansLifelong": [
+      "центральна нервова система"
+    ],
+    "rfcAcute": 2,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "репродуктивна система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-352",
+    "name": "Сапрол",
+    "cas": "94-59-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.22
+  },
+  {
+    "id": "expanded-353",
+    "name": "Свинець",
+    "cas": "7439-92-1",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 42
+  },
+  {
+    "id": "expanded-354",
+    "name": "Свинець ацетат",
+    "cas": "301-04-2",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.28
+  },
+  {
+    "id": "expanded-355",
+    "name": "Свинець ацетат основний",
+    "cas": "1335-32-6",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 38
+  },
+  {
+    "id": "expanded-108",
+    "name": "Свинець та його неорганічні сполуки",
+    "cas": "7439-92-1",
+    "dangerClass": 1,
+    "rfcLifelong": 0.00015,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "кровоносна система",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-109",
+    "name": "Селен",
+    "cas": "7782-79-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0.00008,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 3,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-356",
+    "name": "Синій N1",
+    "cas": "2784-94-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 51
+  },
+  {
+    "id": "expanded-110",
+    "name": "Сірки діоксид",
+    "cas": "7446-09-5",
+    "dangerClass": 3,
+    "rfcLifelong": 0.08,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.66,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-111",
+    "name": "Сірковуглець",
+    "cas": "75-15-0",
+    "dangerClass": 0,
+    "rfcLifelong": 0.7,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 20,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "кровоносна система",
+      "репродуктивна система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-112",
+    "name": "Сірчана кислота",
+    "cas": "7664-93-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.1,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-357",
+    "name": "Стерігматоцистин",
+    "cas": "10048-13-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 35
+  },
+  {
+    "id": "expanded-113",
+    "name": "Стирол",
+    "cas": "100-42-5",
+    "dangerClass": 0,
+    "rfcLifelong": 1,
+    "affectedOrgansLifelong": [
+      "центральна нервова система"
+    ],
+    "rfcAcute": 20,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-358",
+    "name": "Стиролоксид",
+    "cas": "96-09-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.16
+  },
+  {
+    "id": "expanded-114",
+    "name": "Стиролу оксид",
+    "cas": "96-09-3",
+    "dangerClass": 0,
+    "rfcLifelong": 6,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-359",
+    "name": "Стрептозоцин",
+    "cas": "18883-66-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 110
+  },
+  {
+    "id": "expanded-360",
+    "name": "Сульфалат",
+    "cas": "95-06-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.19
+  },
+  {
+    "id": "expanded-115",
+    "name": "Сульфати",
+    "cas": "14808-79-8",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.05,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "системні"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-116",
+    "name": "Сурьма",
+    "cas": "7440-36-0",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.0004,
+    "affectedOrgansAcute": [
+      "кровоносна система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-361",
+    "name": "Тетрааміноантрахінон 1 4 5 8-",
+    "cas": "2475-45-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0045
+  },
+  {
+    "id": "expanded-362",
+    "name": "Тетрагідрофуран",
+    "cas": "109-99-9",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0068
+  },
+  {
+    "id": "expanded-117",
+    "name": "Тетраетилсвинец",
+    "cas": "78-00-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 4,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-363",
+    "name": "Тетраметил-4 4’-диамінобензофенон N N N N-",
+    "cas": "90-94-8",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.86
+  },
+  {
+    "id": "expanded-364",
+    "name": "Тетрахлордібензо-п-діоксин 2 3 7 8-",
+    "cas": "1746-01-6",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 150000
+  },
+  {
+    "id": "expanded-365",
+    "name": "Тетрахлордібензофуран 2 3 7 8-",
+    "cas": "51207-31-9",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16000
+  },
+  {
+    "id": "expanded-366",
+    "name": "Тетрахлордіфенілетан.4 4-",
+    "cas": "72-54-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.24
+  },
+  {
+    "id": "expanded-118",
+    "name": "Тетрахлоретан",
+    "cas": "56-23-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0.04,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "печінка"
+    ],
+    "rfcAcute": 1.3,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "печінка",
+      "репродуктивна система"
+    ],
+    "sfi": 53
+  },
+  {
+    "id": "expanded-368",
+    "name": "Тетрахлоретан 1 1 1 2-",
+    "cas": "630-20-6",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 26
+  },
+  {
+    "id": "expanded-369",
+    "name": "Тетрахлоретан 1 1 2 2 -",
+    "cas": "79-34-5",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.2
+  },
+  {
+    "id": "expanded-119",
+    "name": "Тетрахлоретилен",
+    "cas": "127-18-4",
+    "dangerClass": 2,
+    "rfcLifelong": 35,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "нирки",
+      "печінка",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 1.4,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "нирки",
+      "органи дихання",
+      "органи зору",
+      "печінка",
+      "центральна нервова система"
+    ],
+    "sfi": 2
+  },
+  {
+    "id": "expanded-120",
+    "name": "Тетрахлорфенол",
+    "cas": "25167-83-3",
+    "dangerClass": 0,
+    "rfcLifelong": 0.09,
+    "affectedOrgansLifelong": [
+      "печінка"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-371",
+    "name": "Тіоацетамід",
+    "cas": "62-55-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 6.1
+  },
+  {
+    "id": "expanded-372",
+    "name": "Тіодіанілін 4 4’-",
+    "cas": "139-65-1",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 15
+  },
+  {
+    "id": "expanded-373",
+    "name": "Тіосечовина",
+    "cas": "62-56-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 72
+  },
+  {
+    "id": "expanded-374",
+    "name": "Тіофосфамід",
+    "cas": "52-24-4",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 12
+  },
+  {
+    "id": "expanded-375",
+    "name": "Токсафен",
+    "cas": "8001-35-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.1
+  },
+  {
+    "id": "expanded-376",
+    "name": "Толуілендіізоціанат 2 4-",
+    "cas": "584-84-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 39
+  },
+  {
+    "id": "expanded-121",
+    "name": "Толуол",
+    "cas": "108-88-3",
+    "dangerClass": 3,
+    "rfcLifelong": 0.4,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "органи дихання",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 3.8,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору",
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-377",
+    "name": "Толуол-2 6-диізоціанат",
+    "cas": "91-08-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 39
+  },
+  {
+    "id": "expanded-378",
+    "name": "Толуолдіізоціанат 1 3-",
+    "cas": "26471-62-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 39
+  },
+  {
+    "id": "expanded-122",
+    "name": "транс-1 2-Дихлоретилен",
+    "cas": "156-60-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.8,
+    "affectedOrgansAcute": [
+      "печінка"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-379",
+    "name": "Транс-2-[(Діметиламіно)метиліміно]-5-[2-(5-нітро-2-фурил)вініл]-1 3 4-оксадіазол",
+    "cas": "55738-54-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.44
+  },
+  {
+    "id": "expanded-380",
+    "name": "Трет-Бутил-4-метоксифенол 2-",
+    "cas": "25013-16-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0002
+  },
+  {
+    "id": "expanded-123",
+    "name": "Триетиламін",
+    "cas": "121-44-8",
+    "dangerClass": 3,
+    "rfcLifelong": 7,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 3,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-124",
+    "name": "Трикрезол",
+    "cas": "1319-77-3",
+    "dangerClass": 2,
+    "rfcLifelong": 4,
+    "affectedOrgansLifelong": [
+      "кровоносна система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-383",
+    "name": "Триптофан Р2",
+    "cas": "62450-07-1",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 3.2
+  },
+  {
+    "id": "expanded-382",
+    "name": "Триптофан P1",
+    "cas": "62450-06-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 26
+  },
+  {
+    "id": "expanded-385",
+    "name": "Трихлоретан 1 1 2-",
+    "cas": "79-00-5",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 57
+  },
+  {
+    "id": "expanded-125",
+    "name": "Трихлоретилен",
+    "cas": "79-01-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0.6,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку"
+    ],
+    "rfcAcute": 11,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "центральна нервова система"
+    ],
+    "sfi": 0.0063
+  },
+  {
+    "id": "expanded-384",
+    "name": "Трихлорфенол 2 4 6-",
+    "cas": "88-06-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 11
+  },
+  {
+    "id": "expanded-126",
+    "name": "Трихлорфторметан",
+    "cas": "75-69-4",
+    "dangerClass": 4,
+    "rfcLifelong": 20,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "нирки",
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-381",
+    "name": "Тріафур",
+    "cas": "712-68-5",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16
+  },
+  {
+    "id": "expanded-127",
+    "name": "Уран гексафторид",
+    "cas": "7783-81-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 3.6,
+    "affectedOrgansAcute": [
+      "нирки"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-387",
+    "name": "Уретан",
+    "cas": "51-79-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1
+  },
+  {
+    "id": "expanded-388",
+    "name": "Феназопірідин",
+    "cas": "94-78-0",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.17
+  },
+  {
+    "id": "expanded-389",
+    "name": "Феназопірідин гідрохлорид",
+    "cas": "136-40-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.15
+  },
+  {
+    "id": "expanded-390",
+    "name": "Фенестерин",
+    "cas": "3546-10-9",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 150
+  },
+  {
+    "id": "expanded-391",
+    "name": "Фенілен-2 4-діамін",
+    "cas": "95-80-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 4
+  },
+  {
+    "id": "expanded-392",
+    "name": "Фенобарбітал",
+    "cas": "50-06-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.46
+  },
+  {
+    "id": "expanded-393",
+    "name": "Феноксибензамін",
+    "cas": "56-96-1",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 3.1
+  },
+  {
+    "id": "expanded-394",
+    "name": "Феноксибензамін гідрохлорид",
+    "cas": "63-92-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 2.7
+  },
+  {
+    "id": "expanded-128",
+    "name": "Фенол",
+    "cas": "108-95-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0.006,
+    "affectedOrgansLifelong": [
+      "нирки",
+      "печінка",
+      "серцево-судинна система",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 6,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-129",
+    "name": "Флориди",
+    "cas": "16984-48-8",
+    "dangerClass": 0,
+    "rfcLifelong": 0.03,
+    "affectedOrgansLifelong": [
+      "кісткова система",
+      "органи дихання"
+    ],
+    "rfcAcute": 0.25,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-130",
+    "name": "Формальдегід",
+    "cas": "50-00-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0.003,
+    "affectedOrgansLifelong": [
+      "імунна система",
+      "органи дихання"
+    ],
+    "rfcAcute": 0.048,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0.046
+  },
+  {
+    "id": "expanded-131",
+    "name": "Фосген",
+    "cas": "75-44-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0.0003,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 4,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-132",
+    "name": "Фосфін",
+    "cas": "7803-51-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.13,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-133",
+    "name": "Фосфор",
+    "cas": "7723-14-0",
+    "dangerClass": 0,
+    "rfcLifelong": 0.00007,
+    "affectedOrgansLifelong": [
+      "волосся",
+      "репродуктива система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-134",
+    "name": "Фосфор жовтий",
+    "cas": "12185-10-3",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.02,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-135",
+    "name": "Фосфорна кислота",
+    "cas": "7664-38-2",
+    "dangerClass": 0,
+    "rfcLifelong": 0.01,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-136",
+    "name": "Фталевий ангідрид",
+    "cas": "85-44-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0.01,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-137",
+    "name": "Фтор",
+    "cas": "7782-41-4",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 3,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-138",
+    "name": "Фтористо-водородна кислота",
+    "cas": "7664-39-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.25,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-395",
+    "name": "Фурацилін",
+    "cas": "59-87-0",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 9.4
+  },
+  {
+    "id": "expanded-396",
+    "name": "Фуриламід",
+    "cas": "3688-53-7",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.21
+  },
+  {
+    "id": "expanded-397",
+    "name": "Фуріум",
+    "cas": "531-82-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.5
+  },
+  {
+    "id": "expanded-398",
+    "name": "Фурмециклокс",
+    "cas": "60568-05-0",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.03
+  },
+  {
+    "id": "expanded-139",
+    "name": "Фурфурол",
+    "cas": "98-01-1",
+    "dangerClass": 3,
+    "rfcLifelong": 0.05,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-338",
+    "name": "Харчовий фіолетовий2",
+    "cas": "1694-09-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.02
+  },
+  {
+    "id": "expanded-140",
+    "name": "Хлор",
+    "cas": "7782-50-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0.0002,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.2,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-141",
+    "name": "Хлор діоксид",
+    "cas": "10049-04-4",
+    "dangerClass": 0,
+    "rfcLifelong": 0.0002,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-414",
+    "name": "Хлор етан",
+    "cas": "75-00-3",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0029
+  },
+  {
+    "id": "expanded-406",
+    "name": "Хлор метан",
+    "cas": "74-87-3",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0063
+  },
+  {
+    "id": "expanded-142",
+    "name": "Хлор пропан 2-",
+    "cas": "75-29-6",
+    "dangerClass": 0,
+    "rfcLifelong": 0.1,
+    "affectedOrgansLifelong": [
+      "печінка"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-399",
+    "name": "Хлор-1 2-дібромпропан 3-",
+    "cas": "96-12-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0024
+  },
+  {
+    "id": "expanded-400",
+    "name": "Хлор-5-метиланілін 2-",
+    "cas": "7440-41-7",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 8.4
+  },
+  {
+    "id": "expanded-409",
+    "name": "Хлор-о-фенілендіамін 4-",
+    "cas": "95-83-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 16
+  },
+  {
+    "id": "expanded-401",
+    "name": "Хлорбензилат",
+    "cas": "510-15-6",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.27
+  },
+  {
+    "id": "expanded-143",
+    "name": "Хлорбензол",
+    "cas": "108-90-7",
+    "dangerClass": 3,
+    "rfcLifelong": 59,
+    "affectedOrgansLifelong": [
+      "нирки",
+      "печінка"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-402",
+    "name": "Хлорбутин",
+    "cas": "305-03-3",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 440
+  },
+  {
+    "id": "expanded-403",
+    "name": "Хлордан",
+    "cas": "57-74-9",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 1.3
+  },
+  {
+    "id": "expanded-404",
+    "name": "Хлордан технічний",
+    "cas": "12789-03-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.35
+  },
+  {
+    "id": "expanded-144",
+    "name": "Хлордифторметан",
+    "cas": "75-45-6",
+    "dangerClass": 4,
+    "rfcLifelong": 50,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "нирки",
+      "шлунково-кишковий тракт"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-145",
+    "name": "Хлордіоксини і дібензофурани",
+    "cas": "",
+    "dangerClass": 0,
+    "rfcLifelong": 4e-8,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "ендокринна система",
+      "печінка",
+      "репродуктивна система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-413",
+    "name": "Хлорендикова кислота",
+    "cas": "115-28-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 91
+  },
+  {
+    "id": "expanded-146",
+    "name": "Хлоретан",
+    "cas": "75-00-3",
+    "dangerClass": 4,
+    "rfcLifelong": 10,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "шлунково-кишковий тракт"
+    ],
+    "rfcAcute": 39,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-147",
+    "name": "Хлорметан",
+    "cas": "74-87-3",
+    "dangerClass": 0,
+    "rfcLifelong": 0.1,
+    "affectedOrgansLifelong": [
+      "центральна нервова система"
+    ],
+    "rfcAcute": 1,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-407",
+    "name": "Хлорметоксиметан",
+    "cas": "107-30-2",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 2.4
+  },
+  {
+    "id": "expanded-405",
+    "name": "Хлоровані парафіни С12(60% хлору)",
+    "cas": "108171-26-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 89
+  },
+  {
+    "id": "expanded-408",
+    "name": "Хлороталоніл",
+    "cas": "1897-45-6",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0031
+  },
+  {
+    "id": "expanded-148",
+    "name": "Хлороформ",
+    "cas": "67-66-3",
+    "dangerClass": 2,
+    "rfcLifelong": 98,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "нирки",
+      "печінка"
+    ],
+    "rfcAcute": 0.49,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "органи дихання",
+      "печінка",
+      "репродуктивна система"
+    ],
+    "sfi": 81
+  },
+  {
+    "id": "expanded-149",
+    "name": "Хлорпікрин",
+    "cas": "76-06-2",
+    "dangerClass": 0,
+    "rfcLifelong": 4,
+    "affectedOrgansLifelong": [
+      "органи дихання",
+      "печінка"
+    ],
+    "rfcAcute": 7,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-411",
+    "name": "Хлорпропан 2-",
+    "cas": "75-29-6",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.13
+  },
+  {
+    "id": "expanded-412",
+    "name": "Хлортріанізен",
+    "cas": "569-57-3",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 240
+  },
+  {
+    "id": "expanded-150",
+    "name": "Хлоруксусна кислота",
+    "cas": "79-11-8",
+    "dangerClass": 0,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.0018,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-151",
+    "name": "Хлорфенол 2-",
+    "cas": "95-57-8",
+    "dangerClass": 0,
+    "rfcLifelong": 0.0014,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "репродуктивна система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-415",
+    "name": "Хризен",
+    "cas": "218-01-9",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0031
+  },
+  {
+    "id": "expanded-152",
+    "name": "Хром (VI)",
+    "cas": "18540-29-9",
+    "dangerClass": 1,
+    "rfcLifelong": 0.0001,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 42
+  },
+  {
+    "id": "expanded-153",
+    "name": "Хромова кислота",
+    "cas": "7783-94-5",
+    "dangerClass": 1,
+    "rfcLifelong": 0.00001,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 42
+  },
+  {
+    "id": "expanded-154",
+    "name": "Циклогексан",
+    "cas": "110-82-7",
+    "dangerClass": 4,
+    "rfcLifelong": 0.28,
+    "affectedOrgansLifelong": [
+      "органи дихання",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-155",
+    "name": "Циклогексанол",
+    "cas": "108-93-0",
+    "dangerClass": 3,
+    "rfcLifelong": 0.00002,
+    "affectedOrgansLifelong": [
+      "м’язова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-418",
+    "name": "Циклофосфамід гідрат",
+    "cas": "6055-19-2",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.57
+  },
+  {
+    "id": "expanded-419",
+    "name": "Циклофосфан",
+    "cas": "50-18-0",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.61
+  },
+  {
+    "id": "expanded-156",
+    "name": "Цинк та сполуки",
+    "cas": "7440-66-6",
+    "dangerClass": 0,
+    "rfcLifelong": 0.0009,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "expanded-420",
+    "name": "Циннамілантранілат",
+    "cas": "87-29-6",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0.0046
+  },
+  {
+    "id": "expanded-157",
+    "name": "Ціаніди",
+    "cas": "57-12-5",
+    "dangerClass": 0,
+    "rfcLifelong": 3,
+    "affectedOrgansLifelong": [
+      "ендокринна система",
+      "нервова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  }
+]

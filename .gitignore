@@ -1,0 +1,22 @@
+# Build outputs
+web/dist
+web/node_modules
+web/*.tsbuildinfo
+web/test-results
+web/playwright-report
+launcher/bin
+
+# Releases
+releases
+
+# IDE
+.vscode
+*.user
+.*autosave
+
+# Releases
+*.zip
+*.pdf
+
+# Backup files
+*~

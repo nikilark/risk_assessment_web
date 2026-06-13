@@ -1,0 +1,5250 @@
+{
+  "options": {
+    "research_type": {
+      "cancer_lifelong": false,
+      "cancer_acute": true,
+      "non_cancer_lifelong": false,
+      "non_cancer_acute": false,
+      "suspended_particles": false
+    },
+    "file": {
+      "projects_base_path": "researches",
+      "project_name": "Нове дослідження"
+    },
+    "theme": {
+      "theme": 0,
+      "primary_color": "#009688",
+      "accent_color": "#FFC107"
+    },
+    "location": {
+      "start_location": {
+        "latitude": 47.8393,
+        "longitude": 35.1387
+      },
+      "location_api_key": ""
+    },
+    "localization": {
+      "locale": "en_US",
+      "language": "en"
+    }
+  },
+  "points": {
+    "research_points": [
+      {
+        "title": "м. Запоріжжя, 2020 р.",
+        "population": 731922,
+        "deaths": 1,
+        "coordinate": {
+          "latitude": 47.8393,
+          "longitude": 35.1387
+        }
+      }
+    ]
+  },
+  "agents": {
+    "agents": [
+      {
+        "name": "Азотна кислота",
+        "cas": "4697-37-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.04,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.09,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Азоту діоксид",
+        "cas": "10102-44-0",
+        "danger_class": 3,
+        "rfc_lifelong": 0.04,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.47,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Азоту оксид",
+        "cas": "10102-43-9",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.72,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Акрилова кислота",
+        "cas": "1979-10-07",
+        "danger_class": 3,
+        "rfc_lifelong": 1.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 6.0,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Акрилонітрил",
+        "cas": "107-13-1",
+        "danger_class": 2,
+        "rfc_lifelong": 2.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.2,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Акролеїн",
+        "cas": "0107-02-08",
+        "danger_class": 2,
+        "rfc_lifelong": 2e-05,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0001,
+        "affected_organs_acute": [
+          "органи зору"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Аліфатичні насичені альдегіди C3-C8",
+        "cas": "",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 125.0,
+        "affected_organs_acute": [
+          "органи дихання",
+          "органи зору",
+          "печінка"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Алюміній та сполуки",
+        "cas": "7429-90-5",
+        "danger_class": 0,
+        "rfc_lifelong": 5.0,
+        "affected_organs_lifelong": [
+          "центральна нервова система",
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Аміак",
+        "cas": "7664-41-7",
+        "danger_class": 4,
+        "rfc_lifelong": 0.1,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.35,
+        "affected_organs_acute": [
+          "органи дихання",
+          "органи зору"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Анілін",
+        "cas": "62-53-3",
+        "danger_class": 2,
+        "rfc_lifelong": 1.0,
+        "affected_organs_lifelong": [
+          "селезінка",
+          "кровоносна система"
+        ],
+        "rfc_acute": 0.2,
+        "affected_organs_acute": [
+          "кровоносна система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ацетальдегід",
+        "cas": "75-07-0",
+        "danger_class": 3,
+        "rfc_lifelong": 9.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 115.0,
+        "affected_organs_acute": [
+          "органи зору",
+          "слизові"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ацетон",
+        "cas": "67-64-1",
+        "danger_class": 4,
+        "rfc_lifelong": 30.0,
+        "affected_organs_lifelong": [
+          "печінка",
+          "нирки",
+          "центральна нервова система"
+        ],
+        "rfc_acute": 62.0,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ацетонітрил",
+        "cas": "1975-05-08",
+        "danger_class": 0,
+        "rfc_lifelong": 0.06,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ацетонціангідрин",
+        "cas": "75-86-5",
+        "danger_class": 0,
+        "rfc_lifelong": 0.01,
+        "affected_organs_lifelong": [
+          "печінка",
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ацетофенон",
+        "cas": "98-86-2",
+        "danger_class": 3,
+        "rfc_lifelong": 2e-05,
+        "affected_organs_lifelong": [
+          "центральна нервова система",
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Барій та сполуки",
+        "cas": "7440-39-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0005,
+        "affected_organs_lifelong": [
+          "репродуктивна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Бензил хлористий",
+        "cas": "100-44-7",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.5,
+        "affected_organs_acute": [
+          "органи дихання",
+          "органи зору"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Бензол",
+        "cas": "71-43-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.06,
+        "affected_organs_lifelong": [
+          "вроджені вади розвитку",
+          "кровоносна система",
+          "центральна нервова система"
+        ],
+        "rfc_acute": 0.15,
+        "affected_organs_acute": [
+          "імунна система",
+          "вроджені вади розвитку",
+          "репродуктивна система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Бензотрихлорид",
+        "cas": "1998-07-07",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0007,
+        "affected_organs_acute": [
+          "органи дихання",
+          "органи зору"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Берилій та сполуки",
+        "cas": "7440-41-7",
+        "danger_class": 0,
+        "rfc_lifelong": 2e-05,
+        "affected_organs_lifelong": [
+          "органи дихання",
+          "імунна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Бром",
+        "cas": "7726-95-6",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.2,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Брометен",
+        "cas": "593-60-2",
+        "danger_class": 0,
+        "rfc_lifelong": 3.0,
+        "affected_organs_lifelong": [
+          "печінка",
+          "шлунково-кишковий тракт"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Бромметан",
+        "cas": "74-83-9",
+        "danger_class": 0,
+        "rfc_lifelong": 5.0,
+        "affected_organs_lifelong": [
+          "центральна нервова система",
+          "органи дихання",
+          "вроджені вади розвитку"
+        ],
+        "rfc_acute": 0.2,
+        "affected_organs_acute": [
+          "центральна нервова система",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Бутадієн 1 3-",
+        "cas": "106-99-0",
+        "danger_class": 4,
+        "rfc_lifelong": 8.0,
+        "affected_organs_lifelong": [
+          "репродуктивна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Бутанол 2-",
+        "cas": "78-92-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.3,
+        "affected_organs_lifelong": [
+          "центральна нервова система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Бутеноксид 1-",
+        "cas": "106-88-7",
+        "danger_class": 0,
+        "rfc_lifelong": 0.02,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Бутилацетат",
+        "cas": "123-86-4",
+        "danger_class": 4,
+        "rfc_lifelong": 0.7,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Бутоксіетанол 2-",
+        "cas": "111-76-2",
+        "danger_class": 0,
+        "rfc_lifelong": 13.0,
+        "affected_organs_lifelong": [
+          "кровоносна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ванадій та сполуки",
+        "cas": "7440-62-2",
+        "danger_class": 0,
+        "rfc_lifelong": 7e-05,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0002,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Вінілацетат",
+        "cas": "0108-05-04",
+        "danger_class": 3,
+        "rfc_lifelong": 0.2,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Вінілхлорид",
+        "cas": "1975-01-04",
+        "danger_class": 0,
+        "rfc_lifelong": 5.0,
+        "affected_organs_lifelong": [
+          "вроджені вади розвитку"
+        ],
+        "rfc_acute": 1.3,
+        "affected_organs_acute": [
+          "вроджені вади розвитку"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Водень сульфід",
+        "cas": "7783-06-04",
+        "danger_class": 2,
+        "rfc_lifelong": 0.001,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.1,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Водень фтористий",
+        "cas": "7664-39-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.03,
+        "affected_organs_lifelong": [
+          "кісткова система",
+          "органи дихання"
+        ],
+        "rfc_acute": 0.2,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Водень хлорид",
+        "cas": "7647-01-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.02,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 2.1,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Водень ціанід",
+        "cas": "74-90-8",
+        "danger_class": 2,
+        "rfc_lifelong": 3.0,
+        "affected_organs_lifelong": [
+          "серцево-судинна система",
+          "центральна нервова система",
+          "ендокринна система"
+        ],
+        "rfc_acute": 0.3,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Вуглецю оксид",
+        "cas": "630-08-0",
+        "danger_class": 4,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [
+          "центральна нервова система",
+          "серцево-судинна система",
+          "кровоносна система"
+        ],
+        "rfc_acute": 23.0,
+        "affected_organs_acute": [
+          "серцево-судинна система",
+          "вроджені вади розвитку"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Гексаметилендіізоціанат",
+        "cas": "822-06-0",
+        "danger_class": 0,
+        "rfc_lifelong": 1e-05,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Гексан",
+        "cas": "110-54-3",
+        "danger_class": 4,
+        "rfc_lifelong": 0.2,
+        "affected_organs_lifelong": [
+          "центральна нервова система",
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлорбензол",
+        "cas": "118-74-1",
+        "danger_class": 0,
+        "rfc_lifelong": 3.0,
+        "affected_organs_lifelong": [
+          "печінка"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлорбутадієн",
+        "cas": "87-68-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.09,
+        "affected_organs_lifelong": [
+          "вроджені вади розвитку"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлоретан",
+        "cas": "67-72-1",
+        "danger_class": 3,
+        "rfc_lifelong": 0.08,
+        "affected_organs_lifelong": [
+          "центральна нервова система"
+        ],
+        "rfc_acute": 58.0,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Гідразин",
+        "cas": "0302-01-02",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0002,
+        "affected_organs_lifelong": [
+          "печінка",
+          "ендокринна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Диброметан 1 2-",
+        "cas": "106-93-4",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0008,
+        "affected_organs_lifelong": [
+          "нирки",
+          "печінка",
+          "вроджені вади розвитку",
+          "репродуктивна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дисульфотон",
+        "cas": "0298-04-04",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 6.0,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлордіфторметан",
+        "cas": "75-71-8",
+        "danger_class": 4,
+        "rfc_lifelong": 0.2,
+        "affected_organs_lifelong": [
+          "печінка",
+          "вроджені вади розвитку"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлоретан 1 1-",
+        "cas": "75-34-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.5,
+        "affected_organs_lifelong": [
+          "нирки"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлоретан 1 2-",
+        "cas": "0107-06-02",
+        "danger_class": 2,
+        "rfc_lifelong": 0.4,
+        "affected_organs_lifelong": [
+          "вроджені вади розвитку"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлоретилен 1 2-",
+        "cas": "540-59-0",
+        "danger_class": 0,
+        "rfc_lifelong": 0.06,
+        "affected_organs_lifelong": [
+          "печінки",
+          "біохімія крові",
+          "вроджені вади розвитку"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлорметан",
+        "cas": "1975-09-02",
+        "danger_class": 0,
+        "rfc_lifelong": 0.4,
+        "affected_organs_lifelong": [
+          "печінка",
+          "центральна нервова система",
+          "серцево-судинна система"
+        ],
+        "rfc_acute": 2.1,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлорофос",
+        "cas": "62-73-7",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 18.0,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлорпропан 1 2-",
+        "cas": "78-87-5",
+        "danger_class": 3,
+        "rfc_lifelong": 4.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлорпропен транс-1 3-",
+        "cas": "10061-02-06",
+        "danger_class": 0,
+        "rfc_lifelong": 0.02,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлорпропен цис-1 3-",
+        "cas": "10061-01-05",
+        "danger_class": 0,
+        "rfc_lifelong": 0.02,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлорпропен 1 3-",
+        "cas": "542-75-6",
+        "danger_class": 2,
+        "rfc_lifelong": 0.02,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлорфторметан",
+        "cas": "75-43-4",
+        "danger_class": 4,
+        "rfc_lifelong": 0.6,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Діванадій пентооксид",
+        "cas": "1314-62-1",
+        "danger_class": 1,
+        "rfc_lifelong": 7e-05,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Діетиламін",
+        "cas": "124-40-3",
+        "danger_class": 2,
+        "rfc_lifelong": 2e-05,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ділильних двигунів емісії",
+        "cas": "",
+        "danger_class": 0,
+        "rfc_lifelong": 5.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Епіхлоргідрин",
+        "cas": "106-89-8",
+        "danger_class": 2,
+        "rfc_lifelong": 1.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 3.0,
+        "affected_organs_acute": [
+          "органи зору",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Етанол",
+        "cas": "64-17-5",
+        "danger_class": 4,
+        "rfc_lifelong": 100.0,
+        "affected_organs_lifelong": [
+          "органи дихання",
+          "центральна нервова система"
+        ],
+        "rfc_acute": 100.0,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Етилацетат",
+        "cas": "141-78-6",
+        "danger_class": 4,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 140.0,
+        "affected_organs_acute": [
+          "органи зору",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Етилен",
+        "cas": "74-85-1",
+        "danger_class": 3,
+        "rfc_lifelong": 0.1,
+        "affected_organs_lifelong": [
+          "кровоносна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Етиленбензол",
+        "cas": "100-41-4",
+        "danger_class": 3,
+        "rfc_lifelong": 1.0,
+        "affected_organs_lifelong": [
+          "вроджені вади розвитку",
+          "печінка",
+          "нирки",
+          "ендокринна система"
+        ],
+        "rfc_acute": 1.0,
+        "affected_organs_acute": [
+          "вроджені вади розвитку"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Етиленгликоль",
+        "cas": "107-21-1",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 1.3,
+        "affected_organs_acute": [
+          "нирки"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Етиленоксид",
+        "cas": "75-21-8",
+        "danger_class": 3,
+        "rfc_lifelong": 5.0,
+        "affected_organs_lifelong": [
+          "кровоносна система",
+          "мутаген."
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Етилмеркаптан",
+        "cas": "1975-08-01",
+        "danger_class": 0,
+        "rfc_lifelong": 1.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.1,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Етоксиетанол 2-",
+        "cas": "110-80-5",
+        "danger_class": 0,
+        "rfc_lifelong": 0.2,
+        "affected_organs_lifelong": [
+          "репродуктивна система",
+          "кровоносна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Етоксиетилацетат 2-",
+        "cas": "111-15-9",
+        "danger_class": 0,
+        "rfc_lifelong": 0.3,
+        "affected_organs_lifelong": [
+          "репродуктивна система",
+          "кровоносна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Зважені частинки (TSP)",
+        "cas": "",
+        "danger_class": 3,
+        "rfc_lifelong": 0.1,
+        "affected_organs_lifelong": [
+          "органи дихання",
+          "серцево-судинна система",
+          "вроджені вади розвитку",
+          "смертність"
+        ],
+        "rfc_acute": 0.3,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Завислі частинки (РМ10)",
+        "cas": "",
+        "danger_class": 0,
+        "rfc_lifelong": 0.05,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.15,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Завислі частинки (РМ2.5)",
+        "cas": "",
+        "danger_class": 0,
+        "rfc_lifelong": 15.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 65.0,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Изопропанол",
+        "cas": "67-63-0",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 3.0,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ізопропілбензол",
+        "cas": "98-82-8",
+        "danger_class": 4,
+        "rfc_lifelong": 0.4,
+        "affected_organs_lifelong": [
+          "нирки",
+          "ендокринна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ізофорон",
+        "cas": "78-59-1",
+        "danger_class": 0,
+        "rfc_lifelong": 12.0,
+        "affected_organs_lifelong": [
+          "маса тіла"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Кадмій та сполуки",
+        "cas": "7440-43-9",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0002,
+        "affected_organs_lifelong": [
+          "нирки",
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Керосин",
+        "cas": "8008-20-6",
+        "danger_class": 0,
+        "rfc_lifelong": 0.01,
+        "affected_organs_lifelong": [
+          "печінка"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Кобальт та сполуки",
+        "cas": "7440-48-4",
+        "danger_class": 1,
+        "rfc_lifelong": 5e-05,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Крезол",
+        "cas": "1319-77-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 2.2,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ксилол",
+        "cas": "1330-20-7",
+        "danger_class": 3,
+        "rfc_lifelong": 0.3,
+        "affected_organs_lifelong": [
+          "центральна нервова система",
+          "кровоносна система",
+          "біохімія крові"
+        ],
+        "rfc_acute": 4.3,
+        "affected_organs_acute": [
+          "центральна нервова система",
+          "органи дихання",
+          "органи зору"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Малеиновий ангідрид",
+        "cas": "108-31-6",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.1,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Марганець та сполуки",
+        "cas": "7439-96-5",
+        "danger_class": 0,
+        "rfc_lifelong": 5e-05,
+        "affected_organs_lifelong": [
+          "центральна нервова система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Метанол",
+        "cas": "67-56-1",
+        "danger_class": 3,
+        "rfc_lifelong": 4.0,
+        "affected_organs_lifelong": [
+          "вроджені вади розвитку"
+        ],
+        "rfc_acute": 30.0,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Метилгидразин",
+        "cas": "60-34-4",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.00094,
+        "affected_organs_acute": [
+          "кровоносна система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Метилізоціанат",
+        "cas": "624-83-9",
+        "danger_class": 0,
+        "rfc_lifelong": 1.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0047,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Метилмеркаптан",
+        "cas": "74-93-1",
+        "danger_class": 4,
+        "rfc_lifelong": 1.0,
+        "affected_organs_lifelong": [
+          "органи дихання",
+          "центральна нервова система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Метилметакрилат",
+        "cas": "80-62-6",
+        "danger_class": 3,
+        "rfc_lifelong": 0.7,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Метил-трет-бутиловий ефір",
+        "cas": "1634-04-04",
+        "danger_class": 4,
+        "rfc_lifelong": 3.0,
+        "affected_organs_lifelong": [
+          "печінка",
+          "нирки"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Миш’як",
+        "cas": "7440-38-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0004,
+        "affected_organs_acute": [
+          "репродуктивна система",
+          "вроджені вади розвитку"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Мідь сульфат",
+        "cas": "7758-98-7",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.1,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Мідь та сполуки",
+        "cas": "7440-50-8",
+        "danger_class": 0,
+        "rfc_lifelong": 2e-05,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.1,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "м-Ксилол",
+        "cas": "108-38-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 22.0,
+        "affected_organs_acute": [
+          "органи зору",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Натрію гидроксид",
+        "cas": "1310-73-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 5.0,
+        "affected_organs_acute": [
+          "органи дихання",
+          "органи зору"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Нікель",
+        "cas": "7440-02-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 3.0,
+        "affected_organs_acute": [
+          "імунна система",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Нікель карбонил",
+        "cas": "13463-39-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 6.0,
+        "affected_organs_acute": [
+          "імунна система",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Нітробензол",
+        "cas": "98-95-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.5,
+        "affected_organs_acute": [
+          "центральна нервова система",
+          "печінка",
+          "кровоносна система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Озон",
+        "cas": "10028-15-6",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.18,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "о-Ксилол",
+        "cas": "95-47-6",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 22.0,
+        "affected_organs_acute": [
+          "органи зору",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Оцтова кислота",
+        "cas": "64-19-7",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 3.7,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Паратион",
+        "cas": "56-38-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 2.0,
+        "affected_organs_acute": [
+          "біохімія крові"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Перилен",
+        "cas": "198-55-0",
+        "danger_class": 0,
+        "rfc_lifelong": 0.07,
+        "affected_organs_lifelong": [
+          "нирки"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Пероксиацетилнитрат",
+        "cas": "2278-22-0",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0088,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Піридин",
+        "cas": "110-86-1",
+        "danger_class": 2,
+        "rfc_lifelong": 7.0,
+        "affected_organs_lifelong": [
+          "печінка",
+          "біохімія крові"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "п-Ксилол",
+        "cas": "106-42-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.44,
+        "affected_organs_lifelong": [
+          "вроджені вади розвитку",
+          "центральна нервова система",
+          "органи дихання"
+        ],
+        "rfc_acute": 22.0,
+        "affected_organs_acute": [
+          "органи зору",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Поліхлоровані біфеніли",
+        "cas": "1136-36-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0012,
+        "affected_organs_lifelong": [
+          "печінка",
+          "нирки",
+          "ендокринна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Пропілен",
+        "cas": "0115-07-01",
+        "danger_class": 3,
+        "rfc_lifelong": 3.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Пропілен оксид",
+        "cas": "75-56-9",
+        "danger_class": 1,
+        "rfc_lifelong": 0.03,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 6.0,
+        "affected_organs_acute": [
+          "органи зору",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ртуть та сполуки",
+        "cas": "7439-97-6",
+        "danger_class": 1,
+        "rfc_lifelong": 3.0,
+        "affected_organs_lifelong": [
+          "центральна нервова система"
+        ],
+        "rfc_acute": 2.0,
+        "affected_organs_acute": [
+          "вроджені вади розвитку",
+          "репродуктивна система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Свинець та його неорганічні сполуки",
+        "cas": "7439-92-1",
+        "danger_class": 1,
+        "rfc_lifelong": 0.00015,
+        "affected_organs_lifelong": [
+          "центральна нервова система",
+          "вроджені вади розвитку",
+          "кровоносна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Селен",
+        "cas": "7782-79-2",
+        "danger_class": 0,
+        "rfc_lifelong": 8e-05,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 3.0,
+        "affected_organs_acute": [
+          "органи дихання",
+          "органи зору"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Сірки діоксид",
+        "cas": "7446-09-05",
+        "danger_class": 3,
+        "rfc_lifelong": 0.08,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.66,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Сірковуглець",
+        "cas": "75-15-0",
+        "danger_class": 0,
+        "rfc_lifelong": 0.7,
+        "affected_organs_lifelong": [
+          "центральна нервова система",
+          "вроджені вади розвитку"
+        ],
+        "rfc_acute": 20.0,
+        "affected_organs_acute": [
+          "репродуктивна система",
+          "вроджені вади розвитку",
+          "кровоносна система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Сірчана кислота",
+        "cas": "7664-93-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.1,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Стирол",
+        "cas": "100-42-5",
+        "danger_class": 0,
+        "rfc_lifelong": 1.0,
+        "affected_organs_lifelong": [
+          "центральна нервова система"
+        ],
+        "rfc_acute": 20.0,
+        "affected_organs_acute": [
+          "органи зору",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Стиролу оксид",
+        "cas": "1996-09-03",
+        "danger_class": 0,
+        "rfc_lifelong": 6.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Сульфати",
+        "cas": "14808-79-8",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.05,
+        "affected_organs_acute": [
+          "органи дихання",
+          "системні"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Сурьма",
+        "cas": "7440-36-0",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0004,
+        "affected_organs_acute": [
+          "кровоносна система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Тетраетилсвинец",
+        "cas": "78-00-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 4.0,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Тетрахлоретан",
+        "cas": "56-23-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.04,
+        "affected_organs_lifelong": [
+          "печінка",
+          "вроджені вади розвитку"
+        ],
+        "rfc_acute": 1.3,
+        "affected_organs_acute": [
+          "печінка",
+          "репродуктивна система",
+          "вроджені вади розвитку"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Тетрахлоретилен",
+        "cas": "127-18-4",
+        "danger_class": 2,
+        "rfc_lifelong": 35.0,
+        "affected_organs_lifelong": [
+          "нирки",
+          "печінка",
+          "вроджені вади розвитку",
+          "центральна нервова система"
+        ],
+        "rfc_acute": 1.4,
+        "affected_organs_acute": [
+          "центральна нервова система",
+          "вроджені вади розвитку",
+          "нирки",
+          "печінка",
+          "органи зору",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Тетрахлорфенол",
+        "cas": "25167-83-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.09,
+        "affected_organs_lifelong": [
+          "печінка"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Толуол",
+        "cas": "108-88-3",
+        "danger_class": 3,
+        "rfc_lifelong": 0.4,
+        "affected_organs_lifelong": [
+          "центральна нервова система",
+          "вроджені вади розвитку",
+          "органи дихання"
+        ],
+        "rfc_acute": 3.8,
+        "affected_organs_acute": [
+          "центральна нервова система",
+          "органи зору",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "транс-1 2-Дихлоретилен",
+        "cas": "156-60-5",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.8,
+        "affected_organs_acute": [
+          "печінка"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Триетиламін",
+        "cas": "121-44-8",
+        "danger_class": 3,
+        "rfc_lifelong": 7.0,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 3.0,
+        "affected_organs_acute": [
+          "органи дихання",
+          "органи зору"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Трикрезол",
+        "cas": "1319-77-3",
+        "danger_class": 2,
+        "rfc_lifelong": 4.0,
+        "affected_organs_lifelong": [
+          "кровоносна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Трихлоретилен",
+        "cas": "1979-01-06",
+        "danger_class": 3,
+        "rfc_lifelong": 0.6,
+        "affected_organs_lifelong": [
+          "вроджені вади розвитку"
+        ],
+        "rfc_acute": 11.0,
+        "affected_organs_acute": [
+          "центральна нервова система",
+          "вроджені вади розвитку"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Трихлорфторметан",
+        "cas": "75-69-4",
+        "danger_class": 4,
+        "rfc_lifelong": 20.0,
+        "affected_organs_lifelong": [
+          "вроджені вади розвитку",
+          "нирки",
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Уран гексафторид",
+        "cas": "7783-81-5",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 3.6,
+        "affected_organs_acute": [
+          "нирки"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Фенол",
+        "cas": "108-95-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.006,
+        "affected_organs_lifelong": [
+          "серцево-судинна система",
+          "нирки",
+          "центральна нервова система",
+          "печінка"
+        ],
+        "rfc_acute": 6.0,
+        "affected_organs_acute": [
+          "органи зору",
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Флориди",
+        "cas": "16984-48-8",
+        "danger_class": 0,
+        "rfc_lifelong": 0.03,
+        "affected_organs_lifelong": [
+          "органи дихання",
+          "кісткова система"
+        ],
+        "rfc_acute": 0.25,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Формальдегід",
+        "cas": "50-00-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.003,
+        "affected_organs_lifelong": [
+          "органи дихання",
+          "імунна система"
+        ],
+        "rfc_acute": 0.048,
+        "affected_organs_acute": [
+          "органи дихання",
+          "органи зору"
+        ],
+        "sfi": 0.046,
+        "selected": false
+      },
+      {
+        "name": "Фосген",
+        "cas": "75-44-5",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0003,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 4.0,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Фосфін",
+        "cas": "7803-51-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.13,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Фосфор",
+        "cas": "7723-14-0",
+        "danger_class": 0,
+        "rfc_lifelong": 7e-05,
+        "affected_organs_lifelong": [
+          "репродуктива система",
+          "волосся"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Фосфор жовтий",
+        "cas": "12185-10-03",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.02,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Фосфорна кислота",
+        "cas": "7664-38-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.01,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Фталевий ангідрид",
+        "cas": "85-44-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.01,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Фтор",
+        "cas": "7782-41-4",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 3.0,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Фтористо-водородна кислота",
+        "cas": "7664-39-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.25,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Фурфурол",
+        "cas": "1998-01-01",
+        "danger_class": 3,
+        "rfc_lifelong": 0.05,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлор",
+        "cas": "7782-05-05",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0002,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.2,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлор діоксид",
+        "cas": "10049-04-04",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0002,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлор пропан 2-",
+        "cas": "75-29-6",
+        "danger_class": 0,
+        "rfc_lifelong": 0.1,
+        "affected_organs_lifelong": [
+          "печінка"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлорбензол",
+        "cas": "108-90-7",
+        "danger_class": 3,
+        "rfc_lifelong": 59.0,
+        "affected_organs_lifelong": [
+          "печінка",
+          "нирки"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлордифторметан",
+        "cas": "75-45-6",
+        "danger_class": 4,
+        "rfc_lifelong": 50.0,
+        "affected_organs_lifelong": [
+          "нирки",
+          "шлунково-кишковий тракт",
+          "вроджені вади розвитку"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлордіоксини і дібензофурани",
+        "cas": "",
+        "danger_class": 0,
+        "rfc_lifelong": 4e-08,
+        "affected_organs_lifelong": [
+          "печінка",
+          "репродуктивна система",
+          "вроджені вади розвитку",
+          "ендокринна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлоретан",
+        "cas": "75-00-3",
+        "danger_class": 4,
+        "rfc_lifelong": 10.0,
+        "affected_organs_lifelong": [
+          "вроджені вади розвитку",
+          "шлунково-кишковий тракт"
+        ],
+        "rfc_acute": 39.0,
+        "affected_organs_acute": [
+          "вроджені вади розвитку"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлорметан",
+        "cas": "74-87-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.1,
+        "affected_organs_lifelong": [
+          "центральна нервова система"
+        ],
+        "rfc_acute": 1.0,
+        "affected_organs_acute": [
+          "центральна нервова система"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлороформ",
+        "cas": "67-66-3",
+        "danger_class": 2,
+        "rfc_lifelong": 98.0,
+        "affected_organs_lifelong": [
+          "печінка",
+          "вроджені вади розвитку",
+          "нирки"
+        ],
+        "rfc_acute": 0.49,
+        "affected_organs_acute": [
+          "печінка",
+          "органи дихання",
+          "репродуктивна система",
+          "вроджені вади розвитку"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлорпікрин",
+        "cas": "1976-06-02",
+        "danger_class": 0,
+        "rfc_lifelong": 4.0,
+        "affected_organs_lifelong": [
+          "печінка",
+          "органи дихання"
+        ],
+        "rfc_acute": 7.0,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлоруксусна кислота",
+        "cas": "1979-11-08",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0018,
+        "affected_organs_acute": [
+          "органи дихання"
+        ],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хлорфенол 2-",
+        "cas": "95-57-8",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0014,
+        "affected_organs_lifelong": [
+          "вроджені вади розвитку",
+          "репродуктивна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хром (VI)",
+        "cas": "18540-29-9",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0001,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Хромова кислота",
+        "cas": "7783-94-5",
+        "danger_class": 0,
+        "rfc_lifelong": 1e-05,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Циклогексан",
+        "cas": "110-82-7",
+        "danger_class": 4,
+        "rfc_lifelong": 0.28,
+        "affected_organs_lifelong": [
+          "центральна нервова система",
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Циклогексанол",
+        "cas": "108-93-0",
+        "danger_class": 3,
+        "rfc_lifelong": 2e-05,
+        "affected_organs_lifelong": [
+          "м’язова система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Цинк та сполуки",
+        "cas": "7440-66-6",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0009,
+        "affected_organs_lifelong": [
+          "органи дихання"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Ціаніди",
+        "cas": "1957-12-05",
+        "danger_class": 0,
+        "rfc_lifelong": 3.0,
+        "affected_organs_lifelong": [
+          "нервова система",
+          "ендокринна система"
+        ],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0,
+        "selected": false
+      },
+      {
+        "name": "Азасерин",
+        "cas": "0115-02-06",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 11.0,
+        "selected": false
+      },
+      {
+        "name": "Азатіоприн",
+        "cas": "446-86-6",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.8,
+        "selected": false
+      },
+      {
+        "name": "Азобензол",
+        "cas": "103-33-3",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.11,
+        "selected": false
+      },
+      {
+        "name": "Акриламід",
+        "cas": "1979-06-01",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 4.5,
+        "selected": false
+      },
+      {
+        "name": "Акрилонітрил",
+        "cas": "107-13-1",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.24,
+        "selected": false
+      },
+      {
+        "name": "Актиноміцин D",
+        "cas": "50-76-0",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 8700.0,
+        "selected": false
+      },
+      {
+        "name": "Алар",
+        "cas": "1596-84-5",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 18.0,
+        "selected": false
+      },
+      {
+        "name": "Алдрин",
+        "cas": "309-00-2",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 17.0,
+        "selected": false
+      },
+      {
+        "name": "Алліл хлористий",
+        "cas": "0107-05-01",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 21.0,
+        "selected": false
+      },
+      {
+        "name": "Аміно-2-метилантрахінон 1-",
+        "cas": "82-28-0",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.15,
+        "selected": false
+      },
+      {
+        "name": "Аміно-6-метилдіпірідилдо(1 2-а:3’ 2’-d)імідазол 2-",
+        "cas": "2194-11-04",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 4.8,
+        "selected": false
+      },
+      {
+        "name": "Аміно-9Н-піридо[2 3-b]індол",
+        "cas": "26148-68-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.4,
+        "selected": false
+      },
+      {
+        "name": "Аміно-9-етилкарбазол 3- гідрохлорид",
+        "cas": "6109-97-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 78.0,
+        "selected": false
+      },
+      {
+        "name": "Аміноазотолуол о-",
+        "cas": "97-56-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 3.8,
+        "selected": false
+      },
+      {
+        "name": "Амінодіпірідо(1 2- а:3’ 2’-d)імідазол 2-",
+        "cas": "2194-10-03",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.4,
+        "selected": false
+      },
+      {
+        "name": "Амінодіфеніл 4-",
+        "cas": "92-67-1",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 21.0,
+        "selected": false
+      },
+      {
+        "name": "Амітрол",
+        "cas": "61-82-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.91,
+        "selected": false
+      },
+      {
+        "name": "Анілін",
+        "cas": "62-53-3",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0057,
+        "selected": false
+      },
+      {
+        "name": "Араміт",
+        "cas": "140-57-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 25.0,
+        "selected": false
+      },
+      {
+        "name": "Аурамін",
+        "cas": "492-80-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.88,
+        "selected": false
+      },
+      {
+        "name": "Ацетальдегід",
+        "cas": "75-07-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0077,
+        "selected": false
+      },
+      {
+        "name": "Ацетамід",
+        "cas": "60-35-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.07,
+        "selected": false
+      },
+      {
+        "name": "Ацетиламінофлуорен",
+        "cas": "53-96-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 3.8,
+        "selected": false
+      },
+      {
+        "name": "Ацетофенетидин п-",
+        "cas": "62-44-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0022,
+        "selected": false
+      },
+      {
+        "name": "Бенз[а]антрацен",
+        "cas": "56-55-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.31,
+        "selected": false
+      },
+      {
+        "name": "Бензо[b]флуорантен",
+        "cas": "205-99-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.39,
+        "selected": false
+      },
+      {
+        "name": "Бензо[j]флуорантен",
+        "cas": "205-82-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.39,
+        "selected": false
+      },
+      {
+        "name": "Бензо[k]флуорантен",
+        "cas": "0207-08-09",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 31.0,
+        "selected": false
+      },
+      {
+        "name": "Бенз(а)пірен",
+        "cas": "50-32-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 3.1,
+        "selected": false
+      },
+      {
+        "name": "Бензол",
+        "cas": "71-43-2",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 27.0,
+        "selected": false
+      },
+      {
+        "name": "Берилій",
+        "cas": "7440-41-7",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 8.4,
+        "selected": false
+      },
+      {
+        "name": "Берилій оксид",
+        "cas": "1304-56-9",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 7.0,
+        "selected": false
+      },
+      {
+        "name": "Берилій сульфат (1:1)",
+        "cas": "13510-19-1",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 3000.0,
+        "selected": false
+      },
+      {
+        "name": "Біс(2-хлорізопроріловий)ефір",
+        "cas": "39638-32-9",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 35.0,
+        "selected": false
+      },
+      {
+        "name": "Біс(2-хлоретиловий)ефір",
+        "cas": "111-44-4",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.15,
+        "selected": false
+      },
+      {
+        "name": "Біс(п-хлорфеніл)-1 1-діхлоретилен 2 2-",
+        "cas": "72-55-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.34,
+        "selected": false
+      },
+      {
+        "name": "Біфінелол 2- натрієва сіль",
+        "cas": "132-27-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 3.0,
+        "selected": false
+      },
+      {
+        "name": "Бромдіфеніли",
+        "cas": "",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 30.0,
+        "selected": false
+      },
+      {
+        "name": "Бромдихлорметан",
+        "cas": "75-27-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.13,
+        "selected": false
+      },
+      {
+        "name": "Бромоформ",
+        "cas": "75-25-2",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0039,
+        "selected": false
+      },
+      {
+        "name": "Брометен",
+        "cas": "593-60-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.11,
+        "selected": false
+      },
+      {
+        "name": "Бутадієн 1 3-",
+        "cas": "106-99-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.8,
+        "selected": false
+      },
+      {
+        "name": "Бутіролактон бета-",
+        "cas": "3068-88-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.0,
+        "selected": false
+      },
+      {
+        "name": "Вінілхлорид",
+        "cas": "1975-01-04",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.3,
+        "selected": false
+      },
+      {
+        "name": "Гексахлоран",
+        "cas": "608-73-1",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.78,
+        "selected": false
+      },
+      {
+        "name": "Гексахлорбензол",
+        "cas": "118-74-1",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.6,
+        "selected": false
+      },
+      {
+        "name": "Гексахлорбутадієн",
+        "cas": "87-68-3",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 77.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлордібензо-п-діоксин",
+        "cas": "34465-46-8",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 3300.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлордібензо-п-діоксин 1 2 3 4 7 8 -",
+        "cas": "39227-28-6",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16000.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлордібензо-п-діоксин 1 2 3 7 8 9-",
+        "cas": "19408-74-3",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 4550.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлордібензо-п-діоксин 1 2 3 6 7 8-",
+        "cas": "57653-85-7",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16000.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлордібензофуран 1 2 3 4 7 8-",
+        "cas": "70648-26-9",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16000.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлордібензофуран 1 2 3 6 7 8-",
+        "cas": "57117-44-9",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16000.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлордібензофуран 1 2 3 7 8 9-",
+        "cas": "72918-21-9",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16000.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлордібензофуран 2 3 4 6 7 8-",
+        "cas": "60851-34-5",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16000.0,
+        "selected": false
+      },
+      {
+        "name": "Гексахлоретан",
+        "cas": "67-72-1",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 14.0,
+        "selected": false
+      },
+      {
+        "name": "Гептахлор",
+        "cas": "76-44-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 4.5,
+        "selected": false
+      },
+      {
+        "name": "Гептахлордібензо-п-діоксин 1 2 3 4 6 7 8-",
+        "cas": "35822-46-9",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1600.0,
+        "selected": false
+      },
+      {
+        "name": "Гептахлордібензофуран 1 2 3 4 6 7 8-",
+        "cas": "67562-39-4",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1600.0,
+        "selected": false
+      },
+      {
+        "name": "Гептахлордібензофуран 1 2 3 4 7 8 9-",
+        "cas": "",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1300.0,
+        "selected": false
+      },
+      {
+        "name": "Гептахлорепоксид",
+        "cas": "1024-57-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 9.1,
+        "selected": false
+      },
+      {
+        "name": "Гідразин",
+        "cas": "0302-01-02",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 17.1,
+        "selected": false
+      },
+      {
+        "name": "Гідразин сульфат",
+        "cas": "10034-93-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 17.0,
+        "selected": false
+      },
+      {
+        "name": "Гіромітрин",
+        "cas": "16568-02-08",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 10.0,
+        "selected": false
+      },
+      {
+        "name": "Дакарбазин",
+        "cas": "4342-03-04",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 49.0,
+        "selected": false
+      },
+      {
+        "name": "ДДТ",
+        "cas": "50-29-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.34,
+        "selected": false
+      },
+      {
+        "name": "Ді(2-етилгексил)фталат",
+        "cas": "117-81-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0084,
+        "selected": false
+      },
+      {
+        "name": "Діаміноанізол 2 4- сульфат",
+        "cas": "39156-41-7",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 13.0,
+        "selected": false
+      },
+      {
+        "name": "Діаміноанізол 2 4-",
+        "cas": "0615-05-04",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 23.0,
+        "selected": false
+      },
+      {
+        "name": "Діамінодіфенілметан 4 4’-",
+        "cas": "101-77-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.6,
+        "selected": false
+      },
+      {
+        "name": "Дибенз[а j]акрідин",
+        "cas": "224-42-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.39,
+        "selected": false
+      },
+      {
+        "name": "Дибенз(а h)антрацен",
+        "cas": "53-70-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 3.1,
+        "selected": false
+      },
+      {
+        "name": "Дибенз[а h]акрідин",
+        "cas": "226-36-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.39,
+        "selected": false
+      },
+      {
+        "name": "Дибенз[f j]антрацен",
+        "cas": "194-59-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.9,
+        "selected": false
+      },
+      {
+        "name": "Дибензо[а h)пірен",
+        "cas": "189-64-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Дибензо[a i]пірен",
+        "cas": "189-55-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Дибензо[a l]пірен",
+        "cas": "191-30-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Дибромхлорметан",
+        "cas": "124-48-1",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 94.0,
+        "selected": false
+      },
+      {
+        "name": "Диброметан 1 2-",
+        "cas": "106-93-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.77,
+        "selected": false
+      },
+      {
+        "name": "Дигідроксінантрахінон 1 8-",
+        "cas": "0117-10-02",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 76.0,
+        "selected": false
+      },
+      {
+        "name": "Дигідросафрол",
+        "cas": "94-58-6",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 44.0,
+        "selected": false
+      },
+      {
+        "name": "Дигліциділрезорциновий ефір",
+        "cas": "101-90-6",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.7,
+        "selected": false
+      },
+      {
+        "name": "Диметилбенз[а]антрацен 7 12-",
+        "cas": "57-97-6",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 250.0,
+        "selected": false
+      },
+      {
+        "name": "Диметилгідразин 1 1-",
+        "cas": "57-14-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 550.0,
+        "selected": false
+      },
+      {
+        "name": "Диметилкарбамоілхлорид",
+        "cas": "79-44-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 13.0,
+        "selected": false
+      },
+      {
+        "name": "Динітропірен 1 6-",
+        "cas": "42397-64-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Динітропірен 1 8-",
+        "cas": "42397-65-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Динітротолуол 2 4-",
+        "cas": "121-14-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.31,
+        "selected": false
+      },
+      {
+        "name": "Діоксан 1 4-",
+        "cas": "123-91-1",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 27.0,
+        "selected": false
+      },
+      {
+        "name": "Дифенілгідразин 1 2-",
+        "cas": "122-66-7",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.77,
+        "selected": false
+      },
+      {
+        "name": "Дихлорбензол 1 4-",
+        "cas": "106-46-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.04,
+        "selected": false
+      },
+      {
+        "name": "Дихлорбут-2-ен 1 4-",
+        "cas": "764-41-0",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 9.3,
+        "selected": false
+      },
+      {
+        "name": "Дихлордіметиловий ефір 1 1’-",
+        "cas": "542-88-1",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 217.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлорізопропіловий ефір 2 2’-",
+        "cas": "108-60-1",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 35.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлорметан",
+        "cas": "1975-09-02",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0016,
+        "selected": false
+      },
+      {
+        "name": "Дихлорофос",
+        "cas": "62-73-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.29,
+        "selected": false
+      },
+      {
+        "name": "Дихлорпропан 1 2-",
+        "cas": "78-87-5",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 63.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлорпропен транс-1 3-",
+        "cas": "10061-02-06",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.13,
+        "selected": false
+      },
+      {
+        "name": "Дихлорпропен цис-1 3-",
+        "cas": "10061-01-05",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.13,
+        "selected": false
+      },
+      {
+        "name": "Дихлоретан 1 1-",
+        "cas": "75-34-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0057,
+        "selected": false
+      },
+      {
+        "name": "Дихлоретан 1 2-",
+        "cas": "0107-06-02",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 91.0,
+        "selected": false
+      },
+      {
+        "name": "Дихлоретилен 1 1-",
+        "cas": "75-35-4",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.18,
+        "selected": false
+      },
+      {
+        "name": "Діелдрін",
+        "cas": "60-57-1",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16.0,
+        "selected": false
+      },
+      {
+        "name": "Діетилстілбестрол",
+        "cas": "56-53-1",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 490.0,
+        "selected": false
+      },
+      {
+        "name": "Епіхлоргідрин",
+        "cas": "106-89-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0042,
+        "selected": false
+      },
+      {
+        "name": "Естрадіол",
+        "cas": "50-28-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Етиленімін",
+        "cas": "151-56-4",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 65.0,
+        "selected": false
+      },
+      {
+        "name": "Естрадіол",
+        "cas": "50-28-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Етиленімін",
+        "cas": "151-56-4",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 65.0,
+        "selected": false
+      },
+      {
+        "name": "Індено[1 2 3-с d]пірен",
+        "cas": "193-39-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.31,
+        "selected": false
+      },
+      {
+        "name": "Кадмій",
+        "cas": "7440-43-9",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 6.3,
+        "selected": false
+      },
+      {
+        "name": "Калію бромат",
+        "cas": "7758-01-02",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.49,
+        "selected": false
+      },
+      {
+        "name": "Кам’яновугільні смоли",
+        "cas": "8007-45-2",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 2.17,
+        "selected": false
+      },
+      {
+        "name": "Каптан",
+        "cas": "0133-06-02",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0023,
+        "selected": false
+      },
+      {
+        "name": "Каптофол",
+        "cas": "2425-06-01",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.15,
+        "selected": false
+      },
+      {
+        "name": "Кепон",
+        "cas": "143-50-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16.0,
+        "selected": false
+      },
+      {
+        "name": "Купферон",
+        "cas": "135-20-6",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.22,
+        "selected": false
+      },
+      {
+        "name": "Лізіокарпін",
+        "cas": "303-34-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 7.8,
+        "selected": false
+      },
+      {
+        "name": "Ліндан",
+        "cas": "58-89-9",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.1,
+        "selected": false
+      },
+      {
+        "name": "Ліндан альфа-",
+        "cas": "319-84-6",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 6.3,
+        "selected": false
+      },
+      {
+        "name": "Ліндан бета-",
+        "cas": "319-85-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.85,
+        "selected": false
+      },
+      {
+        "name": "Мелфалан",
+        "cas": "148-82-3",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 130.0,
+        "selected": false
+      },
+      {
+        "name": "Метил-1-нітроантрахінон 2-",
+        "cas": "129-15-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 4.3,
+        "selected": false
+      },
+      {
+        "name": "Метил-1-хлорпроп-1-ен 2",
+        "cas": "513-37-1",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 45.0,
+        "selected": false
+      },
+      {
+        "name": "Метил-2-метоксианілін 5-",
+        "cas": "120-71-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.15,
+        "selected": false
+      },
+      {
+        "name": "Метил-N’-нітрозо-N-нітрогуанідин N-",
+        "cas": "70-25-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 8.3,
+        "selected": false
+      },
+      {
+        "name": "Метиланілін 2-",
+        "cas": "95-53-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.18,
+        "selected": false
+      },
+      {
+        "name": "Метиланілін 2- гідрохлорид",
+        "cas": "636-21-5",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.13,
+        "selected": false
+      },
+      {
+        "name": "Метілен біс(2-хлоранілін)4 4’-",
+        "cas": "101-14-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.13,
+        "selected": false
+      },
+      {
+        "name": "Метилендіанілін 4 4’ діхлорид",
+        "cas": "13552-44-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.2,
+        "selected": false
+      },
+      {
+        "name": "Метилметансульфонат",
+        "cas": "66-27-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 99.0,
+        "selected": false
+      },
+      {
+        "name": "Метилтіоурацил",
+        "cas": "1956-04-02",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.4,
+        "selected": false
+      },
+      {
+        "name": "Метил-трет-бутиловий ефір",
+        "cas": "1634-04-04",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.00015,
+        "selected": false
+      },
+      {
+        "name": "Метилхолантрен 3-",
+        "cas": "56-49-5",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 22.0,
+        "selected": false
+      },
+      {
+        "name": "Метилхрізен 5-",
+        "cas": "3697-24-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 3.9,
+        "selected": false
+      },
+      {
+        "name": "Метокси-5-нітроанілін 2-",
+        "cas": "99-59-2",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 49.0,
+        "selected": false
+      },
+      {
+        "name": "Метоксианілін 2-",
+        "cas": "90-04-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.14,
+        "selected": false
+      },
+      {
+        "name": "Метоксибензамін 2- гідрохлорид",
+        "cas": "134-29-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.11,
+        "selected": false
+      },
+      {
+        "name": "Мірекс",
+        "cas": "2385-85-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 18.0,
+        "selected": false
+      },
+      {
+        "name": "Мітоміцин С",
+        "cas": "1950-07-07",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 8200.0,
+        "selected": false
+      },
+      {
+        "name": "Монокроталін",
+        "cas": "315-22-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 10.0,
+        "selected": false
+      },
+      {
+        "name": "Миш’як",
+        "cas": "7440-38-2",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 15.0,
+        "selected": false
+      },
+      {
+        "name": "Нафтиламін 2-",
+        "cas": "91-59-8",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.8,
+        "selected": false
+      },
+      {
+        "name": "Нафто(1 2 3 4-def)хрізен",
+        "cas": "192-65-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 3.9,
+        "selected": false
+      },
+      {
+        "name": "Нікель",
+        "cas": "7440-02-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.91,
+        "selected": false
+      },
+      {
+        "name": "Нікель очищений пил",
+        "cas": "",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.84,
+        "selected": false
+      },
+      {
+        "name": "Нікель субсульфід",
+        "cas": "12035-72-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.68,
+        "selected": false
+      },
+      {
+        "name": "Нітрилотриоцтова кислота",
+        "cas": "139-13-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0053,
+        "selected": false
+      },
+      {
+        "name": "Нітрилотриоцтова кислота тринатрі- єва сіль моногідрат",
+        "cas": "18662-53-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.01,
+        "selected": false
+      },
+      {
+        "name": "Нітроаценафтен 5-",
+        "cas": "602-87-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.13,
+        "selected": false
+      },
+      {
+        "name": "Нітрогліцерин",
+        "cas": "55-63-0",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 14.0,
+        "selected": false
+      },
+      {
+        "name": "Нітрозо-N-метилсечовина N-",
+        "cas": "684-93-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 120.0,
+        "selected": false
+      },
+      {
+        "name": "Нітрозо-N-метилуретан N-",
+        "cas": "615-53-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 110.0,
+        "selected": false
+      },
+      {
+        "name": "Нітрозо-N-етилсечовина N-",
+        "cas": "759-73-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 27.0,
+        "selected": false
+      },
+      {
+        "name": "Нітрозодибутиламін N-",
+        "cas": "924-16-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 5.6,
+        "selected": false
+      },
+      {
+        "name": "Нітрозодиметиламін N-",
+        "cas": "62-75-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 49.0,
+        "selected": false
+      },
+      {
+        "name": "Нітрозодипропіламін N-",
+        "cas": "621-64-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 7.0,
+        "selected": false
+      },
+      {
+        "name": "Нітрозодифеніламін N-",
+        "cas": "96-30-6",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 9.0,
+        "selected": false
+      },
+      {
+        "name": "Нітрозодіетиламін N-",
+        "cas": "55-18-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 150.0,
+        "selected": false
+      },
+      {
+        "name": "Нітрозоімінодіетанол 2 2’-",
+        "cas": "1116-54-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 2.8,
+        "selected": false
+      },
+      {
+        "name": "Нітрозометилетиламін N-",
+        "cas": "10595-95-6",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 22.0,
+        "selected": false
+      },
+      {
+        "name": "Нітрозоморфолін N-",
+        "cas": "59-89-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 6.7,
+        "selected": false
+      },
+      {
+        "name": "Нітрозонорнікотин N-",
+        "cas": "16543-55-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.4,
+        "selected": false
+      },
+      {
+        "name": "Нітрозопіперідин N-",
+        "cas": "100-75-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 9.4,
+        "selected": false
+      },
+      {
+        "name": "Нітрозопіролідін N-",
+        "cas": "930-55-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 2.1,
+        "selected": false
+      },
+      {
+        "name": "Нітрозофеніл-4 анілін N-",
+        "cas": "0156-10-05",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 22.0,
+        "selected": false
+      },
+      {
+        "name": "Нітропірен 1-",
+        "cas": "5522-43-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.39,
+        "selected": false
+      },
+      {
+        "name": "Нітропірен 4-",
+        "cas": "57835-92-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.39,
+        "selected": false
+      },
+      {
+        "name": "Нітропропан 2-",
+        "cas": "79-46-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 9.4,
+        "selected": false
+      },
+      {
+        "name": "Нітроген",
+        "cas": "1836-75-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 82.0,
+        "selected": false
+      },
+      {
+        "name": "Нітрохрізен 6-",
+        "cas": "7496-02-08",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Ніфураден",
+        "cas": "555-84-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.8,
+        "selected": false
+      },
+      {
+        "name": "Ніфуртиазол",
+        "cas": "3570-75-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 2.3,
+        "selected": false
+      },
+      {
+        "name": "Оксидіанілін 4 4’-",
+        "cas": "101-80-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.14,
+        "selected": false
+      },
+      {
+        "name": "Октахлордібензо-п-діоксин",
+        "cas": "3268-87-9",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 130.0,
+        "selected": false
+      },
+      {
+        "name": "Октахлордібензофуран 1 2 3 4 5 6 7 8-",
+        "cas": "39001-02-0",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 130.0,
+        "selected": false
+      },
+      {
+        "name": "Пентахлордібензофуран 1 2 3 7 8-",
+        "cas": "109719-77-9",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 8000.0,
+        "selected": false
+      },
+      {
+        "name": "Пентахлордібензофуран 2 3 4 7 8-",
+        "cas": "57117-41-6",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 80000.0,
+        "selected": false
+      },
+      {
+        "name": "Пентахлорфенол",
+        "cas": "87-86-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 18.0,
+        "selected": false
+      },
+      {
+        "name": "Пігмент червоний",
+        "cas": "5160-02-01",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0053,
+        "selected": false
+      },
+      {
+        "name": "Харчовий фіолетовий2",
+        "cas": "1694-09-03",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.02,
+        "selected": false
+      },
+      {
+        "name": "Поліхлоровані біфеніли",
+        "cas": "1336-36-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.4,
+        "selected": false
+      },
+      {
+        "name": "Понсо 3R",
+        "cas": "3564-09-08",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16.0,
+        "selected": false
+      },
+      {
+        "name": "Понсо MX",
+        "cas": "3761-53-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0045,
+        "selected": false
+      },
+      {
+        "name": "Прокарбазин",
+        "cas": "671-16-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 14.0,
+        "selected": false
+      },
+      {
+        "name": "Прокарбазин гідрохлорид",
+        "cas": "366-70-1",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 12.0,
+        "selected": false
+      },
+      {
+        "name": "Пропансультон 1 3-",
+        "cas": "1120-71-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 2.4,
+        "selected": false
+      },
+      {
+        "name": "Пропілен оксид",
+        "cas": "75-56-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 13.0,
+        "selected": false
+      },
+      {
+        "name": "Пропілтіоурацил",
+        "cas": "51-52-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.0,
+        "selected": false
+      },
+      {
+        "name": "Пропіолактон бета-",
+        "cas": "57-57-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 14.0,
+        "selected": false
+      },
+      {
+        "name": "Прямий коричневий 95",
+        "cas": "16071-86-6",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 6.7,
+        "selected": false
+      },
+      {
+        "name": "Прямий синій 6",
+        "cas": "2602-46-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 7.4,
+        "selected": false
+      },
+      {
+        "name": "Прямий чорний 38",
+        "cas": "1937-37-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 7.4,
+        "selected": false
+      },
+      {
+        "name": "Резерпін",
+        "cas": "50-55-5",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 11.0,
+        "selected": false
+      },
+      {
+        "name": "Сапрол",
+        "cas": "94-59-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.22,
+        "selected": false
+      },
+      {
+        "name": "Свинець",
+        "cas": "7439-92-1",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 42.0,
+        "selected": false
+      },
+      {
+        "name": "Свинець ацетат",
+        "cas": "0301-04-02",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.28,
+        "selected": false
+      },
+      {
+        "name": "Свинець ацетат основний",
+        "cas": "1335-32-6",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 38.0,
+        "selected": false
+      },
+      {
+        "name": "Синій N1",
+        "cas": "2784-94-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 51.0,
+        "selected": false
+      },
+      {
+        "name": "Стерігматоцистин",
+        "cas": "10048-13-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 35.0,
+        "selected": false
+      },
+      {
+        "name": "Стиролоксид",
+        "cas": "1996-09-03",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.16,
+        "selected": false
+      },
+      {
+        "name": "Стрептозоцин",
+        "cas": "18883-66-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 110.0,
+        "selected": false
+      },
+      {
+        "name": "Сульфалат",
+        "cas": "1995-06-07",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.19,
+        "selected": false
+      },
+      {
+        "name": "Тетрааміноантрахінон 1 4 5 8-",
+        "cas": "2475-45-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0045,
+        "selected": false
+      },
+      {
+        "name": "Тетрагідрофуран",
+        "cas": "109-99-9",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0068,
+        "selected": false
+      },
+      {
+        "name": "Тетраметил-4 4’-диамінобензофенон N N N N-",
+        "cas": "90-94-8",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.86,
+        "selected": false
+      },
+      {
+        "name": "Тетрахлордібензо-п-діоксин 2 3 7 8-",
+        "cas": "1746-01-06",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 150000.0,
+        "selected": false
+      },
+      {
+        "name": "Тетрахлордібензофуран 2 3 7 8-",
+        "cas": "51207-31-9",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16000.0,
+        "selected": false
+      },
+      {
+        "name": "Тетрахлордіфенілетан.4 4-",
+        "cas": "72-54-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.24,
+        "selected": false
+      },
+      {
+        "name": "Тетрахлоретан",
+        "cas": "56-23-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 53.0,
+        "selected": false
+      },
+      {
+        "name": "Тетрахлоретан 1 1 1 2-",
+        "cas": "630-20-6",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 26.0,
+        "selected": false
+      },
+      {
+        "name": "Тетрахлоретан 1 1 2 2 -",
+        "cas": "79-34-5",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.2,
+        "selected": false
+      },
+      {
+        "name": "Тетрахлоретилен",
+        "cas": "127-18-4",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 2.0,
+        "selected": false
+      },
+      {
+        "name": "Тіоацетамід",
+        "cas": "62-55-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 6.1,
+        "selected": false
+      },
+      {
+        "name": "Тіодіанілін 4 4’-",
+        "cas": "139-65-1",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 15.0,
+        "selected": false
+      },
+      {
+        "name": "Тіосечовина",
+        "cas": "62-56-6",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 72.0,
+        "selected": false
+      },
+      {
+        "name": "Тіофосфамід",
+        "cas": "52-24-4",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 12.0,
+        "selected": false
+      },
+      {
+        "name": "Токсафен",
+        "cas": "8001-35-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.1,
+        "selected": false
+      },
+      {
+        "name": "Толуілендіізоціанат 2 4-",
+        "cas": "584-84-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Толуол-2 6-диізоціанат",
+        "cas": "1991-08-07",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Толуолдіізоціанат 1 3-",
+        "cas": "26471-62-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Транс-2-[(Діметиламіно)метиліміно]-5-[2-(5-нітро-2-фурил)вініл]-1 3 4-оксадіазол",
+        "cas": "55738-54-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.44,
+        "selected": false
+      },
+      {
+        "name": "Трет-Бутил-4-метоксифенол 2-",
+        "cas": "25013-16-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0002,
+        "selected": false
+      },
+      {
+        "name": "Тріафур",
+        "cas": "712-68-5",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16.0,
+        "selected": false
+      },
+      {
+        "name": "Триптофан P1",
+        "cas": "62450-06-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 26.0,
+        "selected": false
+      },
+      {
+        "name": "Триптофан Р2",
+        "cas": "62450-07-1",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 3.2,
+        "selected": false
+      },
+      {
+        "name": "Трихлорфенол 2 4 6-",
+        "cas": "1988-06-02",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 11.0,
+        "selected": false
+      },
+      {
+        "name": "Трихлоретан 1 1 2-",
+        "cas": "79-00-5",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 57.0,
+        "selected": false
+      },
+      {
+        "name": "Трихлоретилен",
+        "cas": "1979-01-06",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0063,
+        "selected": false
+      },
+      {
+        "name": "Уретан",
+        "cas": "51-79-6",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.0,
+        "selected": false
+      },
+      {
+        "name": "Феназопірідин",
+        "cas": "94-78-0",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.17,
+        "selected": false
+      },
+      {
+        "name": "Феназопірідин гідрохлорид",
+        "cas": "136-40-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.15,
+        "selected": false
+      },
+      {
+        "name": "Фенестерин",
+        "cas": "3546-10-09",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 150.0,
+        "selected": false
+      },
+      {
+        "name": "Фенілен-2 4-діамін",
+        "cas": "95-80-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 4.0,
+        "selected": false
+      },
+      {
+        "name": "Фенобарбітал",
+        "cas": "1950-06-06",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.46,
+        "selected": false
+      },
+      {
+        "name": "Феноксибензамін",
+        "cas": "56-96-1",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 3.1,
+        "selected": false
+      },
+      {
+        "name": "Феноксибензамін гідрохлорид",
+        "cas": "63-92-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 2.7,
+        "selected": false
+      },
+      {
+        "name": "Фурацилін",
+        "cas": "59-87-0",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 9.4,
+        "selected": false
+      },
+      {
+        "name": "Фуриламід",
+        "cas": "3688-53-7",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.21,
+        "selected": false
+      },
+      {
+        "name": "Фуріум",
+        "cas": "531-82-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.5,
+        "selected": false
+      },
+      {
+        "name": "Фурмециклокс",
+        "cas": "60568-05-0",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.03,
+        "selected": false
+      },
+      {
+        "name": "Хлор-1 2-дібромпропан 3-",
+        "cas": "1996-12-08",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0024,
+        "selected": false
+      },
+      {
+        "name": "Хлор-5-метиланілін 2-",
+        "cas": "7440-41-7",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 8.4,
+        "selected": false
+      },
+      {
+        "name": "Хлорбензилат",
+        "cas": "510-15-6",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.27,
+        "selected": false
+      },
+      {
+        "name": "Хлорбутин",
+        "cas": "0305-03-03",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 440.0,
+        "selected": false
+      },
+      {
+        "name": "Хлордан",
+        "cas": "57-74-9",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 1.3,
+        "selected": false
+      },
+      {
+        "name": "Хлордан технічний",
+        "cas": "12789-03-06",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.35,
+        "selected": false
+      },
+      {
+        "name": "Хлоровані парафіни С12(60% хлору)",
+        "cas": "108171-26-2",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 89.0,
+        "selected": false
+      },
+      {
+        "name": "Хлор метан",
+        "cas": "74-87-3",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0063,
+        "selected": false
+      },
+      {
+        "name": "Хлорметоксиметан",
+        "cas": "107-30-2",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 2.4,
+        "selected": false
+      },
+      {
+        "name": "Хлороталоніл",
+        "cas": "1897-45-6",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0031,
+        "selected": false
+      },
+      {
+        "name": "Хлор-о-фенілендіамін 4-",
+        "cas": "95-83-0",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 16.0,
+        "selected": false
+      },
+      {
+        "name": "Хлороформ",
+        "cas": "67-66-3",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 81.0,
+        "selected": false
+      },
+      {
+        "name": "Хлорпропан 2-",
+        "cas": "75-29-6",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.13,
+        "selected": false
+      },
+      {
+        "name": "Хлортріанізен",
+        "cas": "569-57-3",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 240.0,
+        "selected": false
+      },
+      {
+        "name": "Хлорендикова кислота",
+        "cas": "115-28-6",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 91.0,
+        "selected": false
+      },
+      {
+        "name": "Хлор етан",
+        "cas": "75-00-3",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0029,
+        "selected": false
+      },
+      {
+        "name": "Хризен",
+        "cas": "0218-01-09",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0031,
+        "selected": false
+      },
+      {
+        "name": "Хром (VI)",
+        "cas": "18540-29-9",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 42.0,
+        "selected": false
+      },
+      {
+        "name": "Хромова кислота",
+        "cas": "7783-94-5",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 42.0,
+        "selected": false
+      },
+      {
+        "name": "Циклофосфамід гідрат",
+        "cas": "6055-19-2",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.57,
+        "selected": false
+      },
+      {
+        "name": "Циклофосфан",
+        "cas": "50-18-0",
+        "danger_class": 1,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.61,
+        "selected": false
+      },
+      {
+        "name": "Циннамілантранілат",
+        "cas": "87-29-6",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0046,
+        "selected": false
+      },
+      {
+        "name": "Епіхлоргідрин",
+        "cas": "106-89-8",
+        "danger_class": 2,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 0.0042,
+        "selected": false
+      },
+      {
+        "name": "Естрадіол",
+        "cas": "50-28-2",
+        "danger_class": 0,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 39.0,
+        "selected": false
+      },
+      {
+        "name": "Етиленімін",
+        "cas": "151-56-4",
+        "danger_class": 3,
+        "rfc_lifelong": 0.0,
+        "affected_organs_lifelong": [],
+        "rfc_acute": 0.0,
+        "affected_organs_acute": [],
+        "sfi": 65.0,
+        "selected": false
+      }
+    ]
+  },
+  "exposure_data": {
+    "exposure_data": []
+  },
+  "result_tables": {
+    "category": "Всі"
+  },
+  "result_charts": {
+    "category": "Всі"
+  },
+  "result_maps": {
+    "category": ""
+  },
+  "report": {
+    "items": []
+  }
+}

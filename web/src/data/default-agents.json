@@ -1,0 +1,528 @@
+[
+  {
+    "id": "basic-2",
+    "name": "Азоту діоксид",
+    "cas": "10102-44-0",
+    "dangerClass": 3,
+    "rfcLifelong": 0.04,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.47,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-3",
+    "name": "Азоту оксид",
+    "cas": "10102-43-9",
+    "dangerClass": 3,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.72,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-5",
+    "name": "Акрилонітрил",
+    "cas": "107-13-1",
+    "dangerClass": 2,
+    "rfcLifelong": 2,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.2,
+    "affectedOrgansAcute": [
+      "центральна нервова система"
+    ],
+    "sfi": 0.24
+  },
+  {
+    "id": "basic-6",
+    "name": "Акролеїн",
+    "cas": "107-02-8",
+    "dangerClass": 2,
+    "rfcLifelong": 0.00002,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.0001,
+    "affectedOrgansAcute": [
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-9",
+    "name": "Аміак",
+    "cas": "7664-41-7",
+    "dangerClass": 4,
+    "rfcLifelong": 0.1,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.35,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-11",
+    "name": "Ацетальдегід",
+    "cas": "75-07-0",
+    "dangerClass": 2,
+    "rfcLifelong": 9,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 115,
+    "affectedOrgansAcute": [
+      "органи зору",
+      "слизові"
+    ],
+    "sfi": 0.0077
+  },
+  {
+    "id": "basic-18",
+    "name": "Бензол",
+    "cas": "71-43-2",
+    "dangerClass": 1,
+    "rfcLifelong": 0.06,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "кровоносна система",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0.15,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "імунна система",
+      "репродуктивна система"
+    ],
+    "sfi": 27
+  },
+  {
+    "id": "basic-31",
+    "name": "Вінілхлорид",
+    "cas": "75-01-4",
+    "dangerClass": 1,
+    "rfcLifelong": 5,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку"
+    ],
+    "rfcAcute": 1.3,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку"
+    ],
+    "sfi": 0.3
+  },
+  {
+    "id": "basic-32",
+    "name": "Водень сульфід",
+    "cas": "7783-06-4",
+    "dangerClass": 2,
+    "rfcLifelong": 0.001,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.1,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-33",
+    "name": "Водень фтористий",
+    "cas": "7664-39-3",
+    "dangerClass": 2,
+    "rfcLifelong": 0.03,
+    "affectedOrgansLifelong": [
+      "кісткова система",
+      "органи дихання"
+    ],
+    "rfcAcute": 0.2,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-34",
+    "name": "Водень хлорид",
+    "cas": "7647-01-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0.02,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 2.1,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-36",
+    "name": "Вуглецю оксид",
+    "cas": "630-08-0",
+    "dangerClass": 4,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [
+      "кровоносна система",
+      "серцево-судинна система",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 23,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "серцево-судинна система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-59",
+    "name": "Епіхлоргідрин",
+    "cas": "106-89-8",
+    "dangerClass": 2,
+    "rfcLifelong": 1,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 3,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0.0042
+  },
+  {
+    "id": "basic-63",
+    "name": "Етиленбензол",
+    "cas": "100-41-4",
+    "dangerClass": 3,
+    "rfcLifelong": 1,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "ендокринна система",
+      "нирки",
+      "печінка"
+    ],
+    "rfcAcute": 1,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-70",
+    "name": "Завислі частинки (РМ10)",
+    "cas": "",
+    "dangerClass": 0,
+    "rfcLifelong": 0.05,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.15,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-71",
+    "name": "Завислі частинки (РМ2.5)",
+    "cas": "",
+    "dangerClass": 0,
+    "rfcLifelong": 15,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 65,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-69",
+    "name": "Зважені частинки (TSP)",
+    "cas": "",
+    "dangerClass": 3,
+    "rfcLifelong": 0.1,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "органи дихання",
+      "серцево-судинна система",
+      "смертність"
+    ],
+    "rfcAcute": 0.3,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-75",
+    "name": "Кадмій та сполуки",
+    "cas": "7440-43-9",
+    "dangerClass": 0,
+    "rfcLifelong": 0.0002,
+    "affectedOrgansLifelong": [
+      "нирки",
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "basic-81",
+    "name": "Марганець та сполуки",
+    "cas": "7439-96-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0.00005,
+    "affectedOrgansLifelong": [
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "basic-88",
+    "name": "Миш’як",
+    "cas": "7440-38-2",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.0004,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "репродуктивна система"
+    ],
+    "sfi": 15
+  },
+  {
+    "id": "basic-93",
+    "name": "Нікель",
+    "cas": "7440-02-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 3,
+    "affectedOrgansAcute": [
+      "імунна система",
+      "органи дихання"
+    ],
+    "sfi": 0.91
+  },
+  {
+    "id": "basic-96",
+    "name": "Озон",
+    "cas": "10028-15-6",
+    "dangerClass": 1,
+    "rfcLifelong": 0,
+    "affectedOrgansLifelong": [],
+    "rfcAcute": 0.18,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-108",
+    "name": "Свинець та його неорганічні сполуки",
+    "cas": "7439-92-1",
+    "dangerClass": 1,
+    "rfcLifelong": 0.00015,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "кровоносна система",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 0
+  },
+  {
+    "id": "basic-110",
+    "name": "Сірки діоксид",
+    "cas": "7446-09-5",
+    "dangerClass": 3,
+    "rfcLifelong": 0.08,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.66,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-113",
+    "name": "Стирол",
+    "cas": "100-42-5",
+    "dangerClass": 0,
+    "rfcLifelong": 1,
+    "affectedOrgansLifelong": [
+      "центральна нервова система"
+    ],
+    "rfcAcute": 20,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-119",
+    "name": "Тетрахлоретилен",
+    "cas": "127-18-4",
+    "dangerClass": 2,
+    "rfcLifelong": 35,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "нирки",
+      "печінка",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 1.4,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "нирки",
+      "органи дихання",
+      "органи зору",
+      "печінка",
+      "центральна нервова система"
+    ],
+    "sfi": 2
+  },
+  {
+    "id": "basic-121",
+    "name": "Толуол",
+    "cas": "108-88-3",
+    "dangerClass": 3,
+    "rfcLifelong": 0.4,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "органи дихання",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 3.8,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору",
+      "центральна нервова система"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-125",
+    "name": "Трихлоретилен",
+    "cas": "79-01-6",
+    "dangerClass": 2,
+    "rfcLifelong": 0.6,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку"
+    ],
+    "rfcAcute": 11,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "центральна нервова система"
+    ],
+    "sfi": 0.0063
+  },
+  {
+    "id": "basic-128",
+    "name": "Фенол",
+    "cas": "108-95-2",
+    "dangerClass": 2,
+    "rfcLifelong": 0.006,
+    "affectedOrgansLifelong": [
+      "нирки",
+      "печінка",
+      "серцево-судинна система",
+      "центральна нервова система"
+    ],
+    "rfcAcute": 6,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-130",
+    "name": "Формальдегід",
+    "cas": "50-00-0",
+    "dangerClass": 2,
+    "rfcLifelong": 0.003,
+    "affectedOrgansLifelong": [
+      "імунна система",
+      "органи дихання"
+    ],
+    "rfcAcute": 0.048,
+    "affectedOrgansAcute": [
+      "органи дихання",
+      "органи зору"
+    ],
+    "sfi": 0.046
+  },
+  {
+    "id": "basic-140",
+    "name": "Хлор",
+    "cas": "7782-50-5",
+    "dangerClass": 0,
+    "rfcLifelong": 0.0002,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0.2,
+    "affectedOrgansAcute": [
+      "органи дихання"
+    ],
+    "sfi": 0
+  },
+  {
+    "id": "basic-148",
+    "name": "Хлороформ",
+    "cas": "67-66-3",
+    "dangerClass": 2,
+    "rfcLifelong": 98,
+    "affectedOrgansLifelong": [
+      "вроджені вади розвитку",
+      "нирки",
+      "печінка"
+    ],
+    "rfcAcute": 0.49,
+    "affectedOrgansAcute": [
+      "вроджені вади розвитку",
+      "органи дихання",
+      "печінка",
+      "репродуктивна система"
+    ],
+    "sfi": 81
+  },
+  {
+    "id": "basic-152",
+    "name": "Хром (VI)",
+    "cas": "18540-29-9",
+    "dangerClass": 1,
+    "rfcLifelong": 0.0001,
+    "affectedOrgansLifelong": [
+      "органи дихання"
+    ],
+    "rfcAcute": 0,
+    "affectedOrgansAcute": [],
+    "sfi": 42
+  }
+]

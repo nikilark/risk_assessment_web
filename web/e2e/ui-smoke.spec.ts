@@ -15,6 +15,37 @@ test("project page fits mobile width", async ({ page }) => {
 });
 
 test("main research flow renders map, chart, and typed report assets", async ({ page }) => {
+  const overpassRequests: string[] = [];
+  await page.route("https://overpass-api.de/api/interpreter", async (route) => {
+    const postData = route.request().postData() ?? "";
+    overpassRequests.push(postData);
+    const bbox = postData.match(/\((-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)\)/);
+    const south = Number(bbox?.[1] ?? 49);
+    const west = Number(bbox?.[2] ?? 31);
+    const north = Number(bbox?.[3] ?? 50);
+    const east = Number(bbox?.[4] ?? 32);
+    await route.fulfill({
+      contentType: "application/json",
+      body: JSON.stringify({
+        elements: [
+          {
+            type: "node",
+            id: 1,
+            lat: (south + north) / 2,
+            lon: (west + east) / 2,
+            tags: { man_made: "works", name: "Visible test source" }
+          },
+          {
+            type: "node",
+            id: 2,
+            lat: north + 2,
+            lon: east + 2,
+            tags: { man_made: "chimney", name: "Outside test source" }
+          }
+        ]
+      })
+    });
+  });
   await page.goto("/");
 
   await page.locator(".agents-table tbody input[type='checkbox']").first().check();
@@ -64,6 +95,13 @@ test("main research flow renders map, chart, and typed report assets", async ({ 
   const mapSection = page.locator(".result-section", { hasText: "Мапа" });
   await expect(page.locator(".map-panel .leaflet-interactive").first()).toBeVisible();
   await expect(mapSection.locator(".pollution-source-control")).toContainText("Джерела забруднення");
+  await mapSection.locator(".pollution-source-control input").check();
+  await expect(mapSection.locator(".pollution-source-control small")).toContainText("1");
+  await expect(mapSection.locator(".pollution-source-leaflet-icon")).toHaveCount(1);
+  expect(overpassRequests.length).toBeGreaterThan(0);
+  const requestedBbox = overpassRequests[0].match(/\((-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)\)/);
+  expect(Number(requestedBbox?.[1])).toBeLessThan(Number(requestedBbox?.[3]));
+  expect(Number(requestedBbox?.[2])).toBeLessThan(Number(requestedBbox?.[4]));
   await expect(mapSection.locator(".map-legend-control")).toContainText("Рівень ризику");
   await expect(mapSection.locator(".map-legend-control")).not.toContainText("Масштаб об'єкта");
   const mapDownload = page.waitForEvent("download");

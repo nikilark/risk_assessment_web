@@ -32,17 +32,13 @@ interface OverpassElement {
 }
 
 const sourceCache = new Map<string, PollutionSource[]>();
+const maxPollutionSources = 120;
 
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: markerIcon2x,
   iconUrl: markerIcon,
   shadowUrl: markerShadow
 });
-
-function centerFromMarkers(markers: MapMarker[]) {
-  const first = markers[0];
-  return first ? ([first.latitude, first.longitude] as [number, number]) : ([49.0, 31.0] as [number, number]);
-}
 
 function fallbackPointName(latitude: number, longitude: number): string {
   return `Об'єкт ${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;
@@ -61,6 +57,36 @@ function scaleLabel(scale: PlaceScale): string {
 
 function markerRadius(scale?: PlaceScale): number {
   return mapMarkerRadii[scale ?? "city"];
+}
+
+function clamp(value: number, minimum: number, maximum: number): number {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
+function overpassBounds(bounds: L.LatLngBounds): L.LatLngBounds {
+  const south = clamp(Math.min(bounds.getSouth(), bounds.getNorth()), -90, 90);
+  const north = clamp(Math.max(bounds.getSouth(), bounds.getNorth()), -90, 90);
+  const west = clamp(Math.min(bounds.getWest(), bounds.getEast()), -180, 180);
+  const east = clamp(Math.max(bounds.getWest(), bounds.getEast()), -180, 180);
+  return L.latLngBounds([south, west], [north, east]);
+}
+
+function roundedCacheBounds(bounds: L.LatLngBounds): L.LatLngBounds {
+  const searchBounds = overpassBounds(bounds);
+  const south = clamp(Math.floor(searchBounds.getSouth() * 100) / 100, -90, 90);
+  const west = clamp(Math.floor(searchBounds.getWest() * 100) / 100, -180, 180);
+  const north = clamp(Math.ceil(searchBounds.getNorth() * 100) / 100, -90, 90);
+  const east = clamp(Math.ceil(searchBounds.getEast() * 100) / 100, -180, 180);
+  return L.latLngBounds([south, west], [north, east]);
+}
+
+function sourceInBounds(source: PollutionSource, bounds: L.LatLngBounds): boolean {
+  return bounds.contains([source.latitude, source.longitude]);
+}
+
+function visibleSources(sources: PollutionSource[], bounds: L.LatLngBounds): PollutionSource[] {
+  const visibleBounds = overpassBounds(bounds);
+  return sources.filter((source) => sourceInBounds(source, visibleBounds)).slice(0, maxPollutionSources);
 }
 
 function escapeHtml(value: string): string {
@@ -103,11 +129,7 @@ function pollutionSourceIcon(kind: PollutionSourceKind): L.DivIcon {
 }
 
 function cacheKey(bounds: L.LatLngBounds, zoom: number): string {
-  const south = Math.floor(bounds.getSouth() * 100) / 100;
-  const west = Math.floor(bounds.getWest() * 100) / 100;
-  const north = Math.ceil(bounds.getNorth() * 100) / 100;
-  const east = Math.ceil(bounds.getEast() * 100) / 100;
-  return `${Math.floor(zoom)}:${south},${west},${north},${east}`;
+  return `${Math.floor(zoom)}:${bounds.getSouth().toFixed(2)},${bounds.getWest().toFixed(2)},${bounds.getNorth().toFixed(2)},${bounds.getEast().toFixed(2)}`;
 }
 
 function overpassQuery(bounds: L.LatLngBounds): string {
@@ -126,17 +148,19 @@ function overpassQuery(bounds: L.LatLngBounds): string {
   nwr["landuse"="industrial"](${bbox});
   nwr["industrial"](${bbox});
 );
-out center qt 120;`;
+out center qt ${maxPollutionSources * 3};`;
 }
 
 async function fetchPollutionSources(bounds: L.LatLngBounds, zoom: number, signal: AbortSignal): Promise<PollutionSource[]> {
-  const key = cacheKey(bounds, zoom);
+  const viewBounds = overpassBounds(bounds);
+  const searchBounds = roundedCacheBounds(viewBounds);
+  const key = cacheKey(searchBounds, zoom);
   const cached = sourceCache.get(key);
-  if (cached) return cached;
+  if (cached) return visibleSources(cached, viewBounds);
 
   const response = await fetch("https://overpass-api.de/api/interpreter", {
     method: "POST",
-    body: overpassQuery(bounds),
+    body: overpassQuery(searchBounds),
     signal,
     headers: {
       "Content-Type": "text/plain;charset=UTF-8"
@@ -152,19 +176,23 @@ async function fetchPollutionSources(bounds: L.LatLngBounds, zoom: number, signa
     if (typeof latitude !== "number" || typeof longitude !== "number" || !Number.isFinite(latitude) || !Number.isFinite(longitude)) continue;
     const tags = element.tags ?? {};
     const kind = pollutionSourceKind(tags);
-    sources.set(`${element.type}-${element.id}`, {
+    const source = {
       id: `${element.type}-${element.id}`,
       label: pollutionSourceLabel(tags, kind),
       kind,
       latitude,
       longitude,
       tags
+    };
+    if (!sourceInBounds(source, searchBounds)) continue;
+    sources.set(`${element.type}-${element.id}`, {
+      ...source
     });
   }
 
-  const result = [...sources.values()].slice(0, 120);
+  const result = [...sources.values()].slice(0, maxPollutionSources * 2);
   sourceCache.set(key, result);
-  return result;
+  return visibleSources(result, viewBounds);
 }
 
 function renderPollutionSources(layer: L.LayerGroup, sources: PollutionSource[]) {
@@ -289,6 +317,21 @@ function addMapLegend(map: L.Map, result: ResultItem): L.Control {
   return legend;
 }
 
+function fitMapToMarkers(map: L.Map, markers: MapMarker[]) {
+  if (!markers.length) {
+    map.setView([49.0, 31.0], 5);
+    return;
+  }
+  if (markers.length === 1) {
+    const marker = markers[0];
+    const zoom = marker.scale === "street" ? 14 : marker.scale === "district" ? 12 : marker.scale === "region" ? 9 : 10;
+    map.setView([marker.latitude, marker.longitude], zoom);
+    return;
+  }
+  const bounds = L.latLngBounds(markers.map((marker) => [marker.latitude, marker.longitude] as [number, number]));
+  map.fitBounds(bounds, { maxZoom: 12, padding: [42, 42] });
+}
+
 function pickAddressName(address: Record<string, string | undefined> | undefined, scale: PlaceScale, displayName?: string): string | undefined {
   if (!address) return displayName;
   if (scale === "street") return address.road || address.pedestrian || address.footway || address.neighbourhood || address.suburb || address.city || displayName;
@@ -319,11 +362,12 @@ export function ResultMap({ result }: { result: ResultItem }) {
 
   useEffect(() => {
     if (!ref.current) return;
-    const map = L.map(ref.current).setView(centerFromMarkers(result.mapMarkers), result.mapMarkers.length ? 9 : 5);
+    const map = L.map(ref.current);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: "&copy; OpenStreetMap"
     }).addTo(map);
+    fitMapToMarkers(map, result.mapMarkers);
     for (const point of result.mapMarkers) {
       L.circleMarker([point.latitude, point.longitude], {
         radius: markerRadius(point.scale),
@@ -334,7 +378,10 @@ export function ResultMap({ result }: { result: ResultItem }) {
     }
     const legend = addMapLegend(map, result);
     const pollutionSources = addPollutionSourceOverlay(map);
-    setTimeout(() => map.invalidateSize(), 0);
+    setTimeout(() => {
+      map.invalidateSize();
+      fitMapToMarkers(map, result.mapMarkers);
+    }, 0);
     return () => {
       pollutionSources.remove();
       legend.remove();

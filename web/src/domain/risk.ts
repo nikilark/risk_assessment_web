@@ -86,15 +86,21 @@ export function calculateAdditionalMortality(concentration: number, deaths: numb
   };
 }
 
-export function formatNumber(value: number, digits = 4): string {
+export function normalizeNumber(value: number, significantDigits = 8): number {
+  if (!Number.isFinite(value) || value === 0) return value;
+  return Number(value.toPrecision(significantDigits));
+}
+
+export function formatNumber(value: number, digits = 8): string {
   if (!Number.isFinite(value)) return "—";
-  const absolute = Math.abs(value);
+  const rounded = normalizeNumber(value, digits);
+  const absolute = Math.abs(rounded);
   if (absolute > 0 && (absolute < 0.01 || absolute >= 1_000_000)) {
-    const [mantissa, exponent] = value.toExponential(Math.max(1, digits - 1)).split("e");
+    const [mantissa, exponent] = rounded.toExponential(Math.max(1, digits - 1)).split("e");
     return `${mantissa.replace(/(\.\d*?[1-9])0+$/, "$1").replace(/\.0+$/, "")}e${Number(exponent)}`;
   }
   return new Intl.NumberFormat("uk-UA", {
     maximumFractionDigits: digits,
     maximumSignificantDigits: digits
-  }).format(value);
+  }).format(rounded);
 }

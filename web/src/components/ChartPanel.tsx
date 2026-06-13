@@ -1,5 +1,6 @@
 import * as echarts from "echarts";
 import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
+import { formatNumber } from "../domain/risk";
 import type { ResultItem } from "../domain/types";
 
 export interface ChartPanelHandle {
@@ -65,7 +66,10 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
     const maxLabelLines = Math.max(1, ...wrappedLabels.map((label) => label.split("\n").length));
     chart.setOption({
       grid: { left: 64, right: 24, top: 36, bottom: Math.min(150, 68 + maxLabelLines * 18) },
-      tooltip: { trigger: "axis" },
+      tooltip: {
+        trigger: "axis",
+        valueFormatter: (value: unknown) => typeof value === "number" ? formatNumber(value) : String(value)
+      },
       xAxis: {
         type: "category",
         axisLabel: {
@@ -77,7 +81,11 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
         },
         data: result.chartSeries.map((item) => item.label)
       },
-      yAxis: { type: "value", name: result.chartLabel },
+      yAxis: {
+        type: "value",
+        name: result.chartLabel,
+        axisLabel: { formatter: (value: number) => formatNumber(value) }
+      },
       series: [
         {
           type: "bar",

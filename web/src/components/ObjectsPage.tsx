@@ -1,6 +1,7 @@
 import { Map, Plus, Trash2 } from "lucide-react";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { createId } from "../domain/project";
+import { normalizeNumber } from "../domain/risk";
 import type { AgentRecord, PlaceScale, ProjectFile, ResearchObject, ResearchType } from "../domain/types";
 import { MapPicker } from "./MapPanel";
 
@@ -30,7 +31,7 @@ function defaultConcentration(agent: AgentRecord, researchType: ResearchType): n
   if (researchType.non_cancer_acute && agent.rfcAcute > 0) values.push(agent.rfcAcute * 0.1);
   if (researchType.suspended_particles && agent.name.toLocaleLowerCase("uk-UA").includes("част")) values.push(0.01);
   if ((researchType.cancer_lifelong || researchType.cancer_acute) && agent.sfi > 0) values.push(0.001);
-  return values.length ? Math.min(...values) : 0.001;
+  return normalizeNumber(values.length ? Math.min(...values) : 0.001);
 }
 
 export function ObjectsPage({ project, updateProject }: { project: ProjectFile; updateProject: (project: ProjectFile) => void }) {
@@ -43,15 +44,16 @@ export function ObjectsPage({ project, updateProject }: { project: ProjectFile; 
   const selectedAgents = useMemo(() => project.project.agents.filter((agent) => agent.selected), [project.project.agents]);
 
   const getExposure = (objectId: string, agentId: string) =>
-    project.research.exposures.find((exposure) => exposure.objectId === objectId && exposure.agentId === agentId)?.concentration ?? 0;
+    normalizeNumber(project.research.exposures.find((exposure) => exposure.objectId === objectId && exposure.agentId === agentId)?.concentration ?? 0);
 
   const setExposure = (objectId: string, agentId: string, concentration: number) => {
+    const safeConcentration = Number.isFinite(concentration) ? concentration : 0;
     const rest = project.research.exposures.filter((exposure) => !(exposure.objectId === objectId && exposure.agentId === agentId));
     updateProject({
       ...project,
       research: {
         ...project.research,
-        exposures: [...rest, { objectId, agentId, concentration: Math.max(0, concentration) }]
+        exposures: [...rest, { objectId, agentId, concentration: normalizeNumber(Math.max(0, safeConcentration)) }]
       }
     });
   };

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculateAdditionalMortality, calculateCancer, calculateHazardQuotient, cancerRiskLevel, formatNumber, hazardRiskLevel } from "./risk";
+import { calculateAdditionalMortality, calculateCancer, calculateHazardQuotient, cancerRiskLevel, formatNumber, hazardRiskLevel, normalizeNumber } from "./risk";
 
 describe("risk formulas", () => {
   it("calculates hazard quotient and levels", () => {
@@ -28,5 +28,11 @@ describe("risk formulas", () => {
     expect(formatNumber(0.001)).toBe("1e-3");
     expect(formatNumber(0.01)).toBe("0,01");
     expect(formatNumber(0.00001234)).toBe("1.234e-5");
+  });
+
+  it("hides binary floating point tails", () => {
+    expect(normalizeNumber(0.0100000000002)).toBe(0.01);
+    expect(formatNumber(0.0100000000002)).toBe("0,01");
+    expect(formatNumber(12.345678901)).toBe("12,345679");
   });
 });

@@ -1,6 +1,7 @@
 import { Plus, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { createId } from "../domain/project";
+import { formatNumber, normalizeNumber } from "../domain/risk";
 import type { AgentRecord, ProjectFile } from "../domain/types";
 import { OrganChips, OrganIconLegend, OrganToggleGroup } from "./OrganChips";
 
@@ -27,7 +28,7 @@ const emptyDraft: AgentDraft = {
 };
 
 function numeric(value: string): number {
-  return Number(value) || 0;
+  return normalizeNumber(Number(value) || 0);
 }
 
 export function ProjectPage({ project, updateProject }: { project: ProjectFile; updateProject: (project: ProjectFile) => void }) {
@@ -168,11 +169,11 @@ export function ProjectPage({ project, updateProject }: { project: ProjectFile; 
                 <td><input type="checkbox" checked={Boolean(agent.selected)} onChange={(event) => updateAgent(agent.id, event.target.checked)} /></td>
                 <td>{agent.name}</td>
                 <td>{agent.cas || "—"}</td>
-                <td>{agent.rfcLifelong || "—"}</td>
+                <td>{agent.rfcLifelong ? formatNumber(agent.rfcLifelong) : "—"}</td>
                 <td><OrganChips organs={agent.affectedOrgansLifelong} compact /></td>
-                <td>{agent.rfcAcute || "—"}</td>
+                <td>{agent.rfcAcute ? formatNumber(agent.rfcAcute) : "—"}</td>
                 <td><OrganChips organs={agent.affectedOrgansAcute} compact /></td>
-                <td>{agent.sfi || "—"}</td>
+                <td>{agent.sfi ? formatNumber(agent.sfi) : "—"}</td>
               </tr>
             ))}
           </tbody>

@@ -30,8 +30,8 @@ export function Sidebar({
           <img src={appIconUrl} alt="" aria-hidden="true" />
         </div>
         <div>
-          <strong>Risk Assessment Web</strong>
-          <span>offline PWA</span>
+          <strong>Risk Assessment</strong>
+          <span>Air Pollution Assistant</span>
         </div>
       </div>
       <nav>

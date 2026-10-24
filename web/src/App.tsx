@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ObjectsPage } from "./components/ObjectsPage";
 import { ProjectPage } from "./components/ProjectPage";
 import { ReportPage } from "./components/ReportPage";
 import { ResultsPage } from "./components/ResultsPage";
 import { SettingsPage } from "./components/SettingsPage";
 import { Sidebar } from "./components/Sidebar";
+import { Toast } from "./components/Toast";
 import { createDefaultProject, normalizeProject } from "./domain/project";
 import { generateResults } from "./domain/results";
 import type { ProjectFile } from "./domain/types";
@@ -24,10 +25,24 @@ export default function App() {
   const [project, setProject] = useState<ProjectFile>(() => createDefaultProject());
   const [page, setPage] = useState<PageKey>("project");
   const [loaded, setLoaded] = useState(false);
-  const [toast, setToast] = useState<string | null>(null);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(() => {
+    try {
+      const saved = localStorage.getItem("risk-assessment-sidebar-collapsed");
+      if (saved !== null) return saved === "true";
+    } catch { /* Layout preferences are optional when browser storage is unavailable. */ }
+    return window.matchMedia("(max-width: 1100px)").matches;
+  });
+  const [toast, setToast] = useState<{ message: string; id: number } | null>(null);
+  const showToast = (message: string) => setToast((previous) => ({ message, id: (previous?.id ?? 0) + 1 }));
+  const dismissToast = useCallback(() => setToast(null), []);
   const [availableHighlights, setAvailableHighlights] = useState<Partial<Record<PageKey, boolean>>>({});
   const previousEnabled = useRef<Partial<Record<PageKey, boolean>>>({});
   const results = useMemo(() => generateResults(project), [project]);
+
+  useEffect(() => {
+    try { localStorage.setItem("risk-assessment-sidebar-collapsed", String(sidebarCollapsed)); }
+    catch { /* Navigation still works without persistent browser storage. */ }
+  }, [sidebarCollapsed]);
 
   useEffect(() => {
     loadAutosave().then((saved) => {
@@ -80,11 +95,12 @@ export default function App() {
 
   const navigate = (next: PageKey) => {
     if (!enabled[next]) {
-      setToast("Заповніть попередні дані, щоб перейти далі.");
+      showToast("Заповніть попередні дані, щоб перейти далі.");
       return;
     }
     setAvailableHighlights((current) => ({ ...current, [next]: false }));
     setPage(next);
+    if (window.matchMedia("(max-width: 1100px)").matches) setSidebarCollapsed(true);
   };
 
   const updateProject = (next: ProjectFile) => setProject(next);
@@ -94,8 +110,10 @@ export default function App() {
   };
 
   return (
-    <div className="app">
-      <Sidebar page={page} setPage={navigate} enabled={enabled} availableHighlights={availableHighlights} onHelp={() => setToast(helpText[page])} />
+    <div className="app" data-sidebar-collapsed={sidebarCollapsed}>
+      {!sidebarCollapsed && <button className="sidebar-backdrop" aria-label="Закрити меню" onClick={() => setSidebarCollapsed(true)} />}
+      <Sidebar page={page} setPage={navigate} enabled={enabled} availableHighlights={availableHighlights} onHelp={() => showToast(helpText[page])}
+        collapsed={sidebarCollapsed} onToggle={() => setSidebarCollapsed((value) => !value)} />
       <main>
         {page === "project" && <ProjectPage project={project} updateProject={updateProject} />}
         {page === "objects" && <ObjectsPage project={project} updateProject={updateProject} />}
@@ -103,12 +121,7 @@ export default function App() {
         {page === "report" && <ReportPage project={project} updateProject={updateProject} results={results} />}
         {page === "settings" && <SettingsPage project={project} updateProject={updateProject} resetProject={resetProject} />}
       </main>
-      {toast && (
-        <div className="toast" role="dialog">
-          <p>{toast}</p>
-          <button onClick={() => setToast(null)}>OK</button>
-        </div>
-      )}
+      {toast && <Toast message={toast.message} noticeId={toast.id} onDismiss={dismissToast} />}
     </div>
   );
 }

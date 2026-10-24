@@ -105,6 +105,7 @@ export function ReportPage({
                 <button className="ghost" onClick={() => removeAsset(asset.key)}><Trash2 size={16} /></button>
               </div>
               <h3>{reportAssetLabel(asset.result, asset.kind)}</h3>
+              {asset.kind !== "map" && asset.result.years && <p className="report-asset-years">Роки: {asset.result.years.join(", ")}</p>}
               {asset.kind === "map" && <p>{asset.result.mapLegend}</p>}
               <p className="muted">{asset.result.methodNote}</p>
               {asset.kind === "table" && <TableView headers={asset.result.headers} rows={asset.result.rows} />}

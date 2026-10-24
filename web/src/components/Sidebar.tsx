@@ -15,17 +15,22 @@ export function Sidebar({
   setPage,
   enabled,
   availableHighlights,
-  onHelp
+  onHelp,
+  collapsed,
+  onToggle
 }: {
   page: PageKey;
   setPage: (page: PageKey) => void;
   enabled: Record<PageKey, boolean>;
   availableHighlights: Partial<Record<PageKey, boolean>>;
   onHelp: () => void;
+  collapsed: boolean;
+  onToggle: () => void;
 }) {
   return (
     <aside className="sidebar">
-      <div className="brand">
+      <button type="button" className="brand" aria-label={collapsed ? "Розгорнути меню" : "Згорнути меню"}
+        title={collapsed ? "Розгорнути меню" : "Згорнути меню"} aria-expanded={!collapsed} aria-controls="page-navigation" onClick={onToggle}>
         <div className="brand-mark">
           <img src={appIconUrl} alt="" aria-hidden="true" />
         </div>
@@ -33,8 +38,8 @@ export function Sidebar({
           <strong>Risk Assessment</strong>
           <span>Air Pollution Assistant</span>
         </div>
-      </div>
-      <nav>
+      </button>
+      <nav id="page-navigation" aria-label="Основна навігація">
         {items.map((item) => {
           const Icon = item.icon;
           const active = page === item.key;

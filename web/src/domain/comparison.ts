@@ -37,7 +37,7 @@ export function defaultComparison(project: ProjectFile): ComparisonSpec {
   const years = projectYears(project);
   const agentIds = eligibleAgents(project, metric).map((agent) => agent.id);
   return { metric, aggregation: "agents", objectIds: project.research.points.map((point) => point.id), agentIds,
-    years, mapYear: years[years.length - 1], mapAgentId: agentIds[0] ?? "", mapOrgan: "", tableMode: "comparison", chartAxis: "items" };
+    years, mapYear: years[years.length - 1], mapAgentId: agentIds[0] ?? "", mapOrgan: "", tableMode: "rows", chartAxis: "items" };
 }
 
 interface Observation {
@@ -131,10 +131,10 @@ export function buildComparison(project: ProjectFile, spec: ComparisonSpec): Res
   const itemLabel = (record: Observation) => `${record.object.title} · ${record.label}`;
   const mapLabel = aggregation === "agents" ? agents.get(spec.mapAgentId)?.name : aggregation === "total" ? "Усі обрані речовини" : spec.mapOrgan;
   const mapRecords = records.filter((record) => record.complete !== false && record.year === spec.mapYear && (aggregation === "agents" ? record.agentId === spec.mapAgentId : record.label === mapLabel));
-  const title = `${metricLabels[spec.metric]} · ${aggregation === "total" ? "сумарно" : aggregation === "organs" ? "за органами" : "за речовинами"} · ${years.length ? years.join(", ") : "роки не обрано"}`;
+  const title = `${metricLabels[spec.metric]} · ${aggregation === "total" ? "сумарно" : aggregation === "organs" ? "за органами" : "за речовинами"}`;
   const context = `Об'єкти: ${[...objects.values()].map((object) => object.title).join(", ") || "не обрано"}. Речовини: ${[...agents.values()].map((agent) => agent.name).join(", ") || "не обрано"}.`;
   return {
-    id: comparisonId(spec), title,
+    id: comparisonId(spec), title, years,
     category: cancer ? "Канцерогенний ризик" : particles ? "Зважені частинки" : "Неканцерогенний ризик",
     methodNote: `${cancer ? "ICR = LADD × SF" : particles ? "AM = C(PM10) × SF × N; для TSP: C(PM10) = 0.6 × C(TSP). PM2.5 не входить до цієї моделі; шкала одиниць концентрації та класифікація смертності потребують перевірки" : "HQ = C / RfC; HI = ΣHQ"}. ${context} Роки — окремі сценарії; значення між роками не підсумовуються. Порожні дані позначено «—».${aggregation !== "agents" ? " Суми показано лише за повних даних для обраних речовин (для HI органа — речовин, що впливають на цей орган)." : ""}`,
     headers, rows, chartLabel: measure,

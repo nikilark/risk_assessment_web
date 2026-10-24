@@ -1,15 +1,17 @@
 import { Clipboard, Download, FilePlus, MapPinned } from "lucide-react";
 import { useMemo, useRef, useState } from "react";
-import { buildComparison, defaultComparison, eligibleAgents } from "../domain/comparison";
+import { buildComparison, defaultComparison, eligibleAgents, metricLabels, type ComparisonSpec } from "../domain/comparison";
 import { ComparisonControls } from "./ComparisonControls";
 import { copyText, downloadDataUrl, downloadText, exportResult, safeFileName } from "../domain/files";
 import { mapMarkersToPng } from "../domain/mapExport";
 import { makeReportAssetKey, reportAssetLabel } from "../domain/reportAssets";
 import { resultToTsv } from "../domain/results";
-import type { ProjectFile, ResultItem, ResultView } from "../domain/types";
+import type { ProjectFile, ResearchType, ResultItem, ResultView } from "../domain/types";
 import { ChartPanel, type ChartPanelHandle } from "./ChartPanel";
 import { ResultMap } from "./MapPanel";
 import { TableView } from "./TableView";
+import { ToggleGroup } from "./ToggleGroup";
+import { projectYears } from "../domain/years";
 
 function mapMarkersToTsv(result: ResultItem): string {
   return [
@@ -113,14 +115,15 @@ export function ResultsPage({
 
   const downloadCurrent = (view: ResultView) => {
     if (!selected) return;
+    const exportTitle = `${selected.title} · ${spec.years.join(", ")}`;
     if (view === "table") {
-      exportResult(selected);
+      exportResult({ ...selected, title: exportTitle });
       flash("TSV збережено");
       return;
     }
     if (view === "chart") {
       const dataUrl = chartRef.current?.toPng();
-      if (dataUrl) downloadDataUrl(`${safeFileName(selected.title)}_chart.png`, dataUrl);
+      if (dataUrl) downloadDataUrl(`${safeFileName(exportTitle)}_chart.png`, dataUrl);
       flash(dataUrl ? "PNG збережено" : "Графік ще не готовий");
       return;
     }
@@ -153,9 +156,28 @@ export function ResultsPage({
           {selected && (
             <div className="result-detail">
               <div className="result-header">
-                <div>
-                  <h2>{selected.title}</h2>
-                  <p>{selected.methodNote}</p>
+                <div className="result-config-row">
+                  <select aria-label="Показник" value={spec.metric} onChange={(event) => {
+                    const metric = event.target.value as keyof ResearchType;
+                    const agentIds = eligibleAgents(project, metric).map((agent) => agent.id);
+                    setSpec({ ...spec, metric, agentIds, mapAgentId: agentIds[0] ?? "", aggregation: "agents", mapOrgan: "" });
+                  }}>
+                    {(Object.keys(metricLabels) as Array<keyof ResearchType>).filter((key) => project.project.research_type[key])
+                      .map((key) => <option key={key} value={key}>{metricLabels[key]}</option>)}
+                  </select>
+                  {spec.metric !== "suspended_particles" && <ToggleGroup<ComparisonSpec["aggregation"]>
+                    label="Розрахунок" value={spec.aggregation} onChange={(aggregation) => setSpec({ ...spec, aggregation })}
+                    options={[{ value: "agents", label: "Окремо" }, { value: "total", label: "Сумарно" },
+                      ...(spec.metric.startsWith("non_cancer") ? [{ value: "organs" as const, label: "За органами" }] : [])]} />}
+                </div>
+                <div className="result-year-selection" role="group" aria-label="Роки порівняння">
+                  <span>Роки</span>
+                  {projectYears(project).map((year) => <label key={year}>
+                    <input type="checkbox" checked={spec.years.includes(year)} onChange={() => setSpec({ ...spec,
+                      years: spec.years.includes(year) ? spec.years.filter((item) => item !== year) : [...spec.years, year].sort((a, b) => a - b)
+                    })} />{year}
+                  </label>)}
+                  {projectYears(project).length > 1 && <button className="ghost" onClick={() => setSpec({ ...spec, years: projectYears(project) })}>Усі роки</button>}
                 </div>
               </div>
 
@@ -168,6 +190,9 @@ export function ResultsPage({
                       <button className="secondary" disabled={!selected.rows.length} onClick={() => copyCurrent("table")}><Clipboard size={16} /> Копіювати</button>
                       <button className="secondary" disabled={!selected.rows.length} onClick={() => downloadCurrent("table")}><Download size={16} /> TSV</button>
                     </div>
+                    <ToggleGroup label="Вигляд таблиці" value={spec.tableMode === "details" ? "details" : "rows"}
+                      options={[{ value: "rows", label: "Коротка" }, { value: "details", label: "Повна" }]}
+                      onChange={(tableMode) => setSpec({ ...spec, tableMode })} />
                   </div>
                   {selected.rows.length ? <TableView headers={selected.headers} rows={selected.rows} /> : <p className="empty-state">Немає даних для обраних об’єктів, речовин і років. Змініть вибір або введіть концентрації.</p>}
                 </details>
@@ -180,6 +205,9 @@ export function ResultsPage({
                       <button className="secondary" disabled={!selected.rows.length} onClick={() => copyCurrent("chart")}><Clipboard size={16} /> Копіювати</button>
                       <button className="secondary" disabled={!selected.rows.length} onClick={() => downloadCurrent("chart")}><Download size={16} /> PNG</button>
                     </div>
+                    <ToggleGroup label="Вигляд графіка" value={spec.chartAxis}
+                      options={[{ value: "items", label: "Стовпчики" }, { value: "years", label: "Тенденція" }]}
+                      onChange={(chartAxis) => setSpec({ ...spec, chartAxis })} />
                   </div>
                   <ChartPanel ref={chartRef} result={selected} />
                 </details>

@@ -39,7 +39,7 @@ describe("year comparisons", () => {
   });
   it("keeps all object/agent/year combinations independent and pivots years into columns", () => {
     const project = fixture();
-    const result = buildComparison(project, defaultComparison(project));
+    const result = buildComparison(project, { ...defaultComparison(project), tableMode: "comparison" });
     expect(result.rows).toHaveLength(4);
     expect(result.headers).toEqual(["Об'єкт", "Речовина", "HQ: 2020", "Рівень: 2020", "HQ: 2021", "Рівень: 2021"]);
     expect(result.rows.every((row) => row[2] === "2" && row[4] === "4")).toBe(true);
@@ -53,8 +53,8 @@ describe("year comparisons", () => {
   it("supports all agents at one place and one agent at all places across years", () => {
     const project = fixture();
     const spec = defaultComparison(project);
-    expect(buildComparison(project, { ...spec, objectIds: ["A"] }).rows).toHaveLength(2);
-    expect(buildComparison(project, { ...spec, agentIds: [spec.agentIds[0]] }).rows).toHaveLength(2);
+    expect(buildComparison(project, { ...spec, objectIds: ["A"] }).rows).toHaveLength(4);
+    expect(buildComparison(project, { ...spec, agentIds: [spec.agentIds[0]] }).rows).toHaveLength(4);
     expect(buildComparison(project, { ...spec, objectIds: ["A"], agentIds: [spec.agentIds[0]], years: [2020] }).chartSeries.map((item) => item.value)).toEqual([2]);
   });
 
@@ -62,7 +62,7 @@ describe("year comparisons", () => {
     const project = fixture();
     const spec = defaultComparison(project);
     for (const aggregation of ["total", "organs"] as const) {
-      const result = buildComparison(project, { ...spec, aggregation });
+      const result = buildComparison(project, { ...spec, aggregation, tableMode: "comparison" });
       expect(result.rows).toHaveLength(2);
       expect(result.rows.every((row) => row[2] === "4" && row[4] === "8")).toBe(true);
     }
@@ -72,7 +72,7 @@ describe("year comparisons", () => {
 
   it("distinguishes a measured zero from missing data and keeps empty years on a trend axis", () => {
     const project = fixture();
-    const spec = { ...defaultComparison(project), agentIds: [project.project.agents[0].id], objectIds: ["A"] };
+    const spec = { ...defaultComparison(project), tableMode: "comparison" as const, agentIds: [project.project.agents[0].id], objectIds: ["A"] };
     project.research.exposures = [{ objectId: "A", agentId: spec.agentIds[0], year: 2020, concentration: 0 }];
     const result = buildComparison(project, spec);
     expect(result.rows[0][2]).toBe("0");
@@ -84,7 +84,7 @@ describe("year comparisons", () => {
 
   it("does not present partial agent totals as complete risks when a year has missing concentrations", () => {
     const project = fixture();
-    const spec = { ...defaultComparison(project), objectIds: ["A"], aggregation: "total" as const };
+    const spec = { ...defaultComparison(project), tableMode: "comparison" as const, objectIds: ["A"], aggregation: "total" as const };
     project.research.exposures = project.research.exposures.filter((exposure) => !(exposure.year === 2021 && exposure.agentId === spec.agentIds[1]));
     const result = buildComparison(project, spec);
     expect(result.rows[0][2]).toBe("4");

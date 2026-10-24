@@ -378,11 +378,14 @@ export function ResultMap({ result }: { result: ResultItem }) {
     }
     const legend = addMapLegend(map, result);
     const pollutionSources = addPollutionSourceOverlay(map);
+    const sizeObserver = new ResizeObserver(() => map.invalidateSize());
+    sizeObserver.observe(ref.current);
     setTimeout(() => {
       map.invalidateSize();
       fitMapToMarkers(map, result.mapMarkers);
     }, 0);
     return () => {
+      sizeObserver.disconnect();
       pollutionSources.remove();
       legend.remove();
       map.remove();
@@ -431,7 +434,10 @@ export function MapPicker({
       });
     });
     setTimeout(() => map.invalidateSize(), 0);
+    const sizeObserver = new ResizeObserver(() => map.invalidateSize());
+    sizeObserver.observe(ref.current);
     return () => {
+      sizeObserver.disconnect();
       disposed = true;
       pollutionSources.remove();
       map.remove();

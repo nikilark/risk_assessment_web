@@ -104,6 +104,7 @@ export interface MapMarker {
 export interface ResultItem {
   id: string;
   title: string;
+  years?: number[];
   category: ResultCategory;
   methodNote: string;
   headers: string[];

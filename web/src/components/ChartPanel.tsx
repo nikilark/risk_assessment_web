@@ -7,6 +7,54 @@ export interface ChartPanelHandle {
   toPng: () => string | undefined;
 }
 
+const lightPalette = {
+  background: "#ffffff", surface: "#ffffff", text: "#1b1d22", muted: "#69717f", line: "#d9d3c7",
+  series: ["#2864b4", "#16845b", "#b26a00", "#aa3c70", "#6a55b8", "#00828a"]
+};
+
+function chartPalette(container: HTMLDivElement) {
+  const style = getComputedStyle(container);
+  const dark = document.documentElement.dataset.theme === "dark" && !container.closest(".report-sheet");
+  return {
+    background: style.backgroundColor,
+    surface: style.getPropertyValue("--panel-strong").trim(),
+    text: style.color,
+    muted: style.getPropertyValue("--muted").trim(),
+    line: style.getPropertyValue("--line").trim(),
+    series: dark ? ["#82b7ff", "#8ad4a5", "#f2c66d", "#eda0bf", "#b7a5ff", "#7bd5dc"] : lightPalette.series
+  };
+}
+
+function applyPalette(chart: echarts.EChartsType, palette: typeof lightPalette) {
+  const hasZoom = (chart.getOption().dataZoom as unknown[] | undefined)?.length;
+  chart.setOption({
+    backgroundColor: palette.background,
+    color: palette.series,
+    textStyle: { color: palette.text },
+    legend: {
+      textStyle: { color: palette.text }, inactiveColor: palette.muted,
+      pageTextStyle: { color: palette.text }, pageIconColor: palette.text, pageIconInactiveColor: palette.line
+    },
+    tooltip: { backgroundColor: palette.surface, borderColor: palette.line, textStyle: { color: palette.text } },
+    xAxis: {
+      axisLabel: { color: palette.text }, axisLine: { lineStyle: { color: palette.muted } },
+      axisTick: { lineStyle: { color: palette.muted } },
+      axisPointer: { label: { backgroundColor: palette.text, color: palette.background } }
+    },
+    yAxis: {
+      axisLabel: { color: palette.text }, nameTextStyle: { color: palette.text },
+      axisLine: { lineStyle: { color: palette.muted } }, splitLine: { lineStyle: { color: palette.line } }
+    },
+    dataZoom: hasZoom ? {
+      textStyle: { color: palette.text }, borderColor: palette.line, backgroundColor: palette.surface,
+      fillerColor: "rgba(105, 145, 195, 0.25)", handleStyle: { color: palette.muted, borderColor: palette.background },
+      moveHandleStyle: { color: palette.muted },
+      dataBackground: { lineStyle: { color: palette.muted }, areaStyle: { color: palette.line } },
+      selectedDataBackground: { lineStyle: { color: palette.text }, areaStyle: { color: palette.muted } }
+    } : []
+  });
+}
+
 function wrapChartLabel(value: string, maxLineLength = 18, maxLines = 4): string {
   const words = value
     .replace(/\s+·\s+/g, " · ")
@@ -55,7 +103,17 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
   const chartRef = useRef<echarts.EChartsType | null>(null);
 
   useImperativeHandle(handleRef, () => ({
-    toPng: () => chartRef.current?.getDataURL({ type: "png", pixelRatio: 2, backgroundColor: "#ffffff" })
+    toPng: () => {
+      const chart = chartRef.current;
+      const container = ref.current;
+      if (!chart || !container) return undefined;
+      applyPalette(chart, lightPalette);
+      try {
+        return chart.getDataURL({ type: "png", pixelRatio: 2, backgroundColor: "#ffffff" });
+      } finally {
+        applyPalette(chart, chartPalette(container));
+      }
+    }
   }), []);
 
   useEffect(() => {
@@ -68,7 +126,7 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
     const maxLabelLines = Math.max(1, ...wrappedLabels.map((label) => label.split("\n").length));
     chart.setOption({
       grid: { left: 64, right: 24, top: seriesNames.length > 1 ? 64 : 36, bottom: Math.min(150, 68 + maxLabelLines * 18) },
-      legend: seriesNames.length > 1 ? { type: "scroll", top: 4 } : undefined,
+      legend: { show: seriesNames.length > 1, type: "scroll", top: 4 },
       tooltip: {
         trigger: "axis",
         valueFormatter: (value: unknown) => typeof value === "number" ? formatNumber(value) : String(value)
@@ -96,9 +154,19 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
         itemStyle: { borderRadius: [4, 4, 0, 0] }
       }))
     });
+    const updatePalette = () => {
+      if (ref.current) applyPalette(chart, chartPalette(ref.current));
+    };
+    updatePalette();
+    const themeObserver = new MutationObserver(updatePalette);
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme", "style"] });
     const resize = () => chart.resize();
+    const sizeObserver = new ResizeObserver(resize);
+    sizeObserver.observe(ref.current);
     window.addEventListener("resize", resize);
     return () => {
+      themeObserver.disconnect();
+      sizeObserver.disconnect();
       window.removeEventListener("resize", resize);
       chart.dispose();
       chartRef.current = null;

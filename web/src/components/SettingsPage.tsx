@@ -5,6 +5,14 @@ import { exportProject, readJsonFile } from "../domain/files";
 import { normalizeProject } from "../domain/project";
 import type { ProjectFile, ThemeMode } from "../domain/types";
 
+function previewTextColor(background: string): string {
+  if (!/^#[0-9a-f]{6}$/i.test(background)) return "var(--text)";
+  const channels = background.slice(1).match(/.{2}/g)!.map((value) => parseInt(value, 16) / 255);
+  const luminance = channels.map((value) => value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4)
+    .reduce((sum, value, index) => sum + value * [0.2126, 0.7152, 0.0722][index], 0);
+  return luminance > 0.179 ? "#000000" : "#ffffff";
+}
+
 export function SettingsPage({
   project,
   updateProject,
@@ -74,8 +82,8 @@ export function SettingsPage({
             </label>
           </div>
           <div className="color-preview" aria-label="Попередній перегляд кольорів">
-            <span style={{ background: project.settings.primaryColor }}>Основний</span>
-            <span style={{ background: project.settings.accentColor }}>Акцент</span>
+            <span style={{ background: project.settings.primaryColor, color: previewTextColor(project.settings.primaryColor) }}>Основний</span>
+            <span style={{ background: project.settings.accentColor, color: previewTextColor(project.settings.accentColor) }}>Акцент</span>
           </div>
         </div>
       </div>

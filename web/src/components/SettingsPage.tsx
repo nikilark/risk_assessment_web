@@ -1,4 +1,5 @@
 import { FileDown, FileUp, Monitor, Moon, RotateCcw, Sun } from "lucide-react";
+import { useState } from "react";
 import { clearAutosave } from "../storage/db";
 import { exportProject, readJsonFile } from "../domain/files";
 import { normalizeProject } from "../domain/project";
@@ -13,9 +14,15 @@ export function SettingsPage({
   updateProject: (project: ProjectFile) => void;
   resetProject: () => void;
 }) {
+  const [importError, setImportError] = useState<string | null>(null);
   const importProject = async (file: File) => {
-    const data = await readJsonFile<unknown>(file);
-    updateProject(normalizeProject(data));
+    setImportError(null);
+    try {
+      const data = await readJsonFile<unknown>(file);
+      updateProject(normalizeProject(data));
+    } catch (error) {
+      setImportError(error instanceof Error ? error.message : "Не вдалося відкрити проєкт.");
+    }
   };
 
   const resetAll = async () => {
@@ -39,9 +46,14 @@ export function SettingsPage({
           <h3>Проєкт</h3>
           <div className="button-stack">
             <button className="secondary" onClick={() => exportProject(project)}><FileDown size={16} /> Зберегти JSON</button>
-            <label className="file-button"><FileUp size={16} /> Відкрити JSON<input type="file" accept="application/json,.json" onChange={(event) => event.target.files?.[0] && importProject(event.target.files[0])} /></label>
+            <label className="file-button"><FileUp size={16} /> Відкрити JSON<input type="file" accept="application/json,.json" onChange={(event) => {
+              const file = event.target.files?.[0];
+              event.target.value = "";
+              if (file) void importProject(file);
+            }} /></label>
             <button className="danger" onClick={resetAll}><RotateCcw size={16} /> Новий проєкт</button>
           </div>
+          {importError && <p role="alert">{importError}</p>}
         </div>
 
         <div className="panel">

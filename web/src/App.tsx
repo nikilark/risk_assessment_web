@@ -5,7 +5,7 @@ import { ReportPage } from "./components/ReportPage";
 import { ResultsPage } from "./components/ResultsPage";
 import { SettingsPage } from "./components/SettingsPage";
 import { Sidebar } from "./components/Sidebar";
-import { createDefaultProject } from "./domain/project";
+import { createDefaultProject, normalizeProject } from "./domain/project";
 import { generateResults } from "./domain/results";
 import type { ProjectFile } from "./domain/types";
 import { loadAutosave, saveAutosave } from "./storage/db";
@@ -15,7 +15,7 @@ export type PageKey = "project" | "objects" | "results" | "report" | "settings";
 const helpText: Record<PageKey, string> = {
   project: "Задайте назву, увімкніть потрібні типи розрахунку та оберіть речовини з базового або розширеного каталогу.",
   objects: "Додайте об'єкти вручну або з онлайн-мапи, після чого введіть концентрації в одній таблиці. На мапі можна тимчасово показати ймовірні промислові джерела з OpenStreetMap.",
-  results: "Виберіть результат у дереві ліворуч. Таблиця, графік і мапа відкриваються як окремі блоки; кожен блок можна скопіювати, зберегти або додати до звіту.",
+  results: "Оберіть показник, об'єкти, речовини та роки в панелі порівняння. Таблицю, графік і мапу можна окремо скопіювати, зберегти або додати до звіту. Для мапи оберіть рік і речовину або орган.",
   report: "Редагуйте текстові секції, переглядайте додані таблиці, графіки й мапи та використовуйте друк браузера для PDF.",
   settings: "Імпорт/експорт проєктів, базовий або розширений каталог речовин, тема та кольори інтерфейсу."
 };
@@ -31,9 +31,9 @@ export default function App() {
 
   useEffect(() => {
     loadAutosave().then((saved) => {
-      if (saved) setProject(saved);
+      if (saved) setProject(normalizeProject(saved));
       setLoaded(true);
-    });
+    }).catch(() => setLoaded(true));
   }, []);
 
   useEffect(() => {

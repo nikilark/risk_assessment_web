@@ -8,6 +8,7 @@ import {
   riskLabels
 } from "./risk";
 import type { AgentRecord, ChartSeries, ExposureRecord, ProjectFile, ResearchObject, ResultItem, RiskLevel } from "./types";
+import { exposureYear, projectYears } from "./years";
 
 function selectedAgents(project: ProjectFile): AgentRecord[] {
   return project.project.agents.filter((agent) => agent.selected);
@@ -30,7 +31,7 @@ function positiveExposures(project: ProjectFile): Array<ExposureRecord & { objec
   const objects = new Map(project.research.points.map((point) => [point.id, point]));
   const agents = new Map(selectedAgents(project).map((agent) => [agent.id, agent]));
   return project.research.exposures
-    .filter((exposure) => exposure.concentration > 0)
+    .filter((exposure) => Number.isFinite(exposure.concentration) && exposure.concentration >= 0)
     .map((exposure) => ({ ...exposure, object: objects.get(exposure.objectId), agent: agents.get(exposure.agentId) }))
     .filter((record): record is ExposureRecord & { object: ResearchObject; agent: AgentRecord } => Boolean(record.object && record.agent));
 }
@@ -128,7 +129,7 @@ function makeCancerResults(project: ProjectFile, flavor: "lifelong" | "acute"): 
 function makeNonCancerResults(project: ProjectFile, flavor: "lifelong" | "acute"): ResultItem[] {
   const flavorLabel = flavor === "lifelong" ? "Хронічний" : "Гострий";
   const outputs: ResultItem[] = [];
-  const exposures = positiveExposures(project).filter(({ agent }) => isNonCancerAgent(agent) && !isParticleAgent(agent));
+  const exposures = positiveExposures(project).filter(({ agent }) => isNonCancerAgent(agent));
   const records = exposures
     .map((record) => {
       const rfc = flavor === "lifelong" ? record.agent.rfcLifelong : record.agent.rfcAcute;
@@ -140,7 +141,7 @@ function makeNonCancerResults(project: ProjectFile, flavor: "lifelong" | "acute"
     })
     .filter((record): record is NonNullable<typeof record> => Boolean(record));
 
-  for (const agent of selectedAgents(project).filter((item) => isNonCancerAgent(item) && !isParticleAgent(item))) {
+  for (const agent of selectedAgents(project).filter(isNonCancerAgent)) {
     const agentRecords = records.filter((record) => record.agent.id === agent.id);
     if (!agentRecords.length) continue;
     const rows: string[][] = [];
@@ -262,7 +263,7 @@ function makeParticleResult(project: ProjectFile): ResultItem[] {
   ];
 }
 
-export function generateResults(project: ProjectFile): ResultItem[] {
+function generateYearResults(project: ProjectFile): ResultItem[] {
   const results: ResultItem[] = [];
   if (project.project.research_type.cancer_lifelong) results.push(...makeCancerResults(project, "lifelong"));
   if (project.project.research_type.cancer_acute) results.push(...makeCancerResults(project, "acute"));
@@ -270,6 +271,35 @@ export function generateResults(project: ProjectFile): ResultItem[] {
   if (project.project.research_type.non_cancer_acute) results.push(...makeNonCancerResults(project, "acute"));
   if (project.project.research_type.suspended_particles) results.push(...makeParticleResult(project));
   return results;
+}
+
+export function generateResults(project: ProjectFile): ResultItem[] {
+  const years = projectYears(project);
+  const grouped = new Map<string, Array<{ year: number; result: ResultItem }>>();
+  for (const year of years) {
+    const slice = { ...project, research: { ...project.research, exposures: project.research.exposures.filter((exposure) => exposureYear(exposure) === year) } };
+    for (const result of generateYearResults(slice)) grouped.set(result.id, [...(grouped.get(result.id) ?? []), { year, result }]);
+  }
+  return [...grouped.values()].map((items) => {
+    const first = items[0].result;
+    const headers = [...new Set(items.flatMap(({ result }) => result.headers))];
+    const latest = items[items.length - 1];
+    return { ...first,
+      title: `${first.title} · ${items.map((item) => item.year).join(", ")}`,
+      headers: [...headers, "Рік"],
+      rows: items.flatMap(({ year, result }) => result.rows.map((row) => {
+        const aligned = headers.map((header) => {
+          const index = result.headers.indexOf(header);
+          return index >= 0 ? row[index] : "—";
+        });
+        return [...aligned, String(year)];
+      })),
+      chartSeries: items.flatMap(({ year, result }) => result.chartSeries.map((item) => ({ ...item, series: years.length > 1 ? String(year) : undefined }))),
+      mapMarkers: latest.result.mapMarkers,
+      mapYear: latest.year,
+      mapLegend: `${first.mapLegend} · ${latest.year}`
+    };
+  });
 }
 
 export function resultToTsv(result: ResultItem): string {

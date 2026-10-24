@@ -11,13 +11,15 @@ The repository currently contains:
 Current workflow:
 
 1. **Project**: edit the project title, select risk types, select or add agents.
-2. **Research objects**: add objects manually or from the map, then enter population and exposure data in one table.
-3. **Results**: review result tables through a grouped tree, then copy/download/add tables, charts, and maps individually.
+2. **Research objects**: add objects manually or from the map, then enter concentrations for each year (the current year is the default). Population and death counts are shared across years.
+3. **Results**: choose a risk measure, places, agents, and years in the comparison builder; compare individual agents, totals, or organ HI with tables and grouped bars or yearly trends. Select a year and agent/organ for maps, then copy/download/add each view individually.
 4. **Report**: collect selected tables/charts/maps and print a structured report to PDF.
 
 Theme, project import/export, colors, and the basic/expanded catalog toggle live on the **Settings** page in the left sidebar.
 
 Saved projects use the `schema_version: 1` JSON format. Old project files are not treated as compatible. The bundled `research.json` is audited into a basic catalog and a deduplicated expanded catalog.
+
+Within schema 1, `research.years` lists study years and each exposure has a `year`; existing schema-1 projects without these fields load into the current year. Duplicate exposure validation applies to object/agent/year. Saved report comparisons retain their filters; years are independent exposure scenarios and are never summed together.
 
 ## Web PWA
 

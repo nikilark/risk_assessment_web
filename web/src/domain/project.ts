@@ -1,6 +1,7 @@
 import defaultAgents from "../data/default-agents.json";
 import expandedAgents from "../data/expanded-agents.json";
-import type { AgentRecord, ProjectFile, ReportSection, ResearchType } from "./types";
+import { currentYear, projectYears } from "./years";
+import type { AgentRecord, ExposureRecord, ProjectFile, ReportSection, ResearchType } from "./types";
 
 export const schemaVersion = 1;
 
@@ -95,6 +96,7 @@ export function createDefaultProject(): ProjectFile {
       agents: catalogAgents(false)
     },
     research: {
+      years: [currentYear()],
       points: [],
       exposures: []
     },
@@ -105,12 +107,36 @@ export function createDefaultProject(): ProjectFile {
   };
 }
 
+function validateExposures(exposures: unknown[]): ExposureRecord[] {
+  const seen = new Set<string>();
+  return exposures.map((value, index) => {
+    const exposure = value as Partial<ExposureRecord> | null;
+    if (!exposure || typeof exposure.objectId !== "string" || !exposure.objectId.trim() ||
+        typeof exposure.agentId !== "string" || !exposure.agentId.trim() ||
+        typeof exposure.concentration !== "number" || !Number.isFinite(exposure.concentration) || exposure.concentration < 0 ||
+        (exposure.year !== undefined && (!Number.isInteger(exposure.year) || exposure.year < 1 || exposure.year > 9999))) {
+      throw new Error(`Некоректний запис концентрації №${index + 1}: потрібні ідентифікатори об'єкта й речовини та скінченна невід'ємна концентрація.`);
+    }
+    const year = exposure.year ?? currentYear();
+    const key = JSON.stringify([exposure.objectId, exposure.agentId, year]);
+    if (seen.has(key)) {
+      throw new Error(`Повторний запис концентрації №${index + 1}: для кожної комбінації об'єкт/речовина/рік дозволено лише один запис.`);
+    }
+    seen.add(key);
+    return { objectId: exposure.objectId, agentId: exposure.agentId, year, concentration: exposure.concentration };
+  });
+}
+
 export function normalizeProject(input: unknown): ProjectFile {
   const value = input as Partial<ProjectFile>;
   if (!value || value.schema_version !== schemaVersion || !value.project || !value.research) {
     throw new Error("Підтримується лише JSON проєкту зі schema_version: 1.");
   }
   const defaults = createDefaultProject();
+  if (value.research.years !== undefined && (!Array.isArray(value.research.years) ||
+      value.research.years.some((year) => !Number.isInteger(year) || year < 1 || year > 9999))) {
+    throw new Error("Роки мають бути цілими числами від 1 до 9999.");
+  }
   const settings = {
     ...defaults.settings,
     ...value.settings,
@@ -128,13 +154,15 @@ export function normalizeProject(input: unknown): ProjectFile {
       agents: Array.isArray(value.project.agents) ? value.project.agents : []
     },
     research: {
+      years: value.research.years ?? [],
       points: Array.isArray(value.research.points) ? value.research.points : [],
-      exposures: Array.isArray(value.research.exposures) ? value.research.exposures : []
+      exposures: Array.isArray(value.research.exposures) ? validateExposures(value.research.exposures) : []
     },
     report: {
       sections: Array.isArray(value.report?.sections) ? value.report.sections : defaultReportSections(),
       assetIds: Array.isArray(value.report?.assetIds) ? value.report.assetIds : []
     }
   };
+  project.research.years = projectYears(project);
   return applyCatalogMode(project, Boolean(settings.expandedCatalog));
 }

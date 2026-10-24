@@ -2,6 +2,7 @@ import { Map, Plus, Trash2 } from "lucide-react";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { createId } from "../domain/project";
 import { normalizeNumber } from "../domain/risk";
+import { exposureYear, projectYears } from "../domain/years";
 import type { AgentRecord, PlaceScale, ProjectFile, ResearchObject, ResearchType } from "../domain/types";
 import { MapPicker } from "./MapPanel";
 
@@ -38,22 +39,28 @@ export function ObjectsPage({ project, updateProject }: { project: ProjectFile; 
   const [draft, setDraft] = useState(defaultDraft);
   const [coordinate, setCoordinate] = useState<ResearchObject["coordinate"]>();
   const [showMap, setShowMap] = useState(false);
+  const years = projectYears(project);
+  const [selectedYear, setSelectedYear] = useState(years[0]);
+  const activeYear = years.includes(selectedYear) ? selectedYear : years[0];
+  const [yearDraft, setYearDraft] = useState(String(Math.max(...years) + 1));
+  const [yearError, setYearError] = useState("");
   const titleTouched = useRef(false);
   const populationTouched = useRef(false);
   const deathsTouched = useRef(false);
   const selectedAgents = useMemo(() => project.project.agents.filter((agent) => agent.selected), [project.project.agents]);
 
   const getExposure = (objectId: string, agentId: string) =>
-    normalizeNumber(project.research.exposures.find((exposure) => exposure.objectId === objectId && exposure.agentId === agentId)?.concentration ?? 0);
+    project.research.exposures.find((exposure) => exposure.objectId === objectId && exposure.agentId === agentId && exposureYear(exposure) === activeYear)?.concentration ?? "";
 
-  const setExposure = (objectId: string, agentId: string, concentration: number) => {
+  const setExposure = (objectId: string, agentId: string, value: string) => {
+    const concentration = Number(value);
     const safeConcentration = Number.isFinite(concentration) ? concentration : 0;
-    const rest = project.research.exposures.filter((exposure) => !(exposure.objectId === objectId && exposure.agentId === agentId));
+    const rest = project.research.exposures.filter((exposure) => !(exposure.objectId === objectId && exposure.agentId === agentId && exposureYear(exposure) === activeYear));
     updateProject({
       ...project,
       research: {
         ...project.research,
-        exposures: [...rest, { objectId, agentId, concentration: normalizeNumber(Math.max(0, safeConcentration)) }]
+        exposures: value.trim() ? [...rest, { objectId, agentId, year: activeYear, concentration: normalizeNumber(Math.max(0, safeConcentration)) }] : rest
       }
     });
   };
@@ -71,6 +78,7 @@ export function ObjectsPage({ project, updateProject }: { project: ProjectFile; 
     const defaultExposures = selectedAgents.map((agent) => ({
       objectId,
       agentId: agent.id,
+      year: activeYear,
       concentration: defaultConcentration(agent, project.project.research_type)
     }));
     updateProject({
@@ -92,6 +100,7 @@ export function ObjectsPage({ project, updateProject }: { project: ProjectFile; 
     updateProject({
       ...project,
       research: {
+        ...project.research,
         points: project.research.points.filter((object) => object.id !== id),
         exposures: project.research.exposures.filter((exposure) => exposure.objectId !== id)
       }
@@ -151,6 +160,26 @@ export function ObjectsPage({ project, updateProject }: { project: ProjectFile; 
         </div>
       </div>
 
+      <div className="panel year-controls">
+        <label>Рік концентрацій<select aria-label="Рік концентрацій" value={activeYear} onChange={(event) => setSelectedYear(Number(event.target.value))}>
+          {years.map((year) => <option key={year} value={year}>{year}</option>)}
+        </select></label>
+        <label>Новий рік<input aria-label="Новий рік" type="number" min={1} max={9999} value={yearDraft} onChange={(event) => setYearDraft(event.target.value)} /></label>
+        <button className="secondary" onClick={() => {
+          const year = Number(yearDraft);
+          if (!Number.isInteger(year) || year < 1 || year > 9999) { setYearError("Введіть рік від 1 до 9999."); return; }
+          setYearError("");
+          updateProject({ ...project, research: { ...project.research, years: [...new Set([...years, year])].sort((a, b) => a - b) } });
+          setSelectedYear(year);
+          setYearDraft(String(year + 1));
+        }}>Додати рік</button>
+        {years.length > 1 && <button className="ghost" onClick={() => {
+          updateProject({ ...project, research: { ...project.research, years: years.filter((year) => year !== activeYear), exposures: project.research.exposures.filter((exposure) => exposureYear(exposure) !== activeYear) } });
+        }}>Видалити {activeYear}</button>}
+        {yearError && <p role="alert">{yearError}</p>}
+        <p className="muted">Порожня клітинка — дані відсутні. Населення та випадки смерті об'єкта застосовуються до всіх років.</p>
+      </div>
+
       <div className="table-wrap">
         <table className="data-table exposure-table">
           <thead>
@@ -176,7 +205,7 @@ export function ObjectsPage({ project, updateProject }: { project: ProjectFile; 
                       min={0}
                       step="any"
                       value={getExposure(object.id, agent.id)}
-                      onChange={(event) => setExposure(object.id, agent.id, Number(event.target.value))}
+                      onChange={(event) => setExposure(object.id, agent.id, event.target.value)}
                       placeholder={String(defaultConcentration(agent, project.project.research_type))}
                       aria-label={`${object.title} ${agent.name}`}
                     />

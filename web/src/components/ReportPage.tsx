@@ -1,10 +1,20 @@
 import { Printer, Trash2 } from "lucide-react";
+import { useMemo } from "react";
+import { mapMarkersToPng } from "../domain/mapExport";
 import { methodology } from "../domain/methodology";
+import { resolveComparison } from "../domain/comparison";
+import { exposureYear, projectYears } from "../domain/years";
+import { formatNumber } from "../domain/risk";
 import { parseReportAssetKey, reportAssetLabel } from "../domain/reportAssets";
 import type { ProjectFile, ResultItem } from "../domain/types";
 import { ChartPanel } from "./ChartPanel";
 import { ResultMap } from "./MapPanel";
 import { TableView } from "./TableView";
+
+function ReportMap({ result }: { result: ResultItem }) {
+  const png = useMemo(() => mapMarkersToPng({ ...result, title: `${result.title} · ${result.mapLegend}` }), [result]);
+  return <><ResultMap result={result} /><img className="print-only report-map-image" src={png} alt={result.mapLegend} /></>;
+}
 
 export function ReportPage({
   project,
@@ -17,7 +27,7 @@ export function ReportPage({
 }) {
   const assets = project.report.assetIds
     .map(parseReportAssetKey)
-    .map((asset) => ({ ...asset, result: results.find((result) => result.id === asset.resultId) }))
+    .map((asset) => ({ ...asset, result: resolveComparison(project, asset.resultId) ?? results.find((result) => result.id === asset.resultId) }))
     .filter((asset): asset is ReturnType<typeof parseReportAssetKey> & { result: ResultItem } => Boolean(asset.result));
   const updateSection = (id: string, field: "title" | "body", value: string) =>
     updateProject({
@@ -68,6 +78,7 @@ export function ReportPage({
 
         <section className="report-section">
           <h2>Вхідні дані</h2>
+          <p>Роки дослідження: {projectYears(project).join(", ")}. Населення та випадки смерті об'єкта однакові для всіх років. Роки порівнюються як окремі сценарії експозиції.</p>
           <TableView
             headers={["Об'єкт", "Населення", "Випадки смерті", "Координати"]}
             rows={project.research.points.map((object) => [
@@ -77,6 +88,12 @@ export function ReportPage({
               object.coordinate ? `${object.coordinate.latitude.toFixed(5)}, ${object.coordinate.longitude.toFixed(5)}` : "—"
             ])}
           />
+          <h3>Концентрації за роками</h3>
+          <TableView headers={["Об'єкт", "Речовина", "Рік", "Концентрація"]} rows={project.research.exposures.flatMap((exposure) => {
+            const object = project.research.points.find((point) => point.id === exposure.objectId);
+            const agent = project.project.agents.find((item) => item.id === exposure.agentId && item.selected);
+            return object && agent ? [[object.title, agent.name, String(exposureYear(exposure)), formatNumber(exposure.concentration)]] : [];
+          })} />
         </section>
 
         <section className="report-section">
@@ -88,10 +105,12 @@ export function ReportPage({
                 <button className="ghost" onClick={() => removeAsset(asset.key)}><Trash2 size={16} /></button>
               </div>
               <h3>{reportAssetLabel(asset.result, asset.kind)}</h3>
+              {asset.kind === "map" && <p>{asset.result.mapLegend}</p>}
               <p className="muted">{asset.result.methodNote}</p>
               {asset.kind === "table" && <TableView headers={asset.result.headers} rows={asset.result.rows} />}
               {asset.kind === "chart" && asset.result.chartSeries.length > 0 && <ChartPanel result={asset.result} />}
-              {asset.kind === "map" && asset.result.mapMarkers.length > 0 && <ResultMap result={asset.result} />}
+              {asset.kind === "map" && asset.result.mapMarkers.length > 0 && <ReportMap result={asset.result} />}
+              {!asset.result.rows.length && <p>Немає даних для збереженого вибору. Перевірте об'єкти, речовини та роки.</p>}
             </div>
           ))}
         </section>

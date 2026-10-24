@@ -41,7 +41,7 @@ export function Sidebar({
           const disabled = !enabled[item.key];
           const available = Boolean(availableHighlights[item.key]);
           return (
-            <button className={`nav-item ${active ? "active" : ""} ${available ? "newly-available" : ""}`} disabled={disabled} key={item.key} onClick={() => setPage(item.key)}>
+            <button className={`nav-item ${active ? "active" : ""} ${available ? "newly-available" : ""}`} aria-label={item.label} title={item.label} disabled={disabled} key={item.key} onClick={() => setPage(item.key)}>
               <Icon size={18} />
               <span>{item.label}</span>
             </button>

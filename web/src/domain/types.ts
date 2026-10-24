@@ -44,6 +44,7 @@ export interface ResearchObject {
 export interface ExposureRecord {
   objectId: string;
   agentId: string;
+  year?: number;
   concentration: number;
 }
 
@@ -76,6 +77,7 @@ export interface ProjectFile {
     agents: AgentRecord[];
   };
   research: {
+    years?: number[];
     points: ResearchObject[];
     exposures: ExposureRecord[];
   };
@@ -86,6 +88,7 @@ export interface ChartSeries {
   label: string;
   value: number;
   group?: string;
+  series?: string;
 }
 
 export interface MapMarker {
@@ -107,6 +110,9 @@ export interface ResultItem {
   rows: string[][];
   chartLabel: string;
   chartSeries: ChartSeries[];
+  chartCategories?: string[];
+  chartType?: "bar" | "line";
   mapLegend: string;
+  mapYear?: number;
   mapMarkers: MapMarker[];
 }

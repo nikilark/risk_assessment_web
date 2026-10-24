@@ -62,10 +62,13 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
     if (!ref.current) return;
     const chart = echarts.init(ref.current);
     chartRef.current = chart;
-    const wrappedLabels = result.chartSeries.map((item) => wrapChartLabel(item.label));
+    const categories = result.chartCategories ?? [...new Set(result.chartSeries.map((item) => item.label))];
+    const seriesNames = [...new Set(result.chartSeries.map((item) => item.series ?? result.chartLabel))];
+    const wrappedLabels = categories.map((item) => wrapChartLabel(item));
     const maxLabelLines = Math.max(1, ...wrappedLabels.map((label) => label.split("\n").length));
     chart.setOption({
-      grid: { left: 64, right: 24, top: 36, bottom: Math.min(150, 68 + maxLabelLines * 18) },
+      grid: { left: 64, right: 24, top: seriesNames.length > 1 ? 64 : 36, bottom: Math.min(150, 68 + maxLabelLines * 18) },
+      legend: seriesNames.length > 1 ? { type: "scroll", top: 4 } : undefined,
       tooltip: {
         trigger: "axis",
         valueFormatter: (value: unknown) => typeof value === "number" ? formatNumber(value) : String(value)
@@ -79,20 +82,19 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
           formatter: (value: string) => wrapChartLabel(value),
           hideOverlap: true
         },
-        data: result.chartSeries.map((item) => item.label)
+        data: categories
       },
       yAxis: {
         type: "value",
         name: result.chartLabel,
         axisLabel: { formatter: (value: number) => formatNumber(value) }
       },
-      series: [
-        {
-          type: "bar",
-          data: result.chartSeries.map((item) => item.value),
-          itemStyle: { color: "#b68b3f", borderRadius: [4, 4, 0, 0] }
-        }
-      ]
+      dataZoom: categories.length > 12 ? [{ type: "slider", bottom: 0, start: 0, end: Math.min(100, 12 / categories.length * 100) }] : undefined,
+      series: seriesNames.map((name) => ({
+        name, type: result.chartType ?? "bar", connectNulls: false,
+        data: categories.map((label) => result.chartSeries.find((item) => item.label === label && (item.series ?? result.chartLabel) === name)?.value ?? null),
+        itemStyle: { borderRadius: [4, 4, 0, 0] }
+      }))
     });
     const resize = () => chart.resize();
     window.addEventListener("resize", resize);

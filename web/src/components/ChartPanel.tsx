@@ -31,6 +31,7 @@ function applyPalette(chart: echarts.EChartsType, palette: typeof lightPalette) 
     backgroundColor: palette.background,
     color: palette.series,
     textStyle: { color: palette.text },
+    title: { textStyle: { color: palette.text }, subtextStyle: { color: palette.muted } },
     legend: {
       textStyle: { color: palette.text }, inactiveColor: palette.muted,
       pageTextStyle: { color: palette.text }, pageIconColor: palette.text, pageIconInactiveColor: palette.line
@@ -98,6 +99,67 @@ function wrapChartLabel(value: string, maxLineLength = 18, maxLines = 4): string
   return lines.join("\n");
 }
 
+function chartHeading(result: ResultItem, width: number) {
+  const text = wrapChartLabel(`${result.title} (${result.chartLabel})`, Math.max(24, Math.floor((width - 32) / 8)), 10);
+  const names = [...new Set(result.chartSeries.map((item) => item.series ?? result.chartLabel))];
+  const subtext = [result.years?.length ? `Роки: ${result.years.join(", ")}` : "",
+    result.chartType === "line" && names.length === 1 ? names[0] : ""].filter(Boolean).join(" · ");
+  const wrappedYears = wrapChartLabel(subtext, Math.max(28, Math.floor((width - 32) / 7)), 10);
+  const height = 18 + text.split("\n").length * 19 + (wrappedYears ? wrappedYears.split("\n").length * 16 + 10 : 0);
+  return {
+    height,
+    title: { text, subtext: wrappedYears, left: 12, top: 10,
+      textStyle: { fontSize: 14, lineHeight: 19 }, subtextStyle: { fontSize: 12, lineHeight: 16 }, itemGap: 6 }
+  };
+}
+
+function chartLayout(result: ResultItem, width: number, height: number, exporting = false) {
+  const categories = result.chartCategories ?? [...new Set(result.chartSeries.map((item) => item.label))];
+  const names = [...new Set(result.chartSeries.map((item) => item.series ?? result.chartLabel))];
+  const heading = chartHeading(result, width);
+  const labelLines = Math.max(1, ...categories.map((label) => wrapChartLabel(label).split("\n").length));
+  const bottom = Math.min(150, 68 + labelLines * 18);
+  const hasLegend = names.length > 1;
+  const tendency = result.chartType === "line" && hasLegend;
+  const sideLegend = tendency && width >= 720 && !exporting;
+  const legendWidth = sideLegend ? Math.min(320, Math.floor(width * 0.38)) : width - 32;
+  const legendTop = exporting ? height - exportLegendHeight(result, width) : sideLegend ? heading.height + 12 : tendency ? height - 180 : heading.height + 8;
+  const textWidth = exporting ? exportLegendTextWidth(width) : sideLegend ? legendWidth - 46 : tendency ? width - 78 : undefined;
+  return {
+    title: heading.title,
+    grid: {
+      left: 64, right: sideLegend ? legendWidth + 24 : 24,
+      top: heading.height + (hasLegend && !tendency && !exporting ? 54 : 30),
+      bottom: exporting && hasLegend ? exportLegendHeight(result, width) + bottom : tendency && !sideLegend ? 180 + bottom : bottom
+    },
+    legend: {
+      show: hasLegend, data: names, type: exporting ? "plain" : "scroll",
+      orient: tendency && !exporting ? "vertical" : "horizontal",
+      left: sideLegend ? width - legendWidth : 16, top: legendTop,
+      width: legendWidth, height: exporting ? exportLegendHeight(result, width) - 12 : tendency ? Math.max(60, height - legendTop - 14) : 40,
+      itemGap: 12, itemWidth: 18, itemHeight: 10,
+      textStyle: { fontSize: 12, lineHeight: 15, ...(textWidth ? { width: textWidth } : {}) },
+      formatter: (name: string) => textWidth ? wrapChartLabel(name, Math.max(12, Math.floor(textWidth / 7)), exporting ? 100 : 3) : name,
+      tooltip: { show: true }, pageButtonPosition: "end"
+    },
+    dataZoom: categories.length > 12 ? [{ type: "slider", bottom: exporting && hasLegend ? exportLegendHeight(result, width) : tendency && !sideLegend ? 180 : 0 }] : []
+  };
+}
+
+function exportLegendTextWidth(width: number) {
+  const columns = Math.max(1, Math.floor((width - 32) / 350));
+  return Math.floor((width - 32) / columns) - 52;
+}
+
+function exportLegendHeight(result: ResultItem, width: number) {
+  const names = [...new Set(result.chartSeries.map((item) => item.series ?? result.chartLabel))];
+  if (names.length < 2) return 0;
+  const columns = Math.max(1, Math.floor((width - 32) / 350));
+  const characters = Math.max(12, Math.floor(exportLegendTextWidth(width) / 7));
+  const lines = Math.max(...names.map((name) => wrapChartLabel(name, characters, 100).split("\n").length));
+  return Math.ceil(names.length / columns) * (lines * 15 + 12) + 24;
+}
+
 export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(function ChartPanel({ result }, handleRef) {
   const ref = useRef<HTMLDivElement | null>(null);
   const chartRef = useRef<echarts.EChartsType | null>(null);
@@ -105,16 +167,20 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
   useImperativeHandle(handleRef, () => ({
     toPng: () => {
       const chart = chartRef.current;
-      const container = ref.current;
-      if (!chart || !container) return undefined;
-      applyPalette(chart, lightPalette);
+      if (!chart) return undefined;
+      const width = 1200;
+      const height = 520 + chartHeading(result, width).height + exportLegendHeight(result, width);
+      const exported = echarts.init(document.createElement("div"), undefined, { width, height });
       try {
-        return chart.getDataURL({ type: "png", pixelRatio: 2, backgroundColor: "#ffffff" });
+        exported.setOption({ ...chart.getOption(), animation: false });
+        exported.setOption(chartLayout(result, width, height, true));
+        applyPalette(exported, lightPalette);
+        return exported.getDataURL({ type: "png", pixelRatio: 2, backgroundColor: "#ffffff" });
       } finally {
-        applyPalette(chart, chartPalette(container));
+        exported.dispose();
       }
     }
-  }), []);
+  }), [result]);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -122,11 +188,8 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
     chartRef.current = chart;
     const categories = result.chartCategories ?? [...new Set(result.chartSeries.map((item) => item.label))];
     const seriesNames = [...new Set(result.chartSeries.map((item) => item.series ?? result.chartLabel))];
-    const wrappedLabels = categories.map((item) => wrapChartLabel(item));
-    const maxLabelLines = Math.max(1, ...wrappedLabels.map((label) => label.split("\n").length));
     chart.setOption({
-      grid: { left: 64, right: 24, top: seriesNames.length > 1 ? 64 : 36, bottom: Math.min(150, 68 + maxLabelLines * 18) },
-      legend: { show: seriesNames.length > 1, type: "scroll", top: 4 },
+      ...chartLayout(result, chart.getWidth(), chart.getHeight()),
       tooltip: {
         trigger: "axis",
         valueFormatter: (value: unknown) => typeof value === "number" ? formatNumber(value) : String(value)
@@ -147,7 +210,7 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
         name: result.chartLabel,
         axisLabel: { formatter: (value: number) => formatNumber(value) }
       },
-      dataZoom: categories.length > 12 ? [{ type: "slider", bottom: 0, start: 0, end: Math.min(100, 12 / categories.length * 100) }] : undefined,
+      dataZoom: categories.length > 12 ? [{ type: "slider", bottom: 0, start: 0, end: Math.min(100, 12 / categories.length * 100) }] : [],
       series: seriesNames.map((name) => ({
         name, type: result.chartType ?? "bar", connectNulls: false,
         data: categories.map((label) => result.chartSeries.find((item) => item.label === label && (item.series ?? result.chartLabel) === name)?.value ?? null),
@@ -160,7 +223,10 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
     updatePalette();
     const themeObserver = new MutationObserver(updatePalette);
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme", "style"] });
-    const resize = () => chart.resize();
+    const resize = () => {
+      chart.resize();
+      chart.setOption(chartLayout(result, chart.getWidth(), chart.getHeight()));
+    };
     const sizeObserver = new ResizeObserver(resize);
     sizeObserver.observe(ref.current);
     window.addEventListener("resize", resize);
@@ -173,5 +239,7 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
     };
   }, [result]);
 
-  return <div className="chart-panel" ref={ref} role="img" aria-label={result.title} />;
+  const heading = chartHeading(result, 1200).title;
+  const label = `${heading.text} · ${heading.subtext}`.replace(/\n/g, " ");
+  return <div className={`chart-panel${result.chartType === "line" ? " chart-panel-tendency" : ""}`} ref={ref} role="img" aria-label={label} />;
 });

@@ -222,19 +222,18 @@ export function ResultsPage({
                         <button className="secondary" disabled={!mapResult.mapMarkers.length} onClick={downloadMapPng}><Download size={16} /> PNG</button>
                         <button className="secondary" disabled={!mapResult.mapMarkers.length} onClick={() => downloadCurrent("map")}><Download size={16} /> GeoJSON</button>
                       </div>
+                      <div className="map-filters">
+                        {spec.years.length > 1 && <label><select aria-label="Рік мапи" value={effectiveSpec.mapYear} onChange={(event) => setSpec({ ...spec, mapYear: Number(event.target.value) })}>
+                          {spec.years.map((year) => <option key={year} value={year}>{year}</option>)}
+                        </select></label>}
+                        {spec.aggregation === "agents" && <label><select aria-label="Речовина на мапі" value={effectiveSpec.mapAgentId} onChange={(event) => setSpec({ ...spec, mapAgentId: event.target.value })}>
+                          {mapAgents.map((agent) => <option key={agent.id} value={agent.id}>{agent.name}</option>)}
+                        </select></label>}
+                        {spec.aggregation === "organs" && <label><select aria-label="Орган на мапі" value={effectiveSpec.mapOrgan} onChange={(event) => setSpec({ ...spec, mapOrgan: event.target.value })}>
+                          {organs.map((organ) => <option key={organ} value={organ}>{organ}</option>)}
+                        </select></label>}
+                      </div>
                     </div>
-                    <div className="map-filters">
-                      {spec.years.length > 1 && <label>Рік мапи<select aria-label="Рік мапи" value={effectiveSpec.mapYear} onChange={(event) => setSpec({ ...spec, mapYear: Number(event.target.value) })}>
-                        {spec.years.map((year) => <option key={year} value={year}>{year}</option>)}
-                      </select></label>}
-                      {spec.aggregation === "agents" && <label>Речовина на мапі<select aria-label="Речовина на мапі" value={effectiveSpec.mapAgentId} onChange={(event) => setSpec({ ...spec, mapAgentId: event.target.value })}>
-                        {mapAgents.map((agent) => <option key={agent.id} value={agent.id}>{agent.name}</option>)}
-                      </select></label>}
-                      {spec.aggregation === "organs" && <label>Орган на мапі<select aria-label="Орган на мапі" value={effectiveSpec.mapOrgan} onChange={(event) => setSpec({ ...spec, mapOrgan: event.target.value })}>
-                        {organs.map((organ) => <option key={organ} value={organ}>{organ}</option>)}
-                      </select></label>}
-                    </div>
-                    <p>{mapResult.mapLegend}</p>
                     {mapResult.mapMarkers.length ? <ResultMap result={mapResult} /> : <p className="empty-state">Немає даних з координатами для цього вибору.</p>}
                   </details>
                 )}

@@ -100,6 +100,11 @@ test("main research flow renders map, chart, and typed report assets", async ({ 
   const mapSection = page.locator(".result-section", { hasText: "Мапа" });
   await expect(page.locator(".map-panel .leaflet-interactive").first()).toBeVisible();
   await expect(mapSection.locator(".pollution-source-control")).toContainText("Джерела забруднення");
+  for (let zoom = 0; zoom < 4; zoom++) {
+    await mapSection.getByRole("button", { name: "Zoom in", exact: true }).click();
+    await page.waitForTimeout(400);
+  }
+  await expect(mapSection.locator(".pollution-source-control input")).toBeEnabled();
   await mapSection.locator(".pollution-source-control input").check();
   await expect(mapSection.locator(".pollution-source-control small")).toContainText("1");
   await expect(mapSection.locator(".pollution-source-leaflet-icon")).toHaveCount(1);

@@ -1,4 +1,4 @@
-const CACHE_NAME = "risk-assessment-tool-v9-timed-help";
+const CACHE_NAME = "risk-assessment-tool-v12-chart-titles";
 const BASE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, "");
 const asset = (path) => `${BASE_PATH}${path}`;
 const CORE_ASSETS = [

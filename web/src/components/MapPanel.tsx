@@ -8,7 +8,7 @@ import { mapMarkerRadii, placeScaleLabels, riskLevelsForCategory } from "../doma
 import { riskColors, riskLabels } from "../domain/risk";
 import type { MapMarker, PlaceScale, ResearchObject, ResultItem } from "../domain/types";
 
-type PollutionSourceKind = "works" | "power" | "industrial" | "chimney";
+type PollutionSourceKind = "works" | "power" | "landfill" | "waste" | "wastewater";
 
 interface PollutionSource {
   id: string;
@@ -31,7 +31,7 @@ interface OverpassElement {
   tags?: Record<string, string>;
 }
 
-const sourceCache = new Map<string, PollutionSource[]>();
+const sourceCache = new Map<string, { sources: PollutionSource[]; expires: number }>();
 const maxPollutionSources = 120;
 
 L.Icon.Default.mergeOptions({
@@ -99,19 +99,25 @@ function escapeHtml(value: string): string {
   })[character] ?? character);
 }
 
-function pollutionSourceKind(tags: Record<string, string>): PollutionSourceKind {
-  if (tags.man_made === "chimney") return "chimney";
-  if (tags.power === "plant" || tags.power === "generator") return "power";
-  if (tags.landuse === "industrial" || tags.industrial) return "industrial";
-  return "works";
+const combustionSources = "coal|lignite|gas|oil|diesel|biomass|biogas|wood|waste|peat";
+const combustionSourcePattern = new RegExp(`(^|;)(${combustionSources})(;|$)`);
+
+function pollutionSourceKind(tags: Record<string, string>): PollutionSourceKind | undefined {
+  if (tags.landuse === "landfill") return "landfill";
+  if (tags.man_made === "wastewater_plant") return "wastewater";
+  if (tags.amenity === "waste_transfer_station") return "waste";
+  if (tags.man_made === "works") return "works";
+  if (tags.power === "plant" && (combustionSourcePattern.test(tags["plant:source"] ?? "") || tags["plant:method"] === "combustion")) return "power";
+  return undefined;
 }
 
 function pollutionSourceKindLabel(kind: PollutionSourceKind): string {
   return {
-    works: "виробничий об'єкт",
-    power: "енергетичний об'єкт",
-    industrial: "промислова зона",
-    chimney: "димова труба"
+    works: "завод / виробниче підприємство",
+    power: "паливна електростанція / ТЕЦ",
+    landfill: "полігон відходів",
+    waste: "сміттєперевантажувальна станція",
+    wastewater: "очисні споруди"
   }[kind];
 }
 
@@ -128,8 +134,8 @@ function pollutionSourceIcon(kind: PollutionSourceKind): L.DivIcon {
   });
 }
 
-function cacheKey(bounds: L.LatLngBounds, zoom: number): string {
-  return `${Math.floor(zoom)}:${bounds.getSouth().toFixed(2)},${bounds.getWest().toFixed(2)},${bounds.getNorth().toFixed(2)},${bounds.getEast().toFixed(2)}`;
+function cacheKey(bounds: L.LatLngBounds): string {
+  return `${bounds.getSouth().toFixed(2)},${bounds.getWest().toFixed(2)},${bounds.getNorth().toFixed(2)},${bounds.getEast().toFixed(2)}`;
 }
 
 function overpassQuery(bounds: L.LatLngBounds): string {
@@ -142,57 +148,77 @@ function overpassQuery(bounds: L.LatLngBounds): string {
   return `[out:json][timeout:12];
 (
   nwr["man_made"="works"](${bbox});
-  nwr["man_made"="chimney"](${bbox});
-  nwr["power"="plant"](${bbox});
-  nwr["power"="generator"](${bbox});
-  nwr["landuse"="industrial"](${bbox});
-  nwr["industrial"](${bbox});
+  nwr["power"="plant"]["plant:source"~"(^|;)(${combustionSources})(;|$)"](${bbox});
+  nwr["power"="plant"]["plant:method"="combustion"](${bbox});
+  nwr["landuse"="landfill"](${bbox});
+  nwr["man_made"="wastewater_plant"](${bbox});
+  nwr["amenity"="waste_transfer_station"](${bbox});
 );
 out center qt ${maxPollutionSources * 3};`;
 }
 
-async function fetchPollutionSources(bounds: L.LatLngBounds, zoom: number, signal: AbortSignal): Promise<PollutionSource[]> {
+async function fetchPollutionSources(bounds: L.LatLngBounds, signal: AbortSignal): Promise<PollutionSource[]> {
   const viewBounds = overpassBounds(bounds);
   const searchBounds = roundedCacheBounds(viewBounds);
-  const key = cacheKey(searchBounds, zoom);
+  const key = cacheKey(searchBounds);
   const cached = sourceCache.get(key);
-  if (cached) return visibleSources(cached, viewBounds);
+  if (cached && cached.expires > Date.now()) return cached.sources;
 
-  const response = await fetch("https://overpass-api.de/api/interpreter", {
-    method: "POST",
-    body: overpassQuery(searchBounds),
-    signal,
-    headers: {
-      "Content-Type": "text/plain;charset=UTF-8"
-    }
-  });
-  if (!response.ok) throw new Error("Overpass request failed");
-
-  const data = await response.json() as { elements?: OverpassElement[] };
-  const sources = new Map<string, PollutionSource>();
-  for (const element of data.elements ?? []) {
-    const latitude = element.lat ?? element.center?.lat;
-    const longitude = element.lon ?? element.center?.lon;
-    if (typeof latitude !== "number" || typeof longitude !== "number" || !Number.isFinite(latitude) || !Number.isFinite(longitude)) continue;
-    const tags = element.tags ?? {};
-    const kind = pollutionSourceKind(tags);
-    const source = {
-      id: `${element.type}-${element.id}`,
-      label: pollutionSourceLabel(tags, kind),
-      kind,
-      latitude,
-      longitude,
-      tags
-    };
-    if (!sourceInBounds(source, searchBounds)) continue;
-    sources.set(`${element.type}-${element.id}`, {
-      ...source
+  const controller = new AbortController();
+  const cancel = () => controller.abort();
+  if (signal.aborted) throw new DOMException("Aborted", "AbortError");
+  signal.addEventListener("abort", cancel, { once: true });
+  let timedOut = false;
+  const timeout = window.setTimeout(() => { timedOut = true; controller.abort(); }, 30000);
+  try {
+    const response = await fetch("https://overpass-api.de/api/interpreter", {
+      method: "POST",
+      body: overpassQuery(searchBounds),
+      signal: controller.signal,
+      headers: {
+        "Content-Type": "text/plain;charset=UTF-8"
+      }
     });
-  }
+    if (response.status === 429) throw new Error("Сервіс обмежив запити. Спробуйте пізніше.");
+    if (!response.ok) throw new Error(`Сервіс недоступний (HTTP ${response.status}).`);
 
-  const result = [...sources.values()].slice(0, maxPollutionSources * 2);
-  sourceCache.set(key, result);
-  return visibleSources(result, viewBounds);
+    const data = await response.json() as { elements?: OverpassElement[]; remark?: string };
+    if (!data || !Array.isArray(data.elements)) throw new Error("Сервіс повернув некоректну відповідь.");
+    if (data.remark) throw new Error("Сервіс не завершив пошук. Наблизьте мапу або повторіть пізніше.");
+    const sources = new Map<string, PollutionSource>();
+    for (const element of data.elements ?? []) {
+      const latitude = element.lat ?? element.center?.lat;
+      const longitude = element.lon ?? element.center?.lon;
+      if (typeof latitude !== "number" || typeof longitude !== "number" || !Number.isFinite(latitude) || !Number.isFinite(longitude)) continue;
+      const tags = element.tags ?? {};
+      const kind = pollutionSourceKind(tags);
+      if (!kind) continue;
+      const source = {
+        id: `${element.type}-${element.id}`,
+        label: pollutionSourceLabel(tags, kind),
+        kind,
+        latitude,
+        longitude,
+        tags
+      };
+      if (!sourceInBounds(source, searchBounds)) continue;
+      sources.set(`${element.type}-${element.id}`, {
+        ...source
+      });
+    }
+
+    const result = [...sources.values()].slice(0, maxPollutionSources * 2);
+    if (sourceCache.size >= 50) sourceCache.delete(sourceCache.keys().next().value!);
+    sourceCache.set(key, { sources: result, expires: Date.now() + 5 * 60 * 1000 });
+    return result;
+  } catch (error) {
+    if (timedOut) throw new Error("Сервіс не відповів за 30 секунд. Спробуйте пізніше.");
+    if (error instanceof TypeError) throw new Error("Не вдалося з’єднатися із сервісом.");
+    throw error;
+  } finally {
+    window.clearTimeout(timeout);
+    signal.removeEventListener("abort", cancel);
+  }
 }
 
 function renderPollutionSources(layer: L.LayerGroup, sources: PollutionSource[]) {
@@ -202,7 +228,9 @@ function renderPollutionSources(layer: L.LayerGroup, sources: PollutionSource[])
       source.tags.industrial && `industrial=${source.tags.industrial}`,
       source.tags.power && `power=${source.tags.power}`,
       source.tags.man_made && `man_made=${source.tags.man_made}`,
-      source.tags.landuse && `landuse=${source.tags.landuse}`
+      source.tags.landuse && `landuse=${source.tags.landuse}`,
+      source.tags.amenity && `amenity=${source.tags.amenity}`,
+      source.tags["plant:source"] && `plant:source=${source.tags["plant:source"]}`
     ].filter((item): item is string => Boolean(item)).map(escapeHtml).join("<br>");
     L.marker([source.latitude, source.longitude], {
       icon: pollutionSourceIcon(source.kind),
@@ -214,72 +242,113 @@ function renderPollutionSources(layer: L.LayerGroup, sources: PollutionSource[])
   }
 }
 
-function addPollutionSourceOverlay(map: L.Map): { remove: () => void } {
+function addPollutionSourceOverlay(map: L.Map, selection: { current: boolean }): { remove: () => void } {
   const layer = L.layerGroup().addTo(map);
   const control = new L.Control({ position: "topright" });
-  let active = false;
-  let status: HTMLSpanElement | undefined;
+  let active = selection.current;
+  let status: HTMLElement;
+  let checkbox: HTMLInputElement;
+  let retry: HTMLButtonElement;
   let abortController: AbortController | undefined;
   let requestNumber = 0;
+  let debounce: number | undefined;
+  let lastSources: PollutionSource[] = [];
 
   const setStatus = (message: string) => {
-    if (status) status.textContent = message;
+    status.textContent = message;
+    status.hidden = !message;
+  };
+
+  const unavailableReason = () => {
+    if (!navigator.onLine) return "Потрібне з’єднання з інтернетом.";
+    const bounds = roundedCacheBounds(map.getBounds());
+    const width = bounds.getEast() - bounds.getWest();
+    const height = bounds.getNorth() - bounds.getSouth();
+    const area = width * height * 111 * 111 * Math.cos(map.getCenter().lat * Math.PI / 180);
+    if (map.getZoom() < 11 || area > 1200) return "Наблизьте мапу для пошуку джерел.";
+    return "";
   };
 
   const load = async () => {
-    abortController?.abort();
-    if (!active) {
-      layer.clearLayers();
-      setStatus("");
-      return;
-    }
-    if (map.getZoom() < 9) {
-      layer.clearLayers();
-      setStatus("наблизьте мапу");
-      return;
-    }
-
     const currentRequest = ++requestNumber;
-    abortController = new AbortController();
-    setStatus("пошук...");
-    try {
-      const sources = await fetchPollutionSources(map.getBounds(), map.getZoom(), abortController.signal);
-      if (currentRequest !== requestNumber) return;
-      renderPollutionSources(layer, sources);
-      setStatus(sources.length ? `${sources.length}` : "не знайдено");
-    } catch {
-      if (currentRequest !== requestNumber) return;
+    abortController?.abort();
+    retry.hidden = true;
+    const reason = unavailableReason();
+    checkbox.disabled = Boolean(reason);
+    if (reason || !active) {
       layer.clearLayers();
-      setStatus("недоступно");
+      setStatus(reason);
+      return;
+    }
+    const controller = new AbortController();
+    abortController = controller;
+    renderPollutionSources(layer, visibleSources(lastSources, map.getBounds()));
+    setStatus("Пошук…");
+    try {
+      const sources = await fetchPollutionSources(map.getBounds(), controller.signal);
+      if (currentRequest !== requestNumber || controller.signal.aborted) return;
+      lastSources = sources;
+      const visible = visibleSources(sources, map.getBounds());
+      renderPollutionSources(layer, visible);
+      setStatus(visible.length ? `${visible.length}` : "У цій області джерел в OSM не знайдено.");
+    } catch (error) {
+      if (currentRequest !== requestNumber || controller.signal.aborted) return;
+      setStatus(error instanceof Error ? error.message : "Сервіс недоступний.");
+      retry.hidden = false;
     }
   };
 
+  const scheduleLoad = () => {
+    ++requestNumber;
+    abortController?.abort();
+    window.clearTimeout(debounce);
+    debounce = window.setTimeout(() => void load(), 350);
+  };
+
   control.onAdd = () => {
-    const root = L.DomUtil.create("label", "pollution-source-control");
+    const root = L.DomUtil.create("div", "pollution-source-control");
     L.DomEvent.disableClickPropagation(root);
     L.DomEvent.disableScrollPropagation(root);
-
-    const checkbox = document.createElement("input");
+    const label = document.createElement("label");
+    label.className = "pollution-source-toggle";
+    checkbox = document.createElement("input");
     checkbox.type = "checkbox";
+    checkbox.checked = active;
     const title = document.createElement("span");
     title.textContent = "Джерела забруднення";
     status = document.createElement("small");
-
-    root.append(checkbox, title, status);
+    status.setAttribute("role", "status");
+    retry = document.createElement("button");
+    retry.type = "button";
+    retry.className = "pollution-source-retry";
+    retry.textContent = "Повторити";
+    retry.hidden = true;
+    label.append(checkbox, title);
+    root.append(label, status, retry);
     L.DomEvent.on(checkbox, "change", () => {
       active = checkbox.checked;
+      selection.current = active;
+      window.clearTimeout(debounce);
       void load();
     });
+    L.DomEvent.on(retry, "click", () => { window.clearTimeout(debounce); void load(); });
     return root;
   };
 
   control.addTo(map);
-  map.on("moveend", load);
+  void load();
+  map.on("moveend", scheduleLoad);
+  window.addEventListener("online", scheduleLoad);
+  window.addEventListener("offline", scheduleLoad);
 
   return {
     remove: () => {
+      ++requestNumber;
+      window.clearTimeout(debounce);
       abortController?.abort();
-      map.off("moveend", load);
+      map.off("moveend", scheduleLoad);
+      window.removeEventListener("online", scheduleLoad);
+      window.removeEventListener("offline", scheduleLoad);
       control.remove();
       layer.remove();
     }
@@ -294,7 +363,7 @@ function addMapLegend(map: L.Map, result: ResultItem): L.Control {
     L.DomEvent.disableScrollPropagation(root);
 
     const title = document.createElement("strong");
-    title.textContent = result.mapLegend;
+    title.textContent = "Рівень ризику";
     root.append(title);
 
     const riskList = document.createElement("div");
@@ -358,6 +427,7 @@ async function reverseGeocode(latitude: number, longitude: number, scale: PlaceS
 }
 
 export function ResultMap({ result }: { result: ResultItem }) {
+  const sourceSelection = useRef(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -377,7 +447,7 @@ export function ResultMap({ result }: { result: ResultItem }) {
       }).bindPopup(`${point.label}<br>${result.mapLegend}: ${point.value}`).addTo(map);
     }
     const legend = addMapLegend(map, result);
-    const pollutionSources = addPollutionSourceOverlay(map);
+    const pollutionSources = addPollutionSourceOverlay(map, sourceSelection);
     const sizeObserver = new ResizeObserver(() => map.invalidateSize());
     sizeObserver.observe(ref.current);
     setTimeout(() => {
@@ -402,6 +472,7 @@ export function MapPicker({
   onPick: (coordinate: { latitude: number; longitude: number; title?: string; scale?: PlaceScale }) => void;
   objects: ResearchObject[];
 }) {
+  const sourceSelection = useRef(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -413,7 +484,7 @@ export function MapPicker({
       maxZoom: 19,
       attribution: "&copy; OpenStreetMap"
     }).addTo(map);
-    const pollutionSources = addPollutionSourceOverlay(map);
+    const pollutionSources = addPollutionSourceOverlay(map, sourceSelection);
     for (const object of objects) {
       if (object.coordinate) {
         L.marker([object.coordinate.latitude, object.coordinate.longitude]).bindPopup(object.title).addTo(map);

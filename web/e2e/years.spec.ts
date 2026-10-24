@@ -39,6 +39,9 @@ test("edits years, compares subsets, exports a selected map year and preserves r
   const table = page.locator(".result-section").filter({ has: page.locator("summary", { hasText: /^Таблиця$/ }) });
   const chart = page.locator(".result-section").filter({ has: page.locator("summary", { hasText: /^Графік$/ }) });
   const map = page.locator(".result-section").filter({ has: page.locator("summary", { hasText: "Мапа" }) });
+  await expect(map.locator(".view-actions").getByRole("combobox", { name: "Рік мапи", exact: true })).toBeVisible();
+  await expect(map.locator(".view-actions").getByRole("combobox", { name: "Речовина на мапі", exact: true })).toBeVisible();
+  await expect(map.locator(":scope > p")).toHaveCount(0);
   await expect(table.locator("tbody tr")).toHaveCount(8);
   await expect(page.locator(".result-header h2")).toHaveCount(0);
   await expect(page.locator(".result-config-row").getByRole("combobox", { name: "Показник" })).toBeVisible();

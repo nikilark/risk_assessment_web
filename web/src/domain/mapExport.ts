@@ -1,4 +1,4 @@
-import { mapExportMarkerRadii, placeScaleLabels, riskLevelOrder } from "./mapLegend";
+import { mapExportMarkerRadii, placeScaleLabels, riskLevelsForCategory } from "./mapLegend";
 import { formatNumber, riskColors, riskLabels } from "./risk";
 import type { MapMarker, PlaceScale, ResultItem } from "./types";
 
@@ -111,7 +111,7 @@ export function mapMarkersToPng(result: ResultItem): string {
   context.fillStyle = "#334e68";
   context.fillText("Рівень ризику", 72, 795);
   let legendX = 72;
-  for (const level of riskLevelOrder) {
+  for (const level of riskLevelsForCategory(result.category)) {
     context.beginPath();
     context.arc(legendX + 8, 826, 8, 0, Math.PI * 2);
     context.fillStyle = riskColors[level];

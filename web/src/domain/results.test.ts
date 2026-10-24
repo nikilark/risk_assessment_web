@@ -29,7 +29,7 @@ describe("particulate non-cancer results", () => {
     expect(summary.rows[0][summary.headers.indexOf("HI: органи дихання")]).toBe("8");
     expect(results.some((result) => result.id === "particles-mortality")).toBe(false);
     project.project.research_type.suspended_particles = true;
-    expect(generateResults(project).find((result) => result.id === "particles-mortality")?.rows).toHaveLength(3);
+    expect(generateResults(project).find((result) => result.id === "particles-mortality")?.rows).toHaveLength(2);
   });
 
   it("skips agents without a reference concentration for the selected duration", () => {

@@ -1,6 +1,7 @@
 import type { RiskLevel } from "./types";
 
 export type CancerFlavor = "lifelong" | "acute";
+export type MortalityParticleKind = "pm10" | "tsp";
 
 export const populationMultiplier = 10000;
 
@@ -24,8 +25,7 @@ export function cancerRiskLevel(icr: number): RiskLevel {
   if (icr < 1e-6) return "minimal";
   if (icr < 1e-4) return "low";
   if (icr < 1e-3) return "medium";
-  if (icr < 1) return "high";
-  return "critical";
+  return "high";
 }
 
 export function hazardRiskLevel(value: number): RiskLevel {
@@ -44,7 +44,8 @@ export function calculateLadd(concentration: number, flavor: CancerFlavor): numb
     (concentration * consumptionRate * exposureDuration * exposureFrequency) / (bodyWeight * averagingTime * 365);
 
   if (flavor === "lifelong") {
-    const ageDurations = [6, 12, 18];
+    // A 70-year lifetime covers ages 0–6, 6–18 and 18–70.
+    const ageDurations = [6, 12, 52];
     const rates = [4, 20, 22];
     const weights = [15, 42, 70];
     return ageDurations.reduce((sum, duration, index) => sum + duration * add(rates[index], weights[index]), 0) / averagingTime;
@@ -71,13 +72,15 @@ export function calculateHazardQuotient(concentration: number, referenceConcentr
   return referenceConcentration > 0 ? concentration / referenceConcentration : 0;
 }
 
-export function calculateAdditionalMortality(concentration: number, deaths: number, population: number) {
+export function calculateAdditionalMortality(concentration: number, deaths: number, population: number, particleKind: MortalityParticleKind = "pm10") {
   const safePopulation = Math.max(1, population);
+  const pm10Concentration = particleKind === "tsp" ? concentration * 0.6 : concentration;
   const irm = (deaths * 0.005) / (365 * safePopulation);
   const sf = irm * 70 * 365;
-  const am = concentration * 0.55 * sf * safePopulation;
+  const am = pm10Concentration * sf * safePopulation;
   const amPer10000 = (am / safePopulation) * populationMultiplier;
   return {
+    pm10Concentration,
     irm,
     sf,
     am,

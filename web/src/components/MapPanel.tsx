@@ -4,7 +4,7 @@ import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import { useEffect, useRef } from "react";
-import { mapMarkerRadii, placeScaleLabels, riskLevelOrder } from "../domain/mapLegend";
+import { mapMarkerRadii, placeScaleLabels, riskLevelsForCategory } from "../domain/mapLegend";
 import { riskColors, riskLabels } from "../domain/risk";
 import type { MapMarker, PlaceScale, ResearchObject, ResultItem } from "../domain/types";
 
@@ -299,7 +299,7 @@ function addMapLegend(map: L.Map, result: ResultItem): L.Control {
 
     const riskList = document.createElement("div");
     riskList.className = "map-legend-list";
-    for (const level of riskLevelOrder) {
+    for (const level of riskLevelsForCategory(result.category)) {
       const item = document.createElement("span");
       const swatch = document.createElement("i");
       swatch.className = "map-legend-color";

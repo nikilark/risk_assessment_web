@@ -1,5 +1,5 @@
 import { calculateAdditionalMortality, calculateCancer, calculateHazardQuotient, cancerRiskLevel, formatNumber, hazardRiskLevel, riskLabels } from "./risk";
-import { isParticleAgent } from "./results";
+import { isParticleAgent, mortalityParticleKind } from "./results";
 import { exposureYear, projectYears } from "./years";
 import type { AgentRecord, ProjectFile, ResearchObject, ResearchType, ResultItem } from "./types";
 
@@ -26,7 +26,7 @@ export const metricLabels: Record<keyof ResearchType, string> = {
 
 export function eligibleAgents(project: ProjectFile, metric: keyof ResearchType): AgentRecord[] {
   return project.project.agents.filter((agent) => agent.selected && (
-    metric === "suspended_particles" ? isParticleAgent(agent) :
+    metric === "suspended_particles" ? mortalityParticleKind(agent) !== undefined :
     metric.startsWith("non_cancer") ? (metric.endsWith("lifelong") ? agent.rfcLifelong : agent.rfcAcute) > 0 :
     agent.sfi > 0 && !isParticleAgent(agent)
   ));
@@ -76,9 +76,9 @@ export function buildComparison(project: ProjectFile, spec: ComparisonSpec): Res
       value = risk.icr;
       details = { LADD: risk.ladd, SFi: agent.sfi, PCR: risk.pcr, "PCR на 10000": risk.pcrPer10000 };
     } else if (particles) {
-      const risk = calculateAdditionalMortality(concentration, object.deaths, object.population);
+      const risk = calculateAdditionalMortality(concentration, object.deaths, object.population, mortalityParticleKind(agent));
       value = risk.amPer10000;
-      details = { IRM: risk.irm, SF: risk.sf, AM: risk.am };
+      details = { "C(PM10)": risk.pm10Concentration, IRM: risk.irm, SF: risk.sf, AM: risk.am };
     } else {
       const rfc = flavor === "lifelong" ? agent.rfcLifelong : agent.rfcAcute;
       value = calculateHazardQuotient(concentration, rfc);
@@ -136,7 +136,7 @@ export function buildComparison(project: ProjectFile, spec: ComparisonSpec): Res
   return {
     id: comparisonId(spec), title,
     category: cancer ? "Канцерогенний ризик" : particles ? "Зважені частинки" : "Неканцерогенний ризик",
-    methodNote: `${cancer ? "ICR = LADD × SF" : particles ? "AM/IRM/SF; застосовність формули потребує перевірки" : "HQ = C / RfC; HI = ΣHQ"}. ${context} Роки — окремі сценарії; значення між роками не підсумовуються. Порожні дані позначено «—».${aggregation !== "agents" ? " Суми показано лише за повних даних для обраних речовин (для HI органа — речовин, що впливають на цей орган)." : ""}`,
+    methodNote: `${cancer ? "ICR = LADD × SF" : particles ? "AM = C(PM10) × SF × N; для TSP: C(PM10) = 0.6 × C(TSP). PM2.5 не входить до цієї моделі; шкала одиниць концентрації та класифікація смертності потребують перевірки" : "HQ = C / RfC; HI = ΣHQ"}. ${context} Роки — окремі сценарії; значення між роками не підсумовуються. Порожні дані позначено «—».${aggregation !== "agents" ? " Суми показано лише за повних даних для обраних речовин (для HI органа — речовин, що впливають на цей орган)." : ""}`,
     headers, rows, chartLabel: measure,
     chartCategories: spec.chartAxis === "years" ? years.map(String) : undefined,
     chartType: spec.chartAxis === "years" ? "line" : "bar",

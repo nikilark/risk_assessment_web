@@ -8,6 +8,7 @@ import {
   riskLabels
 } from "./risk";
 import type { AgentRecord, ChartSeries, ExposureRecord, ProjectFile, ResearchObject, ResultItem, RiskLevel } from "./types";
+import type { MortalityParticleKind } from "./risk";
 import { exposureYear, projectYears } from "./years";
 
 function selectedAgents(project: ProjectFile): AgentRecord[] {
@@ -25,6 +26,13 @@ export function isNonCancerAgent(agent: AgentRecord): boolean {
 export function isParticleAgent(agent: AgentRecord): boolean {
   const name = agent.name.toLocaleLowerCase("uk-UA");
   return name.includes("(tsp)") || name.includes("pm10") || name.includes("pm2.5") || name.includes("рм10") || name.includes("рм2.5") || name.includes("частинки");
+}
+
+export function mortalityParticleKind(agent: AgentRecord): MortalityParticleKind | undefined {
+  const name = agent.name.toLocaleLowerCase("uk-UA");
+  if (name.includes("tsp")) return "tsp";
+  if (name.includes("pm10") || name.includes("рм10")) return "pm10";
+  return undefined;
 }
 
 function positiveExposures(project: ProjectFile): Array<ExposureRecord & { object: ResearchObject; agent: AgentRecord }> {
@@ -231,11 +239,14 @@ function makeParticleResult(project: ProjectFile): ResultItem[] {
   const chartSeries: ChartSeries[] = [];
   const mapMarkers = [];
   for (const record of positiveExposures(project).filter((item) => isParticleAgent(item.agent))) {
-    const risk = calculateAdditionalMortality(record.concentration, record.object.deaths, record.object.population);
+    const particleKind = mortalityParticleKind(record.agent);
+    if (!particleKind) continue;
+    const risk = calculateAdditionalMortality(record.concentration, record.object.deaths, record.object.population, particleKind);
     rows.push([
       record.object.title,
       record.agent.name,
       formatNumber(record.concentration),
+      formatNumber(risk.pm10Concentration),
       formatNumber(risk.irm),
       formatNumber(risk.sf),
       formatNumber(risk.am),
@@ -252,8 +263,8 @@ function makeParticleResult(project: ProjectFile): ResultItem[] {
       id: "particles-mortality",
       title: "Зважені частинки: додаткова смертність",
       category: "Зважені частинки",
-      methodNote: methodNote("AM/IRM/SF calculation; перевірити застосовність для PM10/PM2.5"),
-      headers: ["Об'єкт", "Речовина", "Концентрація", "IRM", "SF", "AM", "AM на 10000", "Рівень ризику"],
+      methodNote: methodNote("AM = C(PM10) × SF × N; для TSP: C(PM10) = 0.6 × C(TSP). PM2.5 не входить до цієї моделі; шкала одиниць концентрації та класифікація смертності потребують перевірки."),
+      headers: ["Об'єкт", "Речовина", "Концентрація", "C(PM10)", "IRM", "SF", "AM", "AM на 10000", "Рівень ризику"],
       rows,
       chartLabel: "AM на 10000",
       chartSeries,

@@ -2,6 +2,7 @@ import { Plus, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { applyCatalogMode, createId } from "../domain/project";
 import { formatNumber, normalizeNumber } from "../domain/risk";
+import { mortalityParticleKind } from "../domain/results";
 import type { AgentRecord, ProjectFile } from "../domain/types";
 import { OrganChips, OrganIconLegend, OrganToggleGroup } from "./OrganChips";
 
@@ -43,7 +44,7 @@ export function ProjectPage({ project, updateProject }: { project: ProjectFile; 
           ((researchType.cancer_lifelong || researchType.cancer_acute) && agent.sfi > 0) ||
           (researchType.non_cancer_lifelong && agent.rfcLifelong > 0) ||
           (researchType.non_cancer_acute && agent.rfcAcute > 0) ||
-          (researchType.suspended_particles && agent.name.toLocaleLowerCase("uk-UA").includes("част"));
+          (researchType.suspended_particles && mortalityParticleKind(agent) !== undefined);
         return relevant && (!normalized || agent.name.toLocaleLowerCase("uk-UA").includes(normalized));
       })
       .sort((a, b) => a.name.localeCompare(b.name, "uk-UA"));
@@ -145,6 +146,8 @@ export function ProjectPage({ project, updateProject }: { project: ProjectFile; 
           <input className="toggle-input" type="checkbox" checked={researchType.suspended_particles} onChange={(event) => patchType("suspended_particles", event.target.checked)} />
         </label>
       </div>
+
+      {researchType.suspended_particles && <p className="muted">Додаткова смертність: PM10 і TSP (PM10 = 0.6 × TSP). Для PM2.5 доступна оцінка HQ/HI у розділі неканцерогенного ризику.</p>}
 
       <div className="toolbar">
         <div className="muted">{shownAgents.filter((agent) => agent.selected).length}/{shownAgents.length} обрано в поточному фільтрі</div>

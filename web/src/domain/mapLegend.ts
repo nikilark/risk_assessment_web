@@ -1,4 +1,4 @@
-import type { PlaceScale, RiskLevel } from "./types";
+import type { PlaceScale, ResultCategory, RiskLevel } from "./types";
 
 export const placeScaleLabels: Record<PlaceScale, string> = {
   street: "вулиця",
@@ -22,3 +22,7 @@ export const mapExportMarkerRadii: Record<PlaceScale, number> = {
 };
 
 export const riskLevelOrder: RiskLevel[] = ["minimal", "low", "medium", "high", "critical"];
+
+export function riskLevelsForCategory(category: ResultCategory): RiskLevel[] {
+  return category === "Канцерогенний ризик" ? riskLevelOrder.filter((level) => level !== "critical") : riskLevelOrder;
+}

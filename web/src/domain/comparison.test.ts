@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildComparison, defaultComparison, resolveComparison } from "./comparison";
+import { buildComparison, defaultComparison, eligibleAgents, resolveComparison } from "./comparison";
 import { createDefaultProject, normalizeProject } from "./project";
 import { generateResults } from "./results";
 import { currentYear } from "./years";
@@ -19,6 +19,24 @@ function fixture() {
 }
 
 describe("year comparisons", () => {
+  it("applies the PM10/TSP correction in both result paths while retaining PM2.5 for HQ only", () => {
+    const project = createDefaultProject();
+    project.project.research_type.suspended_particles = true;
+    project.project.agents = project.project.agents.filter((agent) => /частинки/.test(agent.name)).map((agent) => ({ ...agent, selected: true }));
+    project.research.points = [{ id: "A", title: "A", population: 50000, deaths: 100 }];
+    project.research.exposures = project.project.agents.map((agent) => ({ objectId: "A", agentId: agent.id, concentration: 0.1 }));
+    const spec = { ...defaultComparison(project), metric: "suspended_particles" as const, tableMode: "details" as const };
+    const result = buildComparison(project, spec);
+    expect(result.rows).toHaveLength(2);
+    for (const row of result.rows) {
+      expect(row[result.headers.indexOf("AM")]).toBe(row[1].includes("TSP") ? "2,1" : "3,5");
+    }
+    const legacy = generateResults(project).find((item) => item.id === "particles-mortality")!;
+    expect(legacy.rows).toHaveLength(2);
+    for (const row of legacy.rows) expect(row[legacy.headers.indexOf("AM")]).toBe(row[1].includes("TSP") ? "2,1" : "3,5");
+    expect(eligibleAgents(project, "suspended_particles").some((agent) => agent.name.includes("РМ2.5"))).toBe(false);
+    expect(eligibleAgents(project, "non_cancer_lifelong").some((agent) => agent.name.includes("РМ2.5"))).toBe(true);
+  });
   it("keeps all object/agent/year combinations independent and pivots years into columns", () => {
     const project = fixture();
     const result = buildComparison(project, defaultComparison(project));

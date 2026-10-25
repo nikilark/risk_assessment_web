@@ -1,8 +1,10 @@
+import { mockMapTiles } from "./helpers/mapTiles";
 import { stat } from "node:fs/promises";
 import { expect, test } from "@playwright/test";
 
 test("project page fits mobile width", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 900 });
+  await mockMapTiles(page);
   await page.goto("/");
 
   await expect(page.locator(".title-input")).toHaveValue("Нове дослідження");
@@ -51,6 +53,7 @@ test("main research flow renders map, chart, and typed report assets", async ({ 
       })
     });
   });
+  await mockMapTiles(page);
   await page.goto("/");
 
   await page.locator(".agents-table tbody input[type='checkbox']").first().check();
@@ -134,6 +137,7 @@ test("main research flow renders map, chart, and typed report assets", async ({ 
 });
 
 test("results are blocked when active research type has no valid exposure", async ({ page }) => {
+  await mockMapTiles(page);
   await page.goto("/");
 
   await page.locator(".agents-table tbody input[type='checkbox']").first().check();

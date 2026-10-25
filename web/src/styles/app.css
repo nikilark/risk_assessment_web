@@ -974,25 +974,19 @@ textarea {
 .pollution-source-marker {
   background: #6f4e37;
   border: 2px solid #fffdf8;
-  border-radius: 50% 50% 50% 5px;
-  box-shadow: 0 4px 12px rgba(31, 41, 51, 0.35);
-  display: block;
-  height: 24px;
-  position: relative;
-  transform: rotate(-45deg);
-  width: 24px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(31, 41, 51, 0.35);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  height: 34px;
+  width: 34px;
 }
 
-.pollution-source-marker span {
-  background: rgba(255, 253, 248, 0.92);
-  border-radius: 999px;
+.pollution-source-marker svg {
   display: block;
-  height: 8px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
+  height: 22px;
+  width: 22px;
 }
 
 .pollution-source-marker.power {

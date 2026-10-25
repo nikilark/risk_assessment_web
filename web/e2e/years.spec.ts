@@ -1,7 +1,8 @@
+import { mockMapTiles } from "./helpers/mapTiles";
 import { readFile } from "node:fs/promises";
 import { expect, test } from "@playwright/test";
 
-test("edits years, compares subsets, exports a selected map year and preserves report selections", async ({ page }) => {
+test("edits years, compares subsets, exports a selected map year as PNG and preserves report selections", async ({ page }) => {
   const agents = [
     { id: "agent-a", name: "Речовина A", rfcLifelong: 0.05 },
     { id: "agent-b", name: "Речовина B", rfcLifelong: 0.1 }
@@ -20,6 +21,7 @@ test("edits years, compares subsets, exports a selected map year and preserves r
   };
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
+  await mockMapTiles(page);
   await page.goto("/");
   await page.getByRole("button", { name: /Налаштування/ }).click();
   await page.locator('input[type="file"]').setInputFiles({ name: "years.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(project)) });
@@ -80,12 +82,12 @@ test("edits years, compares subsets, exports a selected map year and preserves r
   await page.getByLabel("Рік мапи").selectOption("2021");
   await map.getByRole("button", { name: "До звіту", exact: true }).click();
   const downloaded = page.waitForEvent("download");
-  await map.getByRole("button", { name: "GeoJSON", exact: true }).click();
+  await expect(map.getByRole("button", { name: "GeoJSON", exact: true })).toHaveCount(0);
+  await map.getByRole("button", { name: "PNG", exact: true }).click();
   const file = await downloaded;
-  const geojson = JSON.parse(await readFile((await file.path())!, "utf8"));
-  expect(geojson.features).toHaveLength(1);
-  expect(geojson.features[0].properties.year).toBe(2021);
-  expect(geojson.features[0].properties.value).toBe(8);
+  const png = await readFile((await file.path())!);
+  expect(png.readUInt32BE(16)).toBe(1400);
+  expect(file.suggestedFilename()).toContain("2021");
   await page.screenshot({ path: "/tmp/risk-years-results.png", fullPage: true });
 
   await page.getByRole("button", { name: /^Звіт$/ }).click();

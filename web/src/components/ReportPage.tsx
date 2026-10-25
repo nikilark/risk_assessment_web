@@ -1,5 +1,5 @@
 import { Printer, Trash2 } from "lucide-react";
-import { useMemo } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { mapMarkersToPng } from "../domain/mapExport";
 import { methodology } from "../domain/methodology";
 import { resolveComparison } from "../domain/comparison";
@@ -11,9 +11,32 @@ import { ChartPanel } from "./ChartPanel";
 import { ResultMap } from "./MapPanel";
 import { TableView } from "./TableView";
 
-function ReportMap({ result }: { result: ResultItem }) {
-  const png = useMemo(() => mapMarkersToPng({ ...result, title: `${result.title} · ${result.mapLegend}` }), [result]);
-  return <><ResultMap result={result} /><img className="print-only report-map-image" src={png} alt={result.mapLegend} /></>;
+function mapImageKey(result: ResultItem) {
+  return JSON.stringify([result.title, result.mapLegend, result.category, result.mapMarkers]);
+}
+
+function ReportMap({ result, onReady }: { result: ResultItem; onReady: (key: string, ready: boolean) => void }) {
+  const [png, setPng] = useState("");
+  const [error, setError] = useState("");
+  const [attempt, setAttempt] = useState(0);
+  useEffect(() => {
+    const controller = new AbortController();
+    const key = mapImageKey(result);
+    onReady(key, false);
+    setPng(""); setError("");
+    void mapMarkersToPng(result, controller.signal).then(async (image) => {
+      const decoded = new Image(); decoded.src = image; await decoded.decode();
+      if (controller.signal.aborted) return;
+      setPng(image); onReady(key, true);
+    }).catch((error: unknown) => {
+      if (!controller.signal.aborted) setError(error instanceof Error ? error.message : "Не вдалося підготувати мапу до друку.");
+    });
+    return () => controller.abort();
+  }, [result, onReady, attempt]);
+  return <><ResultMap result={result} />
+    {error ? <p role="alert" className="no-print">{error} <button className="secondary" onClick={() => setAttempt(attempt + 1)}>Повторити</button></p>
+      : !png && <p role="status" className="no-print">Підготовка мапи до друку…</p>}
+    {png && <img className="print-only report-map-image" src={png} alt={result.mapLegend} />}</>;
 }
 
 export function ReportPage({
@@ -25,10 +48,13 @@ export function ReportPage({
   updateProject: (project: ProjectFile) => void;
   results: ResultItem[];
 }) {
-  const assets = project.report.assetIds
+  const [mapReady, setMapReady] = useState<Record<string, boolean>>({});
+  const onMapReady = useCallback((key: string, ready: boolean) => setMapReady(previous => previous[key] === ready ? previous : { ...previous, [key]: ready }), []);
+  const assets = useMemo(() => project.report.assetIds
     .map(parseReportAssetKey)
     .map((asset) => ({ ...asset, result: resolveComparison(project, asset.resultId) ?? results.find((result) => result.id === asset.resultId) }))
-    .filter((asset): asset is ReturnType<typeof parseReportAssetKey> & { result: ResultItem } => Boolean(asset.result));
+    .filter((asset): asset is ReturnType<typeof parseReportAssetKey> & { result: ResultItem } => Boolean(asset.result)), [project, results]);
+  const mapsReady = assets.filter(asset => asset.kind === "map").every(asset => mapReady[mapImageKey(asset.result)]);
   const updateSection = (id: string, field: "title" | "body", value: string) =>
     updateProject({
       ...project,
@@ -47,7 +73,7 @@ export function ReportPage({
           <p className="eyebrow">крок 4</p>
           <h1>Звіт</h1>
         </div>
-        <button className="primary" onClick={() => window.print()}><Printer size={16} /> Роздрукувати</button>
+        <button className="primary" disabled={!mapsReady} title={mapsReady ? undefined : "Дочекайтеся підготовки мап до друку"} onClick={() => window.print()}><Printer size={16} /> Роздрукувати</button>
       </div>
 
       <article className="report-sheet">
@@ -110,7 +136,7 @@ export function ReportPage({
               <p className="muted">{asset.result.methodNote}</p>
               {asset.kind === "table" && <TableView headers={asset.result.headers} rows={asset.result.rows} />}
               {asset.kind === "chart" && asset.result.chartSeries.length > 0 && <ChartPanel result={asset.result} />}
-              {asset.kind === "map" && asset.result.mapMarkers.length > 0 && <ReportMap result={asset.result} />}
+              {asset.kind === "map" && asset.result.mapMarkers.length > 0 && <ReportMap result={asset.result} onReady={onMapReady} />}
               {!asset.result.rows.length && <p>Немає даних для збереженого вибору. Перевірте об'єкти, речовини та роки.</p>}
             </div>
           ))}

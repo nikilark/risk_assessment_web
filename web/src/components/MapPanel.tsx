@@ -125,12 +125,20 @@ function pollutionSourceLabel(tags: Record<string, string>, kind: PollutionSourc
   return tags["name:uk"] || tags.name || tags.operator || tags.brand || pollutionSourceKindLabel(kind);
 }
 
+const pollutionSourceSymbols: Record<PollutionSourceKind, string> = {
+  works: '<path d="M3 21V3h4v10l7-4v4l7-4v12Z"/><path d="M7 17h1m4 0h1m4 0h1"/>',
+  power: '<path d="M13 2 4 14h7l-1 8 10-13h-7Z"/>',
+  landfill: '<path d="M5 7h14l-1 14H6ZM4 7h16M9 7V3h6v4m-5 4v6m4-6v6"/>',
+  waste: '<path d="M2 5h12v13H2ZM14 9h4l4 5v4h-8"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/>',
+  wastewater: '<path d="M2 6q3-3 6 0t6 0 6 0M2 12q3-3 6 0t6 0 6 0M2 18q3-3 6 0t6 0 6 0"/>'
+};
+
 function pollutionSourceIcon(kind: PollutionSourceKind): L.DivIcon {
   return L.divIcon({
     className: "pollution-source-leaflet-icon",
-    html: `<span class="pollution-source-marker ${kind}" aria-hidden="true"><span></span></span>`,
-    iconAnchor: [14, 14],
-    iconSize: [28, 28]
+    html: `<span class="pollution-source-marker ${kind}" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">${pollutionSourceSymbols[kind]}</svg></span>`,
+    iconAnchor: [17, 17],
+    iconSize: [34, 34]
   });
 }
 
@@ -433,7 +441,7 @@ export function ResultMap({ result }: { result: ResultItem }) {
   useEffect(() => {
     if (!ref.current) return;
     const map = L.map(ref.current);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: "&copy; OpenStreetMap"
     }).addTo(map);
@@ -480,7 +488,7 @@ export function MapPicker({
     let disposed = false;
     const map = L.map(ref.current).setView([49.0, 31.0], 5);
     let pickedMarker: L.Marker | undefined;
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: "&copy; OpenStreetMap"
     }).addTo(map);

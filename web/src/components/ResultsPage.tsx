@@ -2,7 +2,7 @@ import { Clipboard, Download, FilePlus, MapPinned } from "lucide-react";
 import { useMemo, useRef, useState } from "react";
 import { buildComparison, defaultComparison, eligibleAgents, metricLabels, type ComparisonSpec } from "../domain/comparison";
 import { ComparisonControls } from "./ComparisonControls";
-import { copyText, downloadDataUrl, downloadText, exportResult, safeFileName } from "../domain/files";
+import { copyText, downloadDataUrl, exportResult, safeFileName } from "../domain/files";
 import { mapMarkersToPng } from "../domain/mapExport";
 import { makeReportAssetKey, reportAssetLabel } from "../domain/reportAssets";
 import { resultToTsv } from "../domain/results";
@@ -18,28 +18,6 @@ function mapMarkersToTsv(result: ResultItem): string {
     ["Об'єкт", "Рік", "Широта", "Довгота", "Масштаб", result.mapLegend, "Рівень"].join("\t"),
     ...result.mapMarkers.map((marker) => [marker.label, result.mapYear ?? "", marker.latitude, marker.longitude, marker.scale ?? "city", marker.value, marker.riskLevel].join("\t"))
   ].join("\n");
-}
-
-function mapMarkersToGeoJson(result: ResultItem): string {
-  return JSON.stringify({
-    type: "FeatureCollection",
-    name: result.title,
-    features: result.mapMarkers.map((marker) => ({
-      type: "Feature",
-      properties: {
-        label: marker.label,
-        year: result.mapYear,
-        value: marker.value,
-        riskLevel: marker.riskLevel,
-        scale: marker.scale ?? "city",
-        legend: result.mapLegend
-      },
-      geometry: {
-        type: "Point",
-        coordinates: [marker.longitude, marker.latitude]
-      }
-    }))
-  }, null, 2);
 }
 
 async function copyPng(dataUrl: string): Promise<boolean> {
@@ -63,6 +41,7 @@ export function ResultsPage({
 }) {
   const [spec, setSpec] = useState(() => defaultComparison(project));
   const [actionNote, setActionNote] = useState("");
+  const [mapExporting, setMapExporting] = useState(false);
   const chartRef = useRef<ChartPanelHandle | null>(null);
   const selected = useMemo(() => buildComparison(project, spec), [project, spec]);
   const mapAgents = eligibleAgents(project, spec.metric).filter((agent) => spec.agentIds.includes(agent.id));
@@ -80,7 +59,7 @@ export function ResultsPage({
 
   const flash = (message: string) => {
     setActionNote(message);
-    window.setTimeout(() => setActionNote(""), 1600);
+    window.setTimeout(() => setActionNote(""), 6000);
   };
 
   const addToReport = (view: ResultView) => {
@@ -107,13 +86,18 @@ export function ResultsPage({
       flash(copied ? "Графік скопійовано як PNG" : "Браузер не дозволив скопіювати PNG");
       return;
     }
-    const dataUrl = mapMarkersToPng(mapResult);
-    const copied = dataUrl ? await copyPng(dataUrl) : false;
-    if (!copied) await copyText(mapMarkersToTsv(mapResult));
-    flash(copied ? "Мапу скопійовано як PNG" : "Браузер не дозволив PNG, скопійовано дані мапи");
+    setMapExporting(true);
+    try {
+      const dataUrl = await mapMarkersToPng(mapResult);
+      const copied = await copyPng(dataUrl);
+      if (!copied) await copyText(mapMarkersToTsv(mapResult));
+      flash(copied ? "Мапу скопійовано як PNG" : "Браузер не дозволив PNG, скопійовано дані мапи");
+    } catch (error) {
+      flash(error instanceof Error ? error.message : "Не вдалося створити PNG мапи.");
+    } finally { setMapExporting(false); }
   };
 
-  const downloadCurrent = (view: ResultView) => {
+  const downloadCurrent = (view: "table" | "chart") => {
     if (!selected) return;
     const exportTitle = `${selected.title} · ${spec.years.join(", ")}`;
     if (view === "table") {
@@ -127,15 +111,17 @@ export function ResultsPage({
       flash(dataUrl ? "PNG збережено" : "Графік ще не готовий");
       return;
     }
-    downloadText(`${safeFileName(mapResult.title)}_map.geojson`, mapMarkersToGeoJson(mapResult), "application/geo+json;charset=utf-8");
-    flash("GeoJSON збережено");
   };
 
-  const downloadMapPng = () => {
-    if (!selected) return;
-    const dataUrl = mapMarkersToPng(mapResult);
-    if (dataUrl) downloadDataUrl(`${safeFileName(mapResult.title)}_map.png`, dataUrl);
-    flash(dataUrl ? "PNG мапи збережено" : "Мапа ще не готова");
+  const downloadMapPng = async () => {
+    setMapExporting(true);
+    try {
+      const dataUrl = await mapMarkersToPng(mapResult);
+      downloadDataUrl(`${safeFileName(mapResult.title)}_map.png`, dataUrl);
+      flash("PNG мапи збережено");
+    } catch (error) {
+      flash(error instanceof Error ? error.message : "Не вдалося створити PNG мапи.");
+    } finally { setMapExporting(false); }
   };
 
   return (
@@ -218,9 +204,9 @@ export function ResultsPage({
                     <div className="view-actions">
                       <div className="button-row">
                         <button className="secondary" disabled={!mapResult.mapMarkers.length} onClick={() => addToReport("map")}><FilePlus size={16} /> До звіту</button>
-                        <button className="secondary" disabled={!mapResult.mapMarkers.length} onClick={() => copyCurrent("map")}><Clipboard size={16} /> Копіювати</button>
-                        <button className="secondary" disabled={!mapResult.mapMarkers.length} onClick={downloadMapPng}><Download size={16} /> PNG</button>
-                        <button className="secondary" disabled={!mapResult.mapMarkers.length} onClick={() => downloadCurrent("map")}><Download size={16} /> GeoJSON</button>
+                        <button className="secondary" disabled={mapExporting || !mapResult.mapMarkers.length} onClick={() => copyCurrent("map")}><Clipboard size={16} /> Копіювати</button>
+                        <button className="secondary" disabled={mapExporting || !mapResult.mapMarkers.length} onClick={downloadMapPng}><Download size={16} /> PNG</button>
+                        {mapExporting && <span role="status">Підготовка PNG мапи…</span>}
                       </div>
                       <div className="map-filters">
                         {spec.years.length > 1 && <label><select aria-label="Рік мапи" value={effectiveSpec.mapYear} onChange={(event) => setSpec({ ...spec, mapYear: Number(event.target.value) })}>

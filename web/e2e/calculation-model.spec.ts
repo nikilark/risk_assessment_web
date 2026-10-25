@@ -1,3 +1,4 @@
+import { mockMapTiles } from "./helpers/mapTiles";
 import { expect, test } from "@playwright/test";
 
 test("cancer tables and map legends use four levels while non-cancer retains five", async ({ page }) => {
@@ -14,6 +15,7 @@ test("cancer tables and map legends use four levels while non-cancer retains fiv
       coordinate: { latitude: 50, longitude: 30 } }],
       exposures: [{ objectId: "point", agentId: "agent-test", year: 2020, concentration: 1 }] }
   };
+  await mockMapTiles(page);
   await page.goto("/");
   await page.getByRole("button", { name: /Налаштування/ }).click();
   await page.locator('input[type="file"]').setInputFiles({ name: "calculations.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(project)) });

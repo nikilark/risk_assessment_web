@@ -1,6 +1,6 @@
 import * as echarts from "echarts";
 import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
-import { formatNumber } from "../domain/risk";
+import { numberFormatter } from "../domain/risk";
 import type { ResultItem } from "../domain/types";
 
 export interface ChartPanelHandle {
@@ -186,6 +186,7 @@ export const ChartPanel = forwardRef<ChartPanelHandle, { result: ResultItem }>(f
     if (!ref.current) return;
     const chart = echarts.init(ref.current);
     chartRef.current = chart;
+    const formatNumber = numberFormatter(result.locale);
     const categories = result.chartCategories ?? [...new Set(result.chartSeries.map((item) => item.label))];
     const seriesNames = [...new Set(result.chartSeries.map((item) => item.series ?? result.chartLabel))];
     chart.setOption({

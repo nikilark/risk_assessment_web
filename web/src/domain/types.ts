@@ -1,6 +1,7 @@
 export type RiskLevel = "minimal" | "low" | "medium" | "high" | "critical";
 export type ResultCategory = "Канцерогенний ризик" | "Неканцерогенний ризик" | "Зважені частинки";
 export type ResultView = "table" | "chart" | "map";
+export type NumberLocale = "en" | "ua";
 export type ThemeMode = "system" | "light" | "dark";
 export type PlaceScale = "street" | "district" | "city" | "region";
 
@@ -60,7 +61,7 @@ export interface ReportState {
 }
 
 export interface SettingsState {
-  locale: string;
+  locale: NumberLocale;
   theme: ThemeMode;
   primaryColor: string;
   accentColor: string;
@@ -102,6 +103,7 @@ export interface MapMarker {
 }
 
 export interface ResultItem {
+  locale?: NumberLocale;
   id: string;
   title: string;
   years?: number[];

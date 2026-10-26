@@ -21,7 +21,7 @@ test("cancer tables and map legends use four levels while non-cancer retains fiv
   await page.locator('input[type="file"]').setInputFiles({ name: "calculations.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(project)) });
   await page.getByRole("button", { name: "Результати", exact: true }).click();
   const table = page.locator(".result-section").filter({ has: page.locator("summary", { hasText: /^Таблиця$/ }) });
-  await expect(table).toContainText("3,2407045");
+  await expect(table).toContainText("3.2407045");
   await expect(table).toContainText("Високий");
   await expect(table).not.toContainText("Критичний");
   await expect(page.locator(".map-legend-list > span")).toHaveCount(4);
@@ -31,6 +31,6 @@ test("cancer tables and map legends use four levels while non-cancer retains fiv
   await expect(table).toContainText("Критичний");
   await expect(page.locator(".map-legend-list > span")).toHaveCount(5);
   await page.getByRole("button", { name: "Звіт", exact: true }).click();
-  await expect(page.locator(".report-asset")).toContainText("3,2407045");
+  await expect(page.locator(".report-asset")).toContainText("3.2407045");
   await expect(page.locator(".report-asset")).not.toContainText("Критичний");
 });

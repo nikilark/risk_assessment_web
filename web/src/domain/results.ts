@@ -3,7 +3,7 @@ import {
   calculateCancer,
   calculateHazardQuotient,
   cancerRiskLevel,
-  formatNumber,
+  numberFormatter,
   hazardRiskLevel,
   riskLabels
 } from "./risk";
@@ -62,6 +62,7 @@ function methodNote(extra = "") {
 }
 
 function makeCancerResults(project: ProjectFile, flavor: "lifelong" | "acute"): ResultItem[] {
+  const formatNumber = numberFormatter(project.settings.locale);
   const results: ResultItem[] = [];
   const flavorLabel = flavor === "lifelong" ? "Хронічний" : "Гострий";
   const exposures = positiveExposures(project).filter(({ agent }) => isCancerAgent(agent) && !isParticleAgent(agent));
@@ -135,6 +136,7 @@ function makeCancerResults(project: ProjectFile, flavor: "lifelong" | "acute"): 
 }
 
 function makeNonCancerResults(project: ProjectFile, flavor: "lifelong" | "acute"): ResultItem[] {
+  const formatNumber = numberFormatter(project.settings.locale);
   const flavorLabel = flavor === "lifelong" ? "Хронічний" : "Гострий";
   const outputs: ResultItem[] = [];
   const exposures = positiveExposures(project).filter(({ agent }) => isNonCancerAgent(agent));
@@ -235,6 +237,7 @@ function makeNonCancerResults(project: ProjectFile, flavor: "lifelong" | "acute"
 }
 
 function makeParticleResult(project: ProjectFile): ResultItem[] {
+  const formatNumber = numberFormatter(project.settings.locale);
   const rows: string[][] = [];
   const chartSeries: ChartSeries[] = [];
   const mapMarkers = [];
@@ -295,7 +298,7 @@ export function generateResults(project: ProjectFile): ResultItem[] {
     const first = items[0].result;
     const headers = [...new Set(items.flatMap(({ result }) => result.headers))];
     const latest = items[items.length - 1];
-    return { ...first,
+    return { ...first, locale: project.settings.locale,
       title: `${first.title} · ${items.map((item) => item.year).join(", ")}`,
       headers: [...headers, "Рік"],
       rows: items.flatMap(({ year, result }) => result.rows.map((row) => {

@@ -59,13 +59,29 @@ describe("risk formulas", () => {
 
   it("formats very small table values in scientific notation", () => {
     expect(formatNumber(0.001)).toBe("1e-3");
-    expect(formatNumber(0.01)).toBe("0,01");
+    expect(formatNumber(0.01)).toBe("0.01");
     expect(formatNumber(0.00001234)).toBe("1.234e-5");
   });
 
   it("hides binary floating point tails", () => {
     expect(normalizeNumber(0.0100000000002)).toBe(0.01);
-    expect(formatNumber(0.0100000000002)).toBe("0,01");
-    expect(formatNumber(12.345678901)).toBe("12,345679");
+    expect(formatNumber(0.0100000000002)).toBe("0.01");
+    expect(formatNumber(12.345678901)).toBe("12.345679");
+  });
+});
+
+
+describe("number locale", () => {
+  it.each([0.01234, 0.00001234, -0.00001234, 123.456, 12345678.9])("uses the chosen separator in ordinary and scientific values: %s", value => {
+    const en = formatNumber(value, 8, "en");
+    const ua = formatNumber(value, 8, "ua");
+    expect(ua).toBe(en.replace(".", ","));
+    expect(en).not.toContain(",");
+    expect(ua).not.toContain(".");
+  });
+  it("keeps zero and invalid values stable in either locale", () => {
+    expect(formatNumber(0, 8, "ua")).toBe("0");
+    expect(formatNumber(NaN, 8, "ua")).toBe("—");
+    expect(formatNumber(Infinity)).toBe("—");
   });
 });

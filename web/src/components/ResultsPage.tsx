@@ -1,3 +1,4 @@
+import { formatCoordinate, numberFormatter } from "../domain/risk";
 import { Clipboard, Download, FilePlus, MapPinned } from "lucide-react";
 import { useMemo, useRef, useState } from "react";
 import { buildComparison, defaultComparison, eligibleAgents, metricLabels, type ComparisonSpec } from "../domain/comparison";
@@ -16,7 +17,7 @@ import { projectYears } from "../domain/years";
 function mapMarkersToTsv(result: ResultItem): string {
   return [
     ["Об'єкт", "Рік", "Широта", "Довгота", "Масштаб", result.mapLegend, "Рівень"].join("\t"),
-    ...result.mapMarkers.map((marker) => [marker.label, result.mapYear ?? "", marker.latitude, marker.longitude, marker.scale ?? "city", marker.value, marker.riskLevel].join("\t"))
+    ...result.mapMarkers.map((marker) => [marker.label, result.mapYear ?? "", formatCoordinate(marker.latitude, result.locale), formatCoordinate(marker.longitude, result.locale), marker.scale ?? "city", numberFormatter(result.locale)(marker.value), marker.riskLevel].join("\t"))
   ].join("\n");
 }
 

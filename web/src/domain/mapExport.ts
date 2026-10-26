@@ -1,6 +1,6 @@
 import L from "leaflet";
 import { riskLevelsForCategory } from "./mapLegend";
-import { formatNumber, riskColors, riskLabels } from "./risk";
+import { numberFormatter, riskColors, riskLabels } from "./risk";
 import type { ResultItem } from "./types";
 
 function wrapText(context: CanvasRenderingContext2D, text: string, width: number): string[] {
@@ -40,6 +40,7 @@ function loadTile(url: string, signal: AbortSignal): Promise<HTMLImageElement> {
 
 /** Render the selected data on the same Web Mercator tile grid used by Leaflet. */
 export async function mapMarkersToPng(result: ResultItem, signal?: AbortSignal): Promise<string> {
+  const formatNumber = numberFormatter(result.locale);
   if (!result.mapMarkers.length) throw new Error("Немає об’єктів із координатами для мапи.");
   const controller = new AbortController();
   const cancel = () => controller.abort();

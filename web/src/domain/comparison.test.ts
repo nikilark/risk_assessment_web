@@ -29,11 +29,11 @@ describe("year comparisons", () => {
     const result = buildComparison(project, spec);
     expect(result.rows).toHaveLength(2);
     for (const row of result.rows) {
-      expect(row[result.headers.indexOf("AM")]).toBe(row[1].includes("TSP") ? "2,1" : "3,5");
+      expect(row[result.headers.indexOf("AM")]).toBe(row[1].includes("TSP") ? "2.1" : "3.5");
     }
     const legacy = generateResults(project).find((item) => item.id === "particles-mortality")!;
     expect(legacy.rows).toHaveLength(2);
-    for (const row of legacy.rows) expect(row[legacy.headers.indexOf("AM")]).toBe(row[1].includes("TSP") ? "2,1" : "3,5");
+    for (const row of legacy.rows) expect(row[legacy.headers.indexOf("AM")]).toBe(row[1].includes("TSP") ? "2.1" : "3.5");
     expect(eligibleAgents(project, "suspended_particles").some((agent) => agent.name.includes("РМ2.5"))).toBe(false);
     expect(eligibleAgents(project, "non_cancer_lifelong").some((agent) => agent.name.includes("РМ2.5"))).toBe(true);
   });
@@ -126,5 +126,26 @@ describe("year comparisons", () => {
     const project = fixture();
     expect(() => normalizeProject({ ...project, research: { ...project.research, years: [year] } })).toThrow("Роки");
     expect(() => normalizeProject({ ...project, research: { ...project.research, exposures: [{ ...project.research.exposures[0], year }] } })).toThrow("Некоректний запис");
+  });
+});
+
+
+it("formats current and saved result paths without changing numeric risk values", () => {
+  const project = fixture();
+  project.research.exposures[0].concentration = 0.012345;
+  const spec = { ...defaultComparison(project), tableMode: "details" as const };
+  const en = buildComparison(project, spec);
+  const enLegacy = generateResults(project);
+  project.settings.locale = "ua";
+  const ua = buildComparison(project, spec);
+  expect(ua.locale).toBe("ua");
+  expect(ua.rows).toEqual(en.rows.map(row => row.map(value => /^-?\d+(\.\d+)?(e-?\d+)?$/.test(value) ? value.replace(".", ",") : value)));
+  expect(ua.chartSeries).toEqual(en.chartSeries);
+  expect(ua.mapMarkers).toEqual(en.mapMarkers);
+  const uaLegacy = generateResults(project);
+  uaLegacy.forEach((result, index) => {
+    expect(result.locale).toBe("ua");
+    expect(result.chartSeries).toEqual(enLegacy[index].chartSeries);
+    expect(result.rows).toEqual(enLegacy[index].rows.map(row => row.map(value => /^-?\d+(\.\d+)?(e-?\d+)?$/.test(value) ? value.replace(".", ",") : value)));
   });
 });

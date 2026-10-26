@@ -5,8 +5,8 @@ import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import { useEffect, useRef } from "react";
 import { mapMarkerRadii, placeScaleLabels, riskLevelsForCategory } from "../domain/mapLegend";
-import { riskColors, riskLabels } from "../domain/risk";
-import type { MapMarker, PlaceScale, ResearchObject, ResultItem } from "../domain/types";
+import { formatCoordinate, numberFormatter, riskColors, riskLabels } from "../domain/risk";
+import type { MapMarker, NumberLocale, PlaceScale, ResearchObject, ResultItem } from "../domain/types";
 
 type PollutionSourceKind = "works" | "power" | "landfill" | "waste" | "wastewater";
 
@@ -40,8 +40,8 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow
 });
 
-function fallbackPointName(latitude: number, longitude: number): string {
-  return `Об'єкт ${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;
+function fallbackPointName(latitude: number, longitude: number, locale: NumberLocale): string {
+  return `Об'єкт ${formatCoordinate(latitude, locale)}; ${formatCoordinate(longitude, locale)}`;
 }
 
 function scaleFromZoom(zoom: number): PlaceScale {
@@ -452,7 +452,7 @@ export function ResultMap({ result }: { result: ResultItem }) {
         color: riskColors[point.riskLevel],
         fillColor: riskColors[point.riskLevel],
         fillOpacity: 0.72
-      }).bindPopup(`${point.label}<br>${result.mapLegend}: ${point.value}`).addTo(map);
+      }).bindPopup(`${point.label}<br>${result.mapLegend}: ${numberFormatter(result.locale)(point.value)}`).addTo(map);
     }
     const legend = addMapLegend(map, result);
     const pollutionSources = addPollutionSourceOverlay(map, sourceSelection);
@@ -474,9 +474,11 @@ export function ResultMap({ result }: { result: ResultItem }) {
 }
 
 export function MapPicker({
+  locale = "en",
   onPick,
   objects
 }: {
+  locale?: NumberLocale;
   onPick: (coordinate: { latitude: number; longitude: number; title?: string; scale?: PlaceScale }) => void;
   objects: ResearchObject[];
 }) {
@@ -502,7 +504,7 @@ export function MapPicker({
       const latitude = event.latlng.lat;
       const longitude = event.latlng.lng;
       const scale = scaleFromZoom(map.getZoom());
-      const title = fallbackPointName(latitude, longitude);
+      const title = fallbackPointName(latitude, longitude, locale);
       pickedMarker?.remove();
       pickedMarker = L.marker([latitude, longitude]).bindPopup(`${title}<br>${scaleLabel(scale)}`).addTo(map).openPopup();
       onPick({ latitude, longitude, title, scale });
@@ -521,7 +523,7 @@ export function MapPicker({
       pollutionSources.remove();
       map.remove();
     };
-  }, [objects, onPick]);
+  }, [objects, onPick, locale]);
 
   return <div className="map-panel map-picker" ref={ref} />;
 }

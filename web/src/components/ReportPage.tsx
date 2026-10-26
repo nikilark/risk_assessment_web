@@ -1,10 +1,11 @@
+import { formatCoordinate, formatCount } from "../domain/risk";
 import { Printer, Trash2 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { mapMarkersToPng } from "../domain/mapExport";
 import { methodology } from "../domain/methodology";
 import { resolveComparison } from "../domain/comparison";
 import { exposureYear, projectYears } from "../domain/years";
-import { formatNumber } from "../domain/risk";
+import { numberFormatter } from "../domain/risk";
 import { parseReportAssetKey, reportAssetLabel } from "../domain/reportAssets";
 import type { ProjectFile, ResultItem } from "../domain/types";
 import { ChartPanel } from "./ChartPanel";
@@ -12,7 +13,7 @@ import { ResultMap } from "./MapPanel";
 import { TableView } from "./TableView";
 
 function mapImageKey(result: ResultItem) {
-  return JSON.stringify([result.title, result.mapLegend, result.category, result.mapMarkers]);
+  return JSON.stringify([result.title, result.mapLegend, result.category, result.locale, result.mapMarkers]);
 }
 
 function ReportMap({ result, onReady }: { result: ResultItem; onReady: (key: string, ready: boolean) => void }) {
@@ -48,6 +49,7 @@ export function ReportPage({
   updateProject: (project: ProjectFile) => void;
   results: ResultItem[];
 }) {
+  const formatNumber = numberFormatter(project.settings.locale);
   const [mapReady, setMapReady] = useState<Record<string, boolean>>({});
   const onMapReady = useCallback((key: string, ready: boolean) => setMapReady(previous => previous[key] === ready ? previous : { ...previous, [key]: ready }), []);
   const assets = useMemo(() => project.report.assetIds
@@ -109,9 +111,9 @@ export function ReportPage({
             headers={["Об'єкт", "Населення", "Випадки смерті", "Координати"]}
             rows={project.research.points.map((object) => [
               object.title,
-              object.population.toLocaleString("uk-UA"),
-              object.deaths.toLocaleString("uk-UA"),
-              object.coordinate ? `${object.coordinate.latitude.toFixed(5)}, ${object.coordinate.longitude.toFixed(5)}` : "—"
+              formatCount(object.population, project.settings.locale),
+              formatCount(object.deaths, project.settings.locale),
+              object.coordinate ? `${formatCoordinate(object.coordinate.latitude, project.settings.locale)}; ${formatCoordinate(object.coordinate.longitude, project.settings.locale)}` : "—"
             ])}
           />
           <h3>Концентрації за роками</h3>

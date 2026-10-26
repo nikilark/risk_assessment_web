@@ -47,3 +47,15 @@ describe("imported exposures", () => {
     expect(() => normalizeProject({ ...project, research: { ...project.research, exposures: [exposure] } })).toThrow("Некоректний запис концентрації №1");
   });
 });
+
+
+it("defaults to decimal dots and round-trips an explicit comma preference", () => {
+  const project = importFixture();
+  expect(project.settings.locale).toBe("en");
+  for (const locale of [undefined, "uk-UA", "invalid", null]) {
+    const data = { ...project, settings: { ...project.settings, locale } };
+    expect(normalizeProject(data).settings.locale).toBe("en");
+  }
+  project.settings.locale = "ua";
+  expect(normalizeProject(JSON.parse(JSON.stringify(project))).settings.locale).toBe("ua");
+});

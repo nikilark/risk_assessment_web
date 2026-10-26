@@ -1,3 +1,4 @@
+import { formatCoordinate, formatCount } from "../domain/risk";
 import { Map, Plus, Trash2 } from "lucide-react";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { createId } from "../domain/project";
@@ -132,7 +133,7 @@ export function ObjectsPage({ project, updateProject }: { project: ProjectFile; 
       {showMap && (
         <div className="panel">
           <p className="muted">Мапа використовує онлайн-тайли OpenStreetMap. Після кліку координати підставляться в новий об'єкт.</p>
-          <MapPicker objects={project.research.points} onPick={onPick} />
+          <MapPicker locale={project.settings.locale} objects={project.research.points} onPick={onPick} />
         </div>
       )}
 
@@ -154,7 +155,7 @@ export function ObjectsPage({ project, updateProject }: { project: ProjectFile; 
             </label>
           )}
           <div className="coordinate-box">
-            {coordinate ? `${coordinate.latitude.toFixed(5)}, ${coordinate.longitude.toFixed(5)}${coordinate.scale ? ` · ${scaleLabels[coordinate.scale]}` : ""}` : "Координати не задані"}
+            {coordinate ? `${formatCoordinate(coordinate.latitude, project.settings.locale)}; ${formatCoordinate(coordinate.longitude, project.settings.locale)}${coordinate.scale ? ` · ${scaleLabels[coordinate.scale]}` : ""}` : "Координати не задані"}
           </div>
           <button className="primary" onClick={addObject}><Plus size={16} /> Додати</button>
         </div>
@@ -195,8 +196,8 @@ export function ObjectsPage({ project, updateProject }: { project: ProjectFile; 
             {project.research.points.map((object) => (
               <tr key={object.id}>
                 <td>{object.title}</td>
-                <td>{object.population.toLocaleString("uk-UA")}</td>
-                {project.project.research_type.suspended_particles && <td>{object.deaths.toLocaleString("uk-UA")}</td>}
+                <td>{formatCount(object.population, project.settings.locale)}</td>
+                {project.project.research_type.suspended_particles && <td>{formatCount(object.deaths, project.settings.locale)}</td>}
                 {selectedAgents.map((agent) => (
                   <td key={agent.id}>
                     <input

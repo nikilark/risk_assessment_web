@@ -1,3 +1,4 @@
+import { normalizeLocale } from "./risk";
 import defaultAgents from "../data/default-agents.json";
 import expandedAgents from "../data/expanded-agents.json";
 import { currentYear, projectYears } from "./years";
@@ -83,7 +84,7 @@ export function createDefaultProject(): ProjectFile {
   return {
     schema_version: schemaVersion,
     settings: {
-      locale: "uk-UA",
+      locale: "en",
       theme: "system",
       primaryColor: "#17324d",
       accentColor: "#b68b3f",
@@ -140,6 +141,7 @@ export function normalizeProject(input: unknown): ProjectFile {
   const settings = {
     ...defaults.settings,
     ...value.settings,
+    locale: normalizeLocale(value.settings?.locale),
     theme: value.settings?.theme === "light" || value.settings?.theme === "dark" || value.settings?.theme === "system"
       ? value.settings.theme
       : "system"

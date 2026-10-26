@@ -3,7 +3,7 @@ import { useState } from "react";
 import { clearAutosave } from "../storage/db";
 import { exportProject, readJsonFile } from "../domain/files";
 import { normalizeProject } from "../domain/project";
-import type { ProjectFile, ThemeMode } from "../domain/types";
+import type { NumberLocale, ProjectFile, ThemeMode } from "../domain/types";
 
 function previewTextColor(background: string): string {
   if (!/^#[0-9a-f]{6}$/i.test(background)) return "var(--text)";
@@ -62,6 +62,14 @@ export function SettingsPage({
             <button className="danger" onClick={resetAll}><RotateCcw size={16} /> Новий проєкт</button>
           </div>
           {importError && <p role="alert">{importError}</p>}
+          <label className="field-label project-number-format">
+            <span>Формат чисел</span>
+            <select aria-label="Формат чисел" value={project.settings.locale} onChange={(event) => updateProject({ ...project,
+              settings: { ...project.settings, locale: event.target.value as NumberLocale } })}>
+              <option value="en">en — крапка (1.23)</option>
+              <option value="ua">ua — кома (1,23)</option>
+            </select>
+          </label>
         </div>
 
         <div className="panel">

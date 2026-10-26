@@ -1,7 +1,7 @@
 import { Plus, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { applyCatalogMode, createId } from "../domain/project";
-import { formatNumber, normalizeNumber } from "../domain/risk";
+import { numberFormatter, normalizeNumber } from "../domain/risk";
 import { mortalityParticleKind } from "../domain/results";
 import type { AgentRecord, ProjectFile } from "../domain/types";
 import { OrganChips, OrganIconLegend, OrganToggleGroup } from "./OrganChips";
@@ -33,6 +33,7 @@ function numeric(value: string): number {
 }
 
 export function ProjectPage({ project, updateProject }: { project: ProjectFile; updateProject: (project: ProjectFile) => void }) {
+  const formatNumber = numberFormatter(project.settings.locale);
   const [query, setQuery] = useState("");
   const [draft, setDraft] = useState<AgentDraft>(emptyDraft);
   const researchType = project.project.research_type;

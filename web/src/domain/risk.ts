@@ -1,4 +1,4 @@
-import type { RiskLevel } from "./types";
+import type { NumberLocale, RiskLevel } from "./types";
 
 export type CancerFlavor = "lifelong" | "acute";
 export type MortalityParticleKind = "pm10" | "tsp";
@@ -94,15 +94,33 @@ export function normalizeNumber(value: number, significantDigits = 8): number {
   return Number(value.toPrecision(significantDigits));
 }
 
-export function formatNumber(value: number, digits = 8): string {
+export function normalizeLocale(value: unknown): NumberLocale {
+  return value === "ua" ? "ua" : "en";
+}
+
+export function numberFormatter(locale: NumberLocale = "en") {
+  return (value: number, digits = 8) => formatNumber(value, digits, locale);
+}
+
+export function formatCoordinate(value: number, locale: NumberLocale = "en"): string {
+  return value.toFixed(5).replace(".", locale === "ua" ? "," : ".");
+}
+
+export function formatCount(value: number, locale: NumberLocale = "en"): string {
+  return new Intl.NumberFormat(locale === "ua" ? "uk-UA" : "en-US", { useGrouping: false, maximumFractionDigits: 0 }).format(value);
+}
+
+export function formatNumber(value: number, digits = 8, locale: NumberLocale = "en"): string {
   if (!Number.isFinite(value)) return "—";
   const rounded = normalizeNumber(value, digits);
   const absolute = Math.abs(rounded);
   if (absolute > 0 && (absolute < 0.01 || absolute >= 1_000_000)) {
     const [mantissa, exponent] = rounded.toExponential(Math.max(1, digits - 1)).split("e");
-    return `${mantissa.replace(/(\.\d*?[1-9])0+$/, "$1").replace(/\.0+$/, "")}e${Number(exponent)}`;
+    const trimmed = mantissa.replace(/(\.\d*?[1-9])0+$/, "$1").replace(/\.0+$/, "");
+    return `${locale === "ua" ? trimmed.replace(".", ",") : trimmed}e${Number(exponent)}`;
   }
-  return new Intl.NumberFormat("uk-UA", {
+  return new Intl.NumberFormat(locale === "ua" ? "uk-UA" : "en-US", {
+    useGrouping: false,
     maximumFractionDigits: digits,
     maximumSignificantDigits: digits
   }).format(rounded);

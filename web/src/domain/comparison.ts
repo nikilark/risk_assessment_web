@@ -1,4 +1,4 @@
-import { calculateAdditionalMortality, calculateCancer, calculateHazardQuotient, cancerRiskLevel, formatNumber, hazardRiskLevel, riskLabels } from "./risk";
+import { calculateAdditionalMortality, calculateCancer, calculateHazardQuotient, cancerRiskLevel, numberFormatter, hazardRiskLevel, riskLabels } from "./risk";
 import { isParticleAgent, mortalityParticleKind } from "./results";
 import { exposureYear, projectYears } from "./years";
 import type { AgentRecord, ProjectFile, ResearchObject, ResearchType, ResultItem } from "./types";
@@ -53,6 +53,7 @@ interface Observation {
 }
 
 export function buildComparison(project: ProjectFile, spec: ComparisonSpec): ResultItem {
+  const formatNumber = numberFormatter(project.settings.locale);
   const cancer = spec.metric.startsWith("cancer");
   const particles = spec.metric === "suspended_particles";
   const flavor = spec.metric.endsWith("lifelong") ? "lifelong" : "acute";
@@ -134,7 +135,7 @@ export function buildComparison(project: ProjectFile, spec: ComparisonSpec): Res
   const title = `${metricLabels[spec.metric]} · ${aggregation === "total" ? "сумарно" : aggregation === "organs" ? "за органами" : "за речовинами"}`;
   const context = `Об'єкти: ${[...objects.values()].map((object) => object.title).join(", ") || "не обрано"}. Речовини: ${[...agents.values()].map((agent) => agent.name).join(", ") || "не обрано"}.`;
   return {
-    id: comparisonId(spec), title, years,
+    id: comparisonId(spec), title, years, locale: project.settings.locale,
     category: cancer ? "Канцерогенний ризик" : particles ? "Зважені частинки" : "Неканцерогенний ризик",
     methodNote: `${cancer ? "ICR = LADD × SF" : particles ? "AM = C(PM10) × SF × N; для TSP: C(PM10) = 0.6 × C(TSP). PM2.5 не входить до цієї моделі; шкала одиниць концентрації та класифікація смертності потребують перевірки" : "HQ = C / RfC; HI = ΣHQ"}. ${context} Роки — окремі сценарії; значення між роками не підсумовуються. Порожні дані позначено «—».${aggregation !== "agents" ? " Суми показано лише за повних даних для обраних речовин (для HI органа — речовин, що впливають на цей орган)." : ""}`,
     headers, rows, chartLabel: measure,

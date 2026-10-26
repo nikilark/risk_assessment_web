@@ -1017,11 +1017,15 @@ textarea {
   gap: 18px;
 }
 
+.settings-grid > .panel { container-type: inline-size; }
+
 .button-stack {
   display: grid;
-  gap: 10px;
-  justify-items: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
 }
+
+.project-number-format { margin-top: 20px; }
 
 .file-button input {
   display: none;
@@ -1032,6 +1036,10 @@ textarea {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
   margin-bottom: 16px;
+}
+
+@container (max-width: 539px) {
+  .button-stack, .theme-toggle { grid-template-columns: minmax(0, 1fr); }
 }
 
 .theme-toggle button {

@@ -28,6 +28,8 @@ export interface AgentRecord {
   selected?: boolean;
   source?: string;
   reviewStatus?: string;
+  parameterSources?: Partial<Record<"rfcLifelong" | "rfcAcute" | "sfi", { url: string; unit: string; basis: string }>>;
+  referenceNotes?: string;
 }
 
 export interface ResearchObject {

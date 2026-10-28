@@ -1,0 +1,655 @@
+{
+  "reviewed": "2026-10-27",
+  "policy": "Chronic RfC and SF use the requested MOH 184/2007 baseline; acute values use OEHHA RELs. Unmatched zero values and ambiguous chemical group mappings remain unverified.",
+  "sources": {
+    "moh2007_rfc": {
+      "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+      "unit": "mg/m3",
+      "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+    },
+    "moh2007_sf": {
+      "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+      "unit": "(mg/kg-day)^-1",
+      "basis": "MOH 184/2007, inhalation cancer slope factors appendix; historical methodological baseline"
+    },
+    "co_surrogate": {
+      "url": "https://doi.org/10.31393/reports-vnmedical-2021-25(1)-27",
+      "unit": "mg/m3",
+      "basis": "Table 3, 3.0 mg/m3 CO benchmark; MPC-equivalent fallback permitted by MOH 184/2007 section 4.4.1, not an EPA RfC"
+    },
+    "oehha_nitrogen_dioxide": {
+      "url": "https://oehha.ca.gov/chemicals/nitrogen-dioxide",
+      "unit": "mg/m3",
+      "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+    },
+    "oehha_hydrogen_sulfide": {
+      "url": "https://oehha.ca.gov/chemicals/hydrogen-sulfide",
+      "unit": "mg/m3",
+      "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+    },
+    "oehha_carbon_monoxide": {
+      "url": "https://oehha.ca.gov/chemicals/carbon-monoxide",
+      "unit": "mg/m3",
+      "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+    },
+    "oehha_sulfur_dioxide": {
+      "url": "https://oehha.ca.gov/chemicals/sulfur-dioxide",
+      "unit": "mg/m3",
+      "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+    },
+    "oehha_phenol": {
+      "url": "https://oehha.ca.gov/chemicals/phenol",
+      "unit": "mg/m3",
+      "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+    },
+    "oehha_formaldehyde": {
+      "url": "https://oehha.ca.gov/chemicals/formaldehyde",
+      "unit": "mg/m3",
+      "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+    }
+  },
+  "agents": {
+    "Акрилова кислота": {
+      "cas": "79-10-7",
+      "rfcLifelong": {
+        "value": 0.001,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Акрилонітрил": {
+      "cas": "107-13-1",
+      "rfcLifelong": {
+        "value": 0.002,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Алюміній та сполуки": {
+      "cas": "7429-90-5",
+      "rfcLifelong": {
+        "value": 0.005,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Анілін": {
+      "cas": "62-53-3",
+      "rfcLifelong": {
+        "value": 0.001,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Ацетальдегід": {
+      "cas": "75-07-0",
+      "rfcLifelong": {
+        "value": 0.009,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Брометен": {
+      "cas": "593-60-2",
+      "rfcLifelong": {
+        "value": 0.003,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Бромметан": {
+      "cas": "74-83-9",
+      "rfcLifelong": {
+        "value": 0.005,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Бутадієн 1 3-": {
+      "cas": "106-99-0",
+      "rfcLifelong": {
+        "value": 0.008,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Вінілхлорид": {
+      "cas": "75-01-4",
+      "rfcLifelong": {
+        "value": 0.005,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Водень ціанід": {
+      "cas": "74-90-8",
+      "rfcLifelong": {
+        "value": 0.003,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Гексахлорбензол": {
+      "cas": "118-74-1",
+      "rfcLifelong": {
+        "value": 0.003,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Дихлорпропан 1 2-": {
+      "cas": "78-87-5",
+      "rfcLifelong": {
+        "value": 0.004,
+        "source": "moh2007_rfc"
+      },
+      "sfi": {
+        "value": 0.063,
+        "source": "moh2007_sf"
+      }
+    },
+    "Епіхлоргідрин": {
+      "cas": "106-89-8",
+      "rfcLifelong": {
+        "value": 0.001,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Етиленоксид": {
+      "cas": "75-21-8",
+      "rfcLifelong": {
+        "value": 0.005,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Етилмеркаптан": {
+      "cas": "75-08-1",
+      "rfcLifelong": {
+        "value": 0.001,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Ізофорон": {
+      "cas": "78-59-1",
+      "rfcLifelong": {
+        "value": 0.012,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Метилізоціанат": {
+      "cas": "624-83-9",
+      "rfcLifelong": {
+        "value": 0.001,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Метилмеркаптан": {
+      "cas": "74-93-1",
+      "rfcLifelong": {
+        "value": 0.001,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Піридин": {
+      "cas": "110-86-1",
+      "rfcLifelong": {
+        "value": 0.007,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Ртуть та сполуки": {
+      "cas": "7439-97-6",
+      "rfcLifelong": {
+        "value": 0.003,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Стиролу оксид": {
+      "cas": "96-09-3",
+      "rfcLifelong": {
+        "value": 0.006,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Тетрахлоретилен": {
+      "cas": "127-18-4",
+      "rfcLifelong": {
+        "value": 0.035,
+        "source": "moh2007_rfc"
+      },
+      "sfi": {
+        "value": 0.002,
+        "source": "moh2007_sf"
+      }
+    },
+    "Триетиламін": {
+      "cas": "121-44-8",
+      "rfcLifelong": {
+        "value": 0.007,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Трикрезол": {
+      "cas": "1319-77-3",
+      "rfcLifelong": {
+        "value": 0.004,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Хлорбензол": {
+      "cas": "108-90-7",
+      "rfcLifelong": {
+        "value": 0.059,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Хлороформ": {
+      "cas": "67-66-3",
+      "rfcLifelong": {
+        "value": 0.098,
+        "source": "moh2007_rfc"
+      },
+      "sfi": {
+        "value": 0.081,
+        "source": "moh2007_sf"
+      }
+    },
+    "Хлорпікрин": {
+      "cas": "76-06-2",
+      "rfcLifelong": {
+        "value": 0.004,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Ціаніди": {
+      "cas": "57-12-5",
+      "rfcLifelong": {
+        "value": 0.003,
+        "source": "moh2007_rfc"
+      }
+    },
+    "Алар": {
+      "cas": "1596-84-5",
+      "sfi": {
+        "value": 0.018,
+        "source": "moh2007_sf"
+      }
+    },
+    "Алліл хлористий": {
+      "cas": "107-05-1",
+      "sfi": {
+        "value": 0.021,
+        "source": "moh2007_sf"
+      }
+    },
+    "Аміно-9-етилкарбазол 3- гідрохлорид": {
+      "cas": "6109-97-3",
+      "sfi": {
+        "value": 0.078,
+        "source": "moh2007_sf"
+      }
+    },
+    "Араміт": {
+      "cas": "140-57-8",
+      "sfi": {
+        "value": 0.025,
+        "source": "moh2007_sf"
+      }
+    },
+    "Бензо[k]флуорантен": {
+      "cas": "207-08-9",
+      "sfi": {
+        "value": 0.031,
+        "source": "moh2007_sf"
+      }
+    },
+    "Бензол": {
+      "cas": "71-43-2",
+      "sfi": {
+        "value": 0.027,
+        "source": "moh2007_sf"
+      }
+    },
+    "Біс(2-хлорізопроріловий)ефір": {
+      "cas": "39638-32-9",
+      "sfi": {
+        "value": 0.035,
+        "source": "moh2007_sf"
+      }
+    },
+    "Біфінелол 2- натрієва сіль": {
+      "cas": "132-27-4",
+      "sfi": {
+        "value": 0.003,
+        "source": "moh2007_sf"
+      }
+    },
+    "Гексахлорбутадієн": {
+      "cas": "87-68-3",
+      "sfi": {
+        "value": 0.077,
+        "source": "moh2007_sf"
+      }
+    },
+    "Гексахлоретан": {
+      "cas": "67-72-1",
+      "sfi": {
+        "value": 0.014,
+        "source": "moh2007_sf"
+      }
+    },
+    "Дибромхлорметан": {
+      "cas": "124-48-1",
+      "sfi": {
+        "value": 0.094,
+        "source": "moh2007_sf"
+      }
+    },
+    "Дигідроксінантрахінон 1 8-": {
+      "cas": "117-10-2",
+      "sfi": {
+        "value": 0.076,
+        "source": "moh2007_sf"
+      }
+    },
+    "Дигідросафрол": {
+      "cas": "94-58-6",
+      "sfi": {
+        "value": 0.044,
+        "source": "moh2007_sf"
+      }
+    },
+    "Дихлоретан 1 2-": {
+      "cas": "107-06-2",
+      "sfi": {
+        "value": 0.091,
+        "source": "moh2007_sf"
+      }
+    },
+    "Дихлорізопропіловий ефір 2 2’-": {
+      "cas": "108-60-1",
+      "sfi": {
+        "value": 0.035,
+        "source": "moh2007_sf"
+      }
+    },
+    "Діаміноанізол 2 4-": {
+      "cas": "615-05-4",
+      "sfi": {
+        "value": 0.023,
+        "source": "moh2007_sf"
+      }
+    },
+    "Діаміноанізол 2 4- сульфат": {
+      "cas": "39156-41-7",
+      "sfi": {
+        "value": 0.013,
+        "source": "moh2007_sf"
+      }
+    },
+    "Діоксан 1 4-": {
+      "cas": "123-91-1",
+      "sfi": {
+        "value": 0.027,
+        "source": "moh2007_sf"
+      }
+    },
+    "Метил-1-хлорпроп-1-ен 2": {
+      "cas": "513-37-1",
+      "sfi": {
+        "value": 0.045,
+        "source": "moh2007_sf"
+      }
+    },
+    "Метилметансульфонат": {
+      "cas": "66-27-3",
+      "sfi": {
+        "value": 0.099,
+        "source": "moh2007_sf"
+      }
+    },
+    "Метокси-5-нітроанілін 2-": {
+      "cas": "99-59-2",
+      "sfi": {
+        "value": 0.049,
+        "source": "moh2007_sf"
+      }
+    },
+    "Нітроген": {
+      "cas": "1836-75-5",
+      "sfi": {
+        "value": 0.082,
+        "source": "moh2007_sf"
+      }
+    },
+    "Нітрогліцерин": {
+      "cas": "55-63-0",
+      "sfi": {
+        "value": 0.014,
+        "source": "moh2007_sf"
+      }
+    },
+    "Нітрозодифеніламін N-": {
+      "cas": "96-30-6",
+      "sfi": {
+        "value": 0.009,
+        "source": "moh2007_sf"
+      }
+    },
+    "Нітрозофеніл-4 анілін N-": {
+      "cas": "156-10-5",
+      "sfi": {
+        "value": 0.022,
+        "source": "moh2007_sf"
+      }
+    },
+    "Пентахлорфенол": {
+      "cas": "87-86-5",
+      "sfi": {
+        "value": 0.018,
+        "source": "moh2007_sf"
+      }
+    },
+    "Понсо 3R": {
+      "cas": "3564-09-8",
+      "sfi": {
+        "value": 0.016,
+        "source": "moh2007_sf"
+      }
+    },
+    "Пропілен оксид": {
+      "cas": "75-56-9",
+      "sfi": {
+        "value": 0.013,
+        "source": "moh2007_sf"
+      }
+    },
+    "Свинець": {
+      "cas": "7439-92-1",
+      "sfi": {
+        "value": 0.042,
+        "source": "moh2007_sf"
+      }
+    },
+    "Свинець ацетат основний": {
+      "cas": "1335-32-6",
+      "sfi": {
+        "value": 0.038,
+        "source": "moh2007_sf"
+      }
+    },
+    "Синій N1": {
+      "cas": "2784-94-3",
+      "sfi": {
+        "value": 0.051,
+        "source": "moh2007_sf"
+      }
+    },
+    "Тетрахлоретан": {
+      "cas": "56-23-5",
+      "sfi": {
+        "value": 0.053,
+        "source": "moh2007_sf"
+      }
+    },
+    "Тетрахлоретан 1 1 1 2-": {
+      "cas": "630-20-6",
+      "sfi": {
+        "value": 0.026,
+        "source": "moh2007_sf"
+      }
+    },
+    "Тіосечовина": {
+      "cas": "62-56-6",
+      "sfi": {
+        "value": 0.072,
+        "source": "moh2007_sf"
+      }
+    },
+    "Толуілендіізоціанат 2 4-": {
+      "cas": "584-84-9",
+      "sfi": {
+        "value": 0.039,
+        "source": "moh2007_sf"
+      }
+    },
+    "Толуол-2 6-диізоціанат": {
+      "cas": "91-08-7",
+      "sfi": {
+        "value": 0.039,
+        "source": "moh2007_sf"
+      }
+    },
+    "Толуолдіізоціанат 1 3-": {
+      "cas": "26471-62-5",
+      "sfi": {
+        "value": 0.039,
+        "source": "moh2007_sf"
+      }
+    },
+    "Трихлоретан 1 1 2-": {
+      "cas": "79-00-5",
+      "sfi": {
+        "value": 0.057,
+        "source": "moh2007_sf"
+      }
+    },
+    "Трихлорфенол 2 4 6-": {
+      "cas": "88-06-2",
+      "sfi": {
+        "value": 0.011,
+        "source": "moh2007_sf"
+      }
+    },
+    "Хлор-о-фенілендіамін 4-": {
+      "cas": "95-83-0",
+      "sfi": {
+        "value": 0.016,
+        "source": "moh2007_sf"
+      }
+    },
+    "Хлорендикова кислота": {
+      "cas": "115-28-6",
+      "sfi": {
+        "value": 0.091,
+        "source": "moh2007_sf"
+      }
+    },
+    "Хлоровані парафіни С12(60% хлору)": {
+      "cas": "108171-26-2",
+      "sfi": {
+        "value": 0.089,
+        "source": "moh2007_sf"
+      }
+    },
+    "Азоту діоксид": {
+      "cas": "10102-44-0",
+      "rfcLifelong": {
+        "value": 0.04,
+        "source": "moh2007_rfc"
+      },
+      "rfcAcute": {
+        "value": 0.47,
+        "source": "oehha_nitrogen_dioxide"
+      },
+      "affectedOrgansAcute": [
+        "органи дихання"
+      ]
+    },
+    "Водень сульфід": {
+      "cas": "7783-06-4",
+      "rfcLifelong": {
+        "value": 0.001,
+        "source": "moh2007_rfc"
+      },
+      "rfcAcute": {
+        "value": 0.042,
+        "source": "oehha_hydrogen_sulfide"
+      },
+      "affectedOrgansAcute": [
+        "центральна нервова система"
+      ]
+    },
+    "Сірки діоксид": {
+      "cas": "7446-09-5",
+      "rfcLifelong": {
+        "value": 0.08,
+        "source": "moh2007_rfc"
+      },
+      "rfcAcute": {
+        "value": 0.66,
+        "source": "oehha_sulfur_dioxide"
+      },
+      "affectedOrgansAcute": [
+        "органи дихання"
+      ]
+    },
+    "Фенол": {
+      "cas": "108-95-2",
+      "rfcLifelong": {
+        "value": 0.006,
+        "source": "moh2007_rfc"
+      },
+      "rfcAcute": {
+        "value": 5.8,
+        "source": "oehha_phenol"
+      },
+      "affectedOrgansAcute": [
+        "органи дихання",
+        "органи зору"
+      ]
+    },
+    "Формальдегід": {
+      "cas": "50-00-0",
+      "rfcLifelong": {
+        "value": 0.003,
+        "source": "moh2007_rfc"
+      },
+      "sfi": {
+        "value": 0.046,
+        "source": "moh2007_sf"
+      },
+      "rfcAcute": {
+        "value": 0.055,
+        "source": "oehha_formaldehyde"
+      },
+      "affectedOrgansAcute": [
+        "органи зору"
+      ]
+    },
+    "Зважені частинки (TSP)": {
+      "cas": "",
+      "rfcLifelong": {
+        "value": 0.1,
+        "source": "moh2007_rfc"
+      },
+      "affectedOrgansLifelong": [
+        "органи дихання"
+      ]
+    },
+    "Вуглецю оксид": {
+      "cas": "630-08-0",
+      "rfcLifelong": {
+        "value": 3,
+        "source": "co_surrogate"
+      },
+      "referenceNotes": "CO: хронічний HQ використовує еквівалент ГДК 3 мг/м³ (табл. 3, Малишевська, 2021; п. 4.4.1 МОЗ №184/2007), а не встановлену EPA RfC.",
+      "rfcAcute": {
+        "value": 23,
+        "source": "oehha_carbon_monoxide"
+      },
+      "affectedOrgansAcute": [
+        "серцево-судинна система"
+      ]
+    }
+  }
+}

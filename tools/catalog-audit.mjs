@@ -111,6 +111,24 @@ function asAgent(raw, index) {
   };
 }
 
+const referenceOverrides = JSON.parse(fs.readFileSync(path.join(webSrcData, "reference-overrides.json"), "utf8"));
+
+function applyReferenceOverrides(agent) {
+  const corrections = referenceOverrides.agents[agent.name];
+  if (!corrections) return agent;
+  if (corrections.cas !== agent.cas) throw new Error(`Reference correction CAS mismatch for ${agent.name}`);
+  const parameterSources = {};
+  for (const field of ["rfcLifelong", "rfcAcute", "sfi"]) {
+    if (!corrections[field]) continue;
+    agent[field] = corrections[field].value;
+    parameterSources[field] = referenceOverrides.sources[corrections[field].source];
+  }
+  return { ...agent, parameterSources,
+    ...(corrections.affectedOrgansLifelong ? { affectedOrgansLifelong: corrections.affectedOrgansLifelong } : {}),
+    ...(corrections.affectedOrgansAcute ? { affectedOrgansAcute: corrections.affectedOrgansAcute } : {}),
+    ...(corrections.referenceNotes ? { referenceNotes: corrections.referenceNotes } : {}) };
+}
+
 const source = JSON.parse(fs.readFileSync(sourcePath, "utf8"));
 const rawAgents = source?.agents?.agents ?? [];
 const audited = rawAgents.map(asAgent);
@@ -144,7 +162,7 @@ function mergeCatalogAgent(name, idPrefix) {
   const overriddenCas = casOverrides.get(preferred.name);
   const cas = overriddenCas ?? records.find((agent) => casChecksumValid(agent.cas))?.cas ?? repairCas(preferred.cas);
   const dangerClasses = records.map((agent) => agent.dangerClass).filter((value) => value > 0);
-  return {
+  return applyReferenceOverrides({
     id: `${idPrefix}-${preferred.id.replace(/^source-/, "")}`,
     name: preferred.name,
     cas,
@@ -154,7 +172,7 @@ function mergeCatalogAgent(name, idPrefix) {
     rfcAcute: Math.max(...records.map((agent) => agent.rfcAcute)),
     affectedOrgansAcute: unique(records.flatMap((agent) => agent.affectedOrgansAcute)),
     sfi: Math.max(...records.map((agent) => agent.sfi))
-  };
+  });
 }
 
 const defaultAgents = [...commonNames]

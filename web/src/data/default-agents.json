@@ -12,7 +12,19 @@
     "affectedOrgansAcute": [
       "органи дихання"
     ],
-    "sfi": 0
+    "sfi": 0,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      },
+      "rfcAcute": {
+        "url": "https://oehha.ca.gov/chemicals/nitrogen-dioxide",
+        "unit": "mg/m3",
+        "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+      }
+    }
   },
   {
     "id": "basic-3",
@@ -32,7 +44,7 @@
     "name": "Акрилонітрил",
     "cas": "107-13-1",
     "dangerClass": 2,
-    "rfcLifelong": 2,
+    "rfcLifelong": 0.002,
     "affectedOrgansLifelong": [
       "органи дихання"
     ],
@@ -40,7 +52,14 @@
     "affectedOrgansAcute": [
       "центральна нервова система"
     ],
-    "sfi": 0.24
+    "sfi": 0.24,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      }
+    }
   },
   {
     "id": "basic-6",
@@ -78,7 +97,7 @@
     "name": "Ацетальдегід",
     "cas": "75-07-0",
     "dangerClass": 2,
-    "rfcLifelong": 9,
+    "rfcLifelong": 0.009,
     "affectedOrgansLifelong": [
       "органи дихання"
     ],
@@ -87,7 +106,14 @@
       "органи зору",
       "слизові"
     ],
-    "sfi": 0.0077
+    "sfi": 0.0077,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      }
+    }
   },
   {
     "id": "basic-18",
@@ -106,14 +132,21 @@
       "імунна система",
       "репродуктивна система"
     ],
-    "sfi": 27
+    "sfi": 0.027,
+    "parameterSources": {
+      "sfi": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "(mg/kg-day)^-1",
+        "basis": "MOH 184/2007, inhalation cancer slope factors appendix; historical methodological baseline"
+      }
+    }
   },
   {
     "id": "basic-31",
     "name": "Вінілхлорид",
     "cas": "75-01-4",
     "dangerClass": 1,
-    "rfcLifelong": 5,
+    "rfcLifelong": 0.005,
     "affectedOrgansLifelong": [
       "вроджені вади розвитку"
     ],
@@ -121,7 +154,14 @@
     "affectedOrgansAcute": [
       "вроджені вади розвитку"
     ],
-    "sfi": 0.3
+    "sfi": 0.3,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      }
+    }
   },
   {
     "id": "basic-32",
@@ -132,11 +172,23 @@
     "affectedOrgansLifelong": [
       "органи дихання"
     ],
-    "rfcAcute": 0.1,
+    "rfcAcute": 0.042,
     "affectedOrgansAcute": [
-      "органи дихання"
+      "центральна нервова система"
     ],
-    "sfi": 0
+    "sfi": 0,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      },
+      "rfcAcute": {
+        "url": "https://oehha.ca.gov/chemicals/hydrogen-sulfide",
+        "unit": "mg/m3",
+        "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+      }
+    }
   },
   {
     "id": "basic-33",
@@ -174,7 +226,7 @@
     "name": "Вуглецю оксид",
     "cas": "630-08-0",
     "dangerClass": 4,
-    "rfcLifelong": 0,
+    "rfcLifelong": 3,
     "affectedOrgansLifelong": [
       "кровоносна система",
       "серцево-судинна система",
@@ -182,17 +234,29 @@
     ],
     "rfcAcute": 23,
     "affectedOrgansAcute": [
-      "вроджені вади розвитку",
       "серцево-судинна система"
     ],
-    "sfi": 0
+    "sfi": 0,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://doi.org/10.31393/reports-vnmedical-2021-25(1)-27",
+        "unit": "mg/m3",
+        "basis": "Table 3, 3.0 mg/m3 CO benchmark; MPC-equivalent fallback permitted by MOH 184/2007 section 4.4.1, not an EPA RfC"
+      },
+      "rfcAcute": {
+        "url": "https://oehha.ca.gov/chemicals/carbon-monoxide",
+        "unit": "mg/m3",
+        "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+      }
+    },
+    "referenceNotes": "CO: хронічний HQ використовує еквівалент ГДК 3 мг/м³ (табл. 3, Малишевська, 2021; п. 4.4.1 МОЗ №184/2007), а не встановлену EPA RfC."
   },
   {
     "id": "basic-59",
     "name": "Епіхлоргідрин",
     "cas": "106-89-8",
     "dangerClass": 2,
-    "rfcLifelong": 1,
+    "rfcLifelong": 0.001,
     "affectedOrgansLifelong": [
       "органи дихання"
     ],
@@ -201,7 +265,14 @@
       "органи дихання",
       "органи зору"
     ],
-    "sfi": 0.0042
+    "sfi": 0.0042,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      }
+    }
   },
   {
     "id": "basic-63",
@@ -258,16 +329,20 @@
     "dangerClass": 3,
     "rfcLifelong": 0.1,
     "affectedOrgansLifelong": [
-      "вроджені вади розвитку",
-      "органи дихання",
-      "серцево-судинна система",
-      "смертність"
+      "органи дихання"
     ],
     "rfcAcute": 0.3,
     "affectedOrgansAcute": [
       "органи дихання"
     ],
-    "sfi": 0
+    "sfi": 0,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      }
+    }
   },
   {
     "id": "basic-75",
@@ -365,7 +440,19 @@
     "affectedOrgansAcute": [
       "органи дихання"
     ],
-    "sfi": 0
+    "sfi": 0,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      },
+      "rfcAcute": {
+        "url": "https://oehha.ca.gov/chemicals/sulfur-dioxide",
+        "unit": "mg/m3",
+        "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+      }
+    }
   },
   {
     "id": "basic-113",
@@ -388,7 +475,7 @@
     "name": "Тетрахлоретилен",
     "cas": "127-18-4",
     "dangerClass": 2,
-    "rfcLifelong": 35,
+    "rfcLifelong": 0.035,
     "affectedOrgansLifelong": [
       "вроджені вади розвитку",
       "нирки",
@@ -404,7 +491,19 @@
       "печінка",
       "центральна нервова система"
     ],
-    "sfi": 2
+    "sfi": 0.002,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      },
+      "sfi": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "(mg/kg-day)^-1",
+        "basis": "MOH 184/2007, inhalation cancer slope factors appendix; historical methodological baseline"
+      }
+    }
   },
   {
     "id": "basic-121",
@@ -453,12 +552,24 @@
       "серцево-судинна система",
       "центральна нервова система"
     ],
-    "rfcAcute": 6,
+    "rfcAcute": 5.8,
     "affectedOrgansAcute": [
       "органи дихання",
       "органи зору"
     ],
-    "sfi": 0
+    "sfi": 0,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      },
+      "rfcAcute": {
+        "url": "https://oehha.ca.gov/chemicals/phenol",
+        "unit": "mg/m3",
+        "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+      }
+    }
   },
   {
     "id": "basic-130",
@@ -470,12 +581,28 @@
       "імунна система",
       "органи дихання"
     ],
-    "rfcAcute": 0.048,
+    "rfcAcute": 0.055,
     "affectedOrgansAcute": [
-      "органи дихання",
       "органи зору"
     ],
-    "sfi": 0.046
+    "sfi": 0.046,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      },
+      "rfcAcute": {
+        "url": "https://oehha.ca.gov/chemicals/formaldehyde",
+        "unit": "mg/m3",
+        "basis": "OEHHA acute inhalation REL; published micrograms/m3 divided by 1000; checked 2026-10-27"
+      },
+      "sfi": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "(mg/kg-day)^-1",
+        "basis": "MOH 184/2007, inhalation cancer slope factors appendix; historical methodological baseline"
+      }
+    }
   },
   {
     "id": "basic-140",
@@ -497,7 +624,7 @@
     "name": "Хлороформ",
     "cas": "67-66-3",
     "dangerClass": 2,
-    "rfcLifelong": 98,
+    "rfcLifelong": 0.098,
     "affectedOrgansLifelong": [
       "вроджені вади розвитку",
       "нирки",
@@ -510,7 +637,19 @@
       "печінка",
       "репродуктивна система"
     ],
-    "sfi": 81
+    "sfi": 0.081,
+    "parameterSources": {
+      "rfcLifelong": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "mg/m3",
+        "basis": "MOH 184/2007, chronic inhalation reference concentrations appendix; historical methodological baseline"
+      },
+      "sfi": {
+        "url": "https://zakon.rada.gov.ua/rada/show/v0184282-07",
+        "unit": "(mg/kg-day)^-1",
+        "basis": "MOH 184/2007, inhalation cancer slope factors appendix; historical methodological baseline"
+      }
+    }
   },
   {
     "id": "basic-152",

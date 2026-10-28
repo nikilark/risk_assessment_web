@@ -87,7 +87,8 @@ test("edits years, compares subsets, exports a selected map year as PNG and pres
   const file = await downloaded;
   const png = await readFile((await file.path())!);
   expect(png.readUInt32BE(16)).toBe(1400);
-  expect(file.suggestedFilename()).toContain("2021");
+  expect(file.suggestedFilename()).not.toMatch(/2020|2021|·/);
+  expect(file.suggestedFilename()).toContain(" - map.png");
   await page.screenshot({ path: "/tmp/risk-years-results.png", fullPage: true });
 
   await page.getByRole("button", { name: /^Звіт$/ }).click();

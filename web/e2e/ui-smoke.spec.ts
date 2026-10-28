@@ -120,7 +120,7 @@ test("main research flow renders map, chart, and typed report assets", async ({ 
   const mapDownload = page.waitForEvent("download");
   await mapSection.getByRole("button", { name: /^PNG$/ }).click();
   const downloadedMap = await mapDownload;
-  expect(downloadedMap.suggestedFilename()).toMatch(/_map\.png$/);
+  expect(downloadedMap.suggestedFilename()).toMatch(/ - map\.png$/);
   const downloadedMapPath = await downloadedMap.path();
   expect(downloadedMapPath).toBeTruthy();
   if (downloadedMapPath) expect((await stat(downloadedMapPath)).size).toBeGreaterThan(1000);

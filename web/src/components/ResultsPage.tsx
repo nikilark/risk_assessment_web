@@ -100,15 +100,15 @@ export function ResultsPage({
 
   const downloadCurrent = (view: "table" | "chart") => {
     if (!selected) return;
-    const exportTitle = `${selected.title} · ${spec.years.join(", ")}`;
+    const exportTitle = selected.title.replace(/\s*·\s*/g, " - ");
     if (view === "table") {
-      exportResult({ ...selected, title: exportTitle });
+      exportResult({ ...selected, title: `${exportTitle} - table` });
       flash("TSV збережено");
       return;
     }
     if (view === "chart") {
       const dataUrl = chartRef.current?.toPng();
-      if (dataUrl) downloadDataUrl(`${safeFileName(exportTitle)}_chart.png`, dataUrl);
+      if (dataUrl) downloadDataUrl(`${safeFileName(exportTitle)} - chart.png`, dataUrl);
       flash(dataUrl ? "PNG збережено" : "Графік ще не готовий");
       return;
     }
@@ -118,7 +118,8 @@ export function ResultsPage({
     setMapExporting(true);
     try {
       const dataUrl = await mapMarkersToPng(mapResult);
-      downloadDataUrl(`${safeFileName(mapResult.title)}_map.png`, dataUrl);
+      const legend = mapResult.mapLegend.replace(/^Рівень ризику · /, "").replace(/ · \d{1,4}$/, "").replace(/\s*·\s*/g, " - ");
+      downloadDataUrl(`${safeFileName(`${selected.title.replace(/\s*·\s*/g, " - ")} - ${legend}`)} - map.png`, dataUrl);
       flash("PNG мапи збережено");
     } catch (error) {
       flash(error instanceof Error ? error.message : "Не вдалося створити PNG мапи.");
